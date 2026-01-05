@@ -1,15 +1,23 @@
 import * as React from "react"
 import { Deck } from "@/components/deck"
 import { Slide } from "@/components/slide"
+import { BasicSlide } from "@/components/basic-slide"
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
 
 export default function Home() {
 	return (
-		<Deck>
-			<Slide>Hello</Slide>
-			<Slide>World</Slide>
-			<Slide>Slide-cn</Slide>
+		<Deck
+		>
+			<Slide key={0}>
+				<BasicSlide>Hello</BasicSlide>
+			</Slide>
+			<Slide key={1}>
+				<BasicSlide>World</BasicSlide>
+			</Slide>
+			<Slide key={2}>
+				<BasicSlide>Slide-CN</BasicSlide>
+			</Slide>
 		</Deck>
 	)
 }

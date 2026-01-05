@@ -3,6 +3,7 @@ import { useDeckController } from "@/src/mechanics/use-deck-controller";
 import { useKeyboardNavigation } from "@/src/mechanics/use-keyboard-navigation";
 import React from "react";
 import { SlideNav } from "./slide-nav";
+import { AnimatePresence } from "motion/react";
 
 const DeckContext = React.createContext<ReturnType<
 	typeof useDeckController
@@ -18,9 +19,21 @@ export function Deck({ children }: { children: React.ReactNode }) {
 
 
 	return (
-		<DeckContext.Provider value={deck}>
-			<SlideNav />
-			{slides[deck.index]}
+		<DeckContext.Provider
+			value={deck}
+		>
+			<div className="fixed inset-0 overflow-hidden touch-none">
+
+				<SlideNav />
+				<div className="absolute inset-0">
+
+					<AnimatePresence mode="wait">
+						{slides[deck.index]}
+					</AnimatePresence>
+				</div>
+
+			</div>
+
 		</DeckContext.Provider>
 	);
 }
