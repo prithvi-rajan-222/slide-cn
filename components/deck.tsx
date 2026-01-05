@@ -22,10 +22,18 @@ export function Deck({ children }: { children: React.ReactNode }) {
 		<DeckContext.Provider
 			value={deck}
 		>
-			<SlideNav />
-			<AnimatePresence mode="wait">
-				{slides[deck.index]}
-			</AnimatePresence>
+			<div className="fixed inset-0 overflow-hidden touch-none">
+
+				<SlideNav />
+				<div className="absolute inset-0">
+
+					<AnimatePresence mode="wait">
+						{slides[deck.index]}
+					</AnimatePresence>
+				</div>
+
+			</div>
+
 		</DeckContext.Provider>
 	);
 }

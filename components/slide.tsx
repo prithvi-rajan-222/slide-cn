@@ -13,12 +13,14 @@ export function Slide({ children, key }: SlideProps) {
 	return (
 		<motion.div
 			data-slide
-			className="w-full h-full"
+			className="absolute inset-0"
 			key={key}
 			exit={{ opacity: 0 }}
 			drag="x"
 			dragConstraints={{ left: 0, right: 0 }}
-			dragElastic={0.15}
+			dragElastic={0.25}
+			dragMomentum={false}
+			whileDrag={{ scale: 1 }}
 			onDragEnd={(event, info) => {
 				const swipeDistance = info.offset.x;
 				const swipeVelocity = info.velocity.x;

@@ -6,7 +6,7 @@ type BasicSlideProps = {
 export function BasicSlide({ children }: BasicSlideProps) {
 	return (
 		<div
-			className="bg-primary text-primary-foreground h-full flex justify-center items-center"
+			className="bg-background text-foreground h-full flex justify-center items-center"
 		>
 			{children}
 		</div>
