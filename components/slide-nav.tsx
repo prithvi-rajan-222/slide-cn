@@ -16,10 +16,9 @@ export function SlideNav() {
 						onClick={deck.prev}
 						className="
 							ml-4
-							      opacity-0
-							      transition-opacity
-							      group-hover:opacity-100
-						    "
+							opacity-0
+							transition-opacity
+							group-hover:opacity-100"
 					>
 						Prev
 					</Button>
