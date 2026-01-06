@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Deck } from "@/components/deck"
 import { Slide } from "@/components/slide"
-import { BasicSlide } from "@/components/basic-slide"
 import { FirstSlide } from "@/components/first-slide"
 import { SecondSlide } from "@/components/second-slide"
 import { ThirdSlide } from "@/components/third-slide"
