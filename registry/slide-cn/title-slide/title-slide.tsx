@@ -41,3 +41,17 @@ export function TitleSlideSubheading({ children, className, ...props }: React.Co
 
 	)
 }
+
+export function TitleSlideMeta({ children, className, ...props }: React.ComponentProps<"p">) {
+	return (
+		<p
+			className={cn(
+				"text-sm text-muted-foreground",
+				className
+			)}
+			{...props}
+		>
+			{children}
+		</p>
+	);
+}
