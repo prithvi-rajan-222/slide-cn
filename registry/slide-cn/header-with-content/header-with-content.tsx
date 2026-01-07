@@ -4,7 +4,7 @@ export function HeaderWithContent({ children, className, ...props }: React.Compo
 	return (
 		<div
 			className={cn(
-				"flex flex-col w-full h-full p-8",
+				"flex flex-col w-full h-full p-8 md:p-16 lg:p-24 gap-4",
 				className
 			)}
 			{...props}
@@ -18,7 +18,7 @@ HeaderWithContent.Header = function Header({ children, className, ...props }: Re
 	return (
 		<h1
 			className={cn(
-				"font-bold text-foreground",
+				"font-bold text-foreground text-2xl md:text-4xl lg:text-6xl tracking-tight antialiased",
 				className
 			)}
 			{...props}
@@ -32,7 +32,7 @@ HeaderWithContent.Content = function Content({ children, className, ...props }: 
 	return (
 		<h1
 			className={cn(
-				"text-muted-foreground",
+				"text-muted-foreground text-sm md:text-xl lg:text-2xl",
 				className
 			)}
 			{...props}

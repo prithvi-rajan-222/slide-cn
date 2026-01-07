@@ -1,18 +1,16 @@
-import { ImageSlide } from "@/registry/slide-cn/image-slide/image-slide";
+import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/header-with-content";
 
 export function ThirdSlide() {
 	return (
-		<ImageSlide>
-			<div className="flex flex-col items-center justify-center gap-6">
-				<ImageSlide.Image
-					src="/Wallpaper.jpg"
-					alt="Mahoraga"
-					className="max-h-[60vh] w-auto rounded-xl shadow-2xl border border-white/10"
-				/>
-				<ImageSlide.Caption className="">
-					Divine General Mahoraga
-				</ImageSlide.Caption>
-			</div>
-		</ImageSlide>
+		<HeaderWithContent>
+			<HeaderWithContent.Header>Why not Canva/PPT?</HeaderWithContent.Header>
+			<HeaderWithContent.Content>
+				<ul className="list-disc list-inside flex flex-col gap-2">
+					<li>Canva and PPT limits your creativity</li>
+					<li>With AI tools, anyone can code a website in a matter of minutes. You no longer need a visual "drag and drop" editor, because coding a presentation is just as easy.</li>
+					<li>Use Slide-CN, and build a deck that impresses</li>
+				</ul>
+			</HeaderWithContent.Content>
+		</HeaderWithContent>
 	)
 }

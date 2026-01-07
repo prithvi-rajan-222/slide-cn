@@ -25,7 +25,7 @@ ImageSlide.Caption = function Caption({ children, className, ...props }: React.C
 	return (
 		<div
 			className={cn(
-				"text-sm text-muted-foreground",
+				"text-sm md:text-xl text-muted-foreground",
 				className
 			)}
 			{...props}
