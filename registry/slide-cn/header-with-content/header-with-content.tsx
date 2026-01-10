@@ -30,15 +30,15 @@ HeaderWithContent.Header = function Header({ children, className, ...props }: Re
 
 HeaderWithContent.Content = function Content({ children, className, ...props }: React.ComponentProps<"div">) {
 	return (
-		<h1
+		<div
 			className={cn(
-				"text-muted-foreground text-sm md:text-xl lg:text-2xl",
+				"text-muted-foreground text-sm md:text-xl lg:text-2xl flex-1",
 				className
 			)}
 			{...props}
 		>
 			{children}
-		</h1>
+		</div>
 	)
 }
 

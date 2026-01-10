@@ -16,14 +16,16 @@ export function SecondSlide() {
 					<li>Use the basic templates provided by Slide-CN and extend them to create your own branding, your own themes, so that your presentations can be consistent</li>
 					<li>Slide-CN works with ShadCN components, so you can be as creative as you want with your slides</li>
 				</ul>
-				<SlideImage
-					src="/spinning-cat.gif"
-					alt="oiia cat"
-					aspectRatio={1}
-					caption="Spinning cat"
-					objectFit="contain"
-					className="self-center w-[25%] h-full"
-				/>
+				<SlideImage className="my-auto">
+					<SlideImage.Image
+						src="/spinning-cat.gif"
+						alt="oiia cat"
+						aspectRatio={1}
+						objectFit="contain"
+						className="w-[25%]"
+					/>
+					<SlideImage.Caption>Spinning cat</SlideImage.Caption>
+				</SlideImage>
 			</HeaderWithContent.Content>
 		</HeaderWithContent>
 	)

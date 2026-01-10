@@ -4,29 +4,39 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
-interface SlideImageProps {
+interface SlideImageProps extends React.ComponentProps<"div"> {
+	children: React.ReactNode
+}
+
+export function SlideImage({ children, className, ...props }: SlideImageProps) {
+	return (
+		<div className={cn("flex flex-col items-center gap-2", className)} {...props}>
+			{children}
+		</div>
+	)
+}
+
+interface SlideImageImageProps extends React.ComponentProps<"div"> {
 	src: string
 	alt: string
 	aspectRatio?: number
-	caption?: string
-	className?: string
 	objectFit?: "contain" | "cover" | "fill" | "none" | "scale-down"
 	priority?: boolean
 }
 
-export function SlideImage({
+SlideImage.Image = function SlideImageImage({
 	src,
 	alt,
 	aspectRatio = 16 / 9,
-	caption,
 	className,
 	objectFit = "cover",
 	priority = false,
-}: SlideImageProps) {
-
-	const imageContainer = (
+	...props
+}: SlideImageImageProps) {
+	return (
 		<div
-			className={cn("relative overflow-hidden rounded-lg bg-muted", className)}
+			className={cn("relative overflow-hidden rounded-lg bg-muted w-full", className)}
+			{...props}
 		>
 			<AspectRatio ratio={aspectRatio}>
 				<Image
@@ -40,15 +50,16 @@ export function SlideImage({
 			</AspectRatio>
 		</div>
 	)
+}
 
-	if (caption) {
-		return (
-			<div className="flex flex-col items-center gap-2">
-				{imageContainer}
-				<span className="text-sm text-muted-foreground">{caption}</span>
-			</div>
-		)
-	}
-
-	return imageContainer
+SlideImage.Caption = function SlideImageCaption({
+	children,
+	className,
+	...props
+}: React.ComponentProps<"span">) {
+	return (
+		<span className={cn("text-sm text-muted-foreground", className)} {...props}>
+			{children}
+		</span>
+	)
 }
