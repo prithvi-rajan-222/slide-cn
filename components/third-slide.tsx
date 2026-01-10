@@ -13,18 +13,18 @@ export function ThirdSlide() {
 					<li>Use Slide-CN, and build a deck that impresses</li>
 				</ul>
 				<div className="self-center">
-					<AspectRatio ratio={9 / 16} className="bg-muted rounded">
+					<AspectRatio ratio={9 / 16} className="bg-muted rounded max-h-[600vh]">
 						<Image
 							src={'/gojo.gif'}
 							alt="silly gojo"
 							fill={false}
-							width={600}
-							height={600}
-							className="max-h-[75%]"
+							width={1000}
+							height={1000}
 							style={{ objectFit: "contain" }}
 
 						/>
 					</AspectRatio>
+					<div className="text-muted-foreground">Silly Gojo</div>
 				</div>
 			</HeaderWithContent.Content>
 		</HeaderWithContent>
