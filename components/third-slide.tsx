@@ -1,13 +1,14 @@
 "use client";
 import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/header-with-content";
 import { SlideImage } from "@/registry/slide-cn/slide-image/slide-image";
-import FloatingLines from "./FloatingLines.jsx"
+import FloatingLines from "./FloatingLines";
 
 export function ThirdSlide() {
 	return (
 		<>
 			<div className="w-full h-full absolute">
 				<FloatingLines
+
 					enabledWaves={['top', 'middle', 'bottom']}
 					// Array - specify line count per wave; Number - same count for all waves
 					lineCount={[10, 15, 20]}
