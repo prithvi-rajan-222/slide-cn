@@ -1,5 +1,5 @@
 import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/header-with-content";
-import { SlideImage } from "./ui/slide-image";
+import { SlideImage } from "@/registry/slide-cn/slide-image/slide-image";
 
 export function SecondSlide() {
 	return (

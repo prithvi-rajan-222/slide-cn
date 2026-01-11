@@ -1,5 +1,5 @@
 import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/header-with-content";
-import { SlideImage } from "./ui/slide-image";
+import { SlideImage } from "@/registry/slide-cn/slide-image/slide-image";
 
 export function ThirdSlide() {
 	return (
@@ -11,7 +11,7 @@ export function ThirdSlide() {
 					<li>{'With AI tools, anyone can code a website in a matter of minutes. You no longer need a visual "drag and drop" editor, because coding a presentation is just as easy.'}</li>
 					<li>Use Slide-CN, and build a deck that impresses</li>
 				</ul>
-				<SlideImage className="self-center">
+				<SlideImage className="self-center my-auto w-full">
 					<SlideImage.Image
 						src="/Wallpaper.jpg"
 						alt="silly gojo"
