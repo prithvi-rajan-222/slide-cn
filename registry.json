@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "Slide-CN",
+  "homepage": "https://slide-cn.com",
   "items": [
     {
       "name": "hello-world",
