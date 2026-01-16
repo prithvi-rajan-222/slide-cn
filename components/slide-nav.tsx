@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/registry/new-york/ui/button";
 import { useDeck } from "./deck";
+import { Button } from "./ui/button";
 
 export function SlideNav() {
 	const deck = useDeck();

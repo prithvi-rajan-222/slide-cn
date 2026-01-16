@@ -1,6 +1,6 @@
 "use client";
 import { AuroraText } from "@/components/ui/aurora-text";
-import { Button } from "@/registry/new-york/ui/button";
+import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
 export function Hero() {
