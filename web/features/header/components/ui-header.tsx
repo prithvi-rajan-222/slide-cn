@@ -3,6 +3,7 @@ import { NavbarItemType } from "@/types";
 import Link from "next/link";
 import { useState } from "react";
 import MotionDrawer from "./motion-drawer";
+import { Route } from "next";
 
 export function UIHeader() {
 
@@ -29,7 +30,7 @@ export function UIHeader() {
 						{navbarItems.map(item => (
 							<Link
 								key={item.label}
-								href={item.href}
+								href={item.href as Route}
 								className="transition-colors hover:text-foreground/80 text-foreground/60"
 							>
 								{item.label}
@@ -63,7 +64,7 @@ export function UIHeader() {
 					{navbarItems.map(item => (
 						<Link
 							key={item.label}
-							href={item.href}
+							href={item.href as Route}
 							className="text-lg font-medium text-foreground/80 hover:text-foreground transition-colors"
 							onClick={() => setOpen(false)}
 						>
