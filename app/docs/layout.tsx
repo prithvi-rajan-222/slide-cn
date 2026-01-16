@@ -1,18 +1,11 @@
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { UISidebar } from "@/web/features/sidebar/ui-sidebar";
+import { source } from '@/lib/source';
+import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { baseOptions } from '@/lib/layout.shared';
 
-
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+export default function Layout({ children }: LayoutProps<'/docs'>) {
 	return (
-		<SidebarProvider >
-			<UISidebar />
-			<main>
-				{children}
-			</main>
-		</SidebarProvider>
+		<DocsLayout tree={source.getPageTree()} {...baseOptions()}>
+			{children}
+		</DocsLayout>
 	);
 }
