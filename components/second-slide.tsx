@@ -3,7 +3,7 @@ import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/heade
 import { SlideImage } from "@/registry/slide-cn/slide-image/slide-image";
 import LiquidEther from "./LiquidEther.jsx"
 import { TwoColumn } from "@/registry/slide-cn/two-column/two-column";
-import { VerticalSplit } from "@/registry/slide-cn/vertical-split/vertical-split.js";
+import { VerticalSplit } from "@/registry/slide-cn/vertical-split/vertical-split";
 
 export function SecondSlide() {
 	return (
@@ -37,7 +37,7 @@ export function SecondSlide() {
 
 
 							<TwoColumn ratio={0.35}>
-								<TwoColumn.Left>
+								<TwoColumn.Left className="bg-green-200">
 
 
 									<ul className="list-disc list-inside flex flex-col gap-2">
@@ -63,7 +63,7 @@ export function SecondSlide() {
 								</TwoColumn.Right>
 							</TwoColumn>
 						</VerticalSplit.Top>
-						<VerticalSplit.Bottom>
+						<VerticalSplit.Bottom className="bg-blue-200">
 
 
 							<SlideImage className="my-auto">
