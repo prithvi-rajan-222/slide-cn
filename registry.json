@@ -67,6 +67,34 @@
 					"type": "registry:component"
 				}
 			]
+		},
+		{
+			"name": "title-slide",
+			"type": "registry:component",
+			"title": "Title slide",
+			"description": "Set of components to easily create a title slide",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/title-slide/title-slide.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "slide-image",
+			"type": "registry:component",
+			"title": "Slide image",
+			"description": "Set of components to add an image and caption to a slide",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/slide-image/slide-image.tsx",
+					"type": "registry:component"
+				}
+			]
 		}
+
+
   ]
 }
