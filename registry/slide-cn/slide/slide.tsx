@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
-import { useDeck } from "./deck";
+import { useDeck } from "../deck/deck";
 
 type SlideProps = {
 	children: React.ReactNode;

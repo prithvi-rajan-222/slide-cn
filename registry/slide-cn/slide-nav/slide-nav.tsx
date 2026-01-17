@@ -1,7 +1,7 @@
 "use client";
 
-import { useDeck } from "./deck";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { useDeck } from "../deck/deck";
 
 export function SlideNav() {
 	const deck = useDeck();

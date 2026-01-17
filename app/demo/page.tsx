@@ -1,10 +1,10 @@
 import * as React from "react"
-import { Deck } from "@/components/deck"
-import { Slide } from "@/components/slide"
 import { FirstSlide } from "@/components/first-slide"
 import { SecondSlide } from "@/components/second-slide"
 import { ThirdSlide } from "@/components/third-slide"
 import { FourthSlide } from "@/components/fourth-slide"
+import { Deck } from "@/registry/slide-cn/deck/deck"
+import { Slide } from "@/registry/slide-cn/slide/slide"
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
 
