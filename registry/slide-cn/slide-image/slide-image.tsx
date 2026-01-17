@@ -17,6 +17,7 @@ interface SlideImageImageProps extends React.ComponentProps<"div"> {
 	aspectRatio?: number
 	objectFit?: "contain" | "cover" | "fill" | "none" | "scale-down"
 	priority?: boolean
+	fillContainer?: boolean
 }
 
 SlideImage.Image = function SlideImageImage({
@@ -26,8 +27,27 @@ SlideImage.Image = function SlideImageImage({
 	className,
 	objectFit = "cover",
 	priority = false,
+	fillContainer = false,
 	...props
 }: SlideImageImageProps) {
+	if (fillContainer) {
+		return (
+			<div
+				className={cn("relative overflow-hidden rounded-lg bg-muted w-full h-full flex-1", className)}
+				{...props}
+			>
+				<Image
+					src={src}
+					alt={alt}
+					fill
+					priority={priority}
+					className="rounded-lg"
+					style={{ objectFit }}
+				/>
+			</div>
+		)
+	}
+
 	return (
 		<div
 			className={cn("relative overflow-hidden rounded-lg bg-muted w-full", className)}
