@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "deck",
+  "title": "Deck",
+  "description": "A Deck component that is the core of the presenation",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/slide-cn/deck/deck.tsx",
+      "content": "\"use client\";\nimport { useDeckController } from \"@/src/mechanics/use-deck-controller\";\nimport { useKeyboardNavigation } from \"@/src/mechanics/use-keyboard-navigation\";\nimport React from \"react\";\nimport { SlideNav } from \"./slide-nav\";\nimport { AnimatePresence } from \"motion/react\";\n\nconst DeckContext = React.createContext<ReturnType<\n\ttypeof useDeckController\n> | null>(null);\n\nexport function Deck({ children }: { children: React.ReactNode }) {\n\tconst slides = React.Children.toArray(children);\n\tconst deck = useDeckController(slides.length);\n\tuseKeyboardNavigation({\n\t\tonNext: deck.next,\n\t\tonPrev: deck.prev\n\t});\n\n\n\treturn (\n\t\t<DeckContext.Provider\n\t\t\tvalue={deck}\n\t\t>\n\t\t\t<div className=\"fixed inset-0 overflow-hidden touch-none\">\n\n\t\t\t\t<SlideNav />\n\t\t\t\t<div className=\"absolute inset-0\">\n\n\t\t\t\t\t<AnimatePresence mode=\"wait\">\n\t\t\t\t\t\t{slides[deck.index]}\n\t\t\t\t\t</AnimatePresence>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t</DeckContext.Provider>\n\t);\n}\n\nexport function useDeck() {\n\tconst ctx = React.useContext(DeckContext);\n\tif (!ctx) throw new Error(\"useDeck must be used inside Deck\");\n\treturn ctx;\n}\n\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
