@@ -9,6 +9,14 @@ export function UIHeader() {
 
 	const navbarItems: NavbarItemType[] = [
 		{
+			label: "Docs",
+			href: "/docs"
+		},
+		{
+			label: "Demo",
+			href: "/demo"
+		},
+		{
 			label: "Components",
 			href: "/components"
 		},

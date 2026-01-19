@@ -1,4 +1,3 @@
-import * as React from "react"
 import { UIHeader } from "@/web/features/header/components/ui-header"
 import { Hero } from "@/web/features/hero/components/Hero"
 // This page displays items from the custom registry.
@@ -7,6 +6,7 @@ import { Hero } from "@/web/features/hero/components/Hero"
 export default function Home() {
 	return (
 		<>
+			<UIHeader />
 			<Hero />
 		</>
 	)

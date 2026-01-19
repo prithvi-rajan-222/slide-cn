@@ -36,7 +36,7 @@ export function SecondSlide() {
 						<VerticalSplit.Top>
 
 
-							<TwoColumn ratio={0.35}>
+							<TwoColumn ratio={0.5}>
 								<TwoColumn.Left className="bg-green-200">
 
 

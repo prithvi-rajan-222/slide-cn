@@ -16,7 +16,7 @@ export function Hero() {
 	}
 	return (
 		<section className="relative w-full py-32 md:py-48 overflow-hidden">
-			<div className="max-w-7xl mx-auto py-32 md:py-48 text-center">
+			<div className="max-w-7xl mx-auto py-32 lg:py-32 text-center">
 				<h1 className="text-7xl font-semibold tracking-tight">
 					Create <AuroraText>beautiful</AuroraText> presentations using code
 				</h1>
