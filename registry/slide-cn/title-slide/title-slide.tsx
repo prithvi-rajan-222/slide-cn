@@ -13,7 +13,7 @@ export function TitleSlide({ children, className, ...props }: React.ComponentPro
 	)
 }
 
-export function TitleSlideHeading({ children, className, ...props }: React.ComponentProps<"h1">) {
+TitleSlide.Heading = function Heading({ children, className, ...props }: React.ComponentProps<"h1">) {
 	return (
 		<h1
 			className={cn(
@@ -27,7 +27,7 @@ export function TitleSlideHeading({ children, className, ...props }: React.Compo
 	)
 }
 
-export function TitleSlideSubheading({ children, className, ...props }: React.ComponentProps<"p">) {
+TitleSlide.SubHeading = function Subheading({ children, className, ...props }: React.ComponentProps<"p">) {
 	return (
 		<p
 			className={cn(
@@ -42,7 +42,7 @@ export function TitleSlideSubheading({ children, className, ...props }: React.Co
 	)
 }
 
-export function TitleSlideMeta({ children, className, ...props }: React.ComponentProps<"p">) {
+TitleSlide.Meta = function Meta({ children, className, ...props }: React.ComponentProps<"p">) {
 	return (
 		<p
 			className={cn(

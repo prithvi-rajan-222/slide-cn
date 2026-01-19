@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
 
-interface TwoColumnProps extends React.ComponentProps<"div"> {
+interface HorizontalSplitProps extends React.ComponentProps<"div"> {
 	ratio?: number;
 }
 
-export function TwoColumn({ children, ratio = 0.5, className, style, ...props }: TwoColumnProps) {
+export function HorizontalSplit({ children, ratio = 0.5, className, style, ...props }: HorizontalSplitProps) {
 	const clampedRatio = Math.max(0.2, Math.min(0.8, ratio));
 	return (
 		<div
@@ -21,7 +21,7 @@ export function TwoColumn({ children, ratio = 0.5, className, style, ...props }:
 }
 
 
-TwoColumn.Left = function Left({ children, className, ...props }: React.ComponentProps<"div">) {
+HorizontalSplit.Left = function Left({ children, className, ...props }: React.ComponentProps<"div">) {
 	return (
 		<div
 			className={cn(
@@ -32,11 +32,10 @@ TwoColumn.Left = function Left({ children, className, ...props }: React.Componen
 		>
 			{children}
 		</div>
-
 	)
 }
 
-TwoColumn.Right = function Right({ children, className, ...props }: React.ComponentProps<"div">) {
+HorizontalSplit.Right = function Right({ children, className, ...props }: React.ComponentProps<"div">) {
 	return (
 		<div
 			className={cn(
@@ -47,6 +46,5 @@ TwoColumn.Right = function Right({ children, className, ...props }: React.Compon
 		>
 			{children}
 		</div>
-
 	)
 }

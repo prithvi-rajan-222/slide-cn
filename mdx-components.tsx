@@ -7,6 +7,9 @@ import {
 	TabsTrigger,
 	TabsContent,
 } from "fumadocs-ui/components/tabs"
+import {
+	TypeTable
+} from "fumadocs-ui/components/type-table";
 
 export function getMDXComponents(
 	components?: MDXComponents
@@ -19,6 +22,7 @@ export function getMDXComponents(
 		TabsList,
 		TabsTrigger,
 		TabsContent,
+		TypeTable,
 
 		...components,
 	}

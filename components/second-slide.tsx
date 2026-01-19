@@ -2,7 +2,7 @@
 import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/header-with-content";
 import { SlideImage } from "@/registry/slide-cn/slide-image/slide-image";
 import LiquidEther from "./LiquidEther.jsx"
-import { TwoColumn } from "@/registry/slide-cn/two-column/two-column";
+import { HorizontalSplit } from "@/registry/slide-cn/horizontal-split/horizontal-split";
 import { VerticalSplit } from "@/registry/slide-cn/vertical-split/vertical-split";
 
 export function SecondSlide() {
@@ -36,8 +36,8 @@ export function SecondSlide() {
 						<VerticalSplit.Top>
 
 
-							<TwoColumn ratio={0.5}>
-								<TwoColumn.Left className="bg-green-200">
+							<HorizontalSplit ratio={0.5}>
+								<HorizontalSplit.Left className="bg-green-200">
 
 
 									<ul className="list-disc list-inside flex flex-col gap-2">
@@ -48,8 +48,8 @@ export function SecondSlide() {
 										<li>Use the basic templates provided by Slide-CN and extend them to create your own branding, your own themes, so that your presentations can be consistent</li>
 										<li>Slide-CN works with ShadCN components, so you can be as creative as you want with your slides</li>
 									</ul>
-								</TwoColumn.Left>
-								<TwoColumn.Right>
+								</HorizontalSplit.Left>
+								<HorizontalSplit.Right>
 									<SlideImage className="h-full">
 										<SlideImage.Image
 											src="/spinning-cat.gif"
@@ -60,8 +60,8 @@ export function SecondSlide() {
 										/>
 										<SlideImage.Caption>Spinning cat</SlideImage.Caption>
 									</SlideImage>
-								</TwoColumn.Right>
-							</TwoColumn>
+								</HorizontalSplit.Right>
+							</HorizontalSplit>
 						</VerticalSplit.Top>
 						<VerticalSplit.Bottom className="bg-blue-200">
 

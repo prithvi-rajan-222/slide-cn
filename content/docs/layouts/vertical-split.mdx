@@ -1,0 +1,32 @@
+---
+title: Vertical Split
+description: A component to split your content vertically
+---
+
+## Usage
+
+Use this component within a slide to split any content vertically.
+
+```tsx
+
+<VerticalSplit ratio={0.7}>
+	<VerticalSplit.Top>
+		This content will take up 70% of the available space on the top
+	</VerticalSplit.Top>
+	<VerticalSplit.Bottom>
+		This will take up only the bottom 30% of the parent container
+	</VerticalSplit.Bottom>
+</VerticalSplit>
+
+```
+
+### Api
+<TypeTable
+	type={{
+		ratio: {
+			type: "number",
+			description: "The ratio in which you want the container to be split. The top half will have a weightage of 'ratio' and the botto will have a weight of '1 - ratio'. The maximum value of ratio is 0.8, and the minimum value is 0.2. You can change this directly in the component if you want",
+			default: 0.5
+		},
+	}}
+/>
