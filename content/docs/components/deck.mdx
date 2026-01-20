@@ -1,0 +1,38 @@
+---
+title: Deck
+description: The main component to create a slide deck
+---
+
+## Overview
+This is the root component of your presentation. It controls which slide is shown. 
+
+The Deck component handles everything from Keyboard navigations and swipe guestures, to animations and more.
+
+The children of this component are the different slides of the presentation.
+
+## Usage
+```tsx
+<Deck>
+	<Slide key={0}>
+		<FirstSlide />
+	</Slide>
+	<Slide key={1}>
+		<SecondSlide />
+	</Slide>
+</Deck>
+```
+
+## Reference
+### useDeck()
+This hook allows you to control the slide navigation. For most use cases it is already taken care of, but if you want a fine grained way of going to the next/previous slide, or jumping to any slide, then you can use this hook.
+
+You can use this as follows:
+```tsx
+const deck = useDeck();
+
+function handleContactInfoClick() {
+	deck.goTo(CONTACT_INFO_SLIDE);
+}
+```
+
+For more info checkout the [useDeck hook](./index.mdx)
