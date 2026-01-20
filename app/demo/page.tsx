@@ -3,6 +3,7 @@ import { FirstSlide } from "@/components/first-slide"
 import { SecondSlide } from "@/components/second-slide"
 import { ThirdSlide } from "@/components/third-slide"
 import { FourthSlide } from "@/components/fourth-slide"
+import { FifthSlide } from "@/components/fifth-slide"
 import { Deck } from "@/registry/slide-cn/deck/deck"
 import { Slide } from "@/registry/slide-cn/slide/slide"
 // This page displays items from the custom registry.
@@ -23,6 +24,9 @@ export default function Home() {
 			</Slide>
 			<Slide key={3}>
 				<FourthSlide />
+			</Slide>
+			<Slide key={4}>
+				<FifthSlide />
 			</Slide>
 		</Deck>
 	)

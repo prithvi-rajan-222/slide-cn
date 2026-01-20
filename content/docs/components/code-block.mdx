@@ -1,0 +1,53 @@
+---
+title: CodeBlock
+description: Display code snippets with syntax highlighting.
+---
+
+## Overview
+Add a code block to your slide. You can use it to display code snippets with syntax highlighting in your slides.
+
+## Usage
+```tsx
+import { CodeBlock } from "@/registry/slide-cn/code-block/code-block"
+
+const sampleCode = `function greet(name) {
+  return "Hello, " + name;
+}
+
+console.log(greet("World"));`
+
+export function FifthSlide() {
+	return (
+		<HeaderWithContent>
+			<HeaderWithContent.Header>Code Block Demo</HeaderWithContent.Header>
+			<HeaderWithContent.Content>
+				<div className="w-full max-w-3xl mx-auto">
+					<CodeBlock code={sampleCode} language="javascript" />
+				</div>
+			</HeaderWithContent.Content>
+		</HeaderWithContent>
+	)
+}
+```
+
+## Reference
+
+<TypeTable
+  type={{
+    code: {
+      type: "string",
+      description: "The code string to display.",
+      default: "-"
+    },
+    language: {
+      type: "string",
+      description: "The language for syntax highlighting.",
+      default: '"javascript"'
+    },
+    showLineNumbers: {
+      type: "boolean",
+      description: "Whether to show line numbers in the block.",
+      default: true
+    }
+  }}
+/>
