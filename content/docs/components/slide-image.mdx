@@ -1,0 +1,41 @@
+---
+title: Slide Image
+description: Simple way to add media to your slides
+---
+
+## Overview
+Use this component to add any form of media to your slides. You can specify if you want the image to fill the parent container, or if you want to show the image in a certain aspect ratio.
+
+## Usage
+```tsx
+<SlideImage className="my-auto">
+	<SlideImage.Image
+		src="/spinning-cat.gif"
+		alt="oiia cat"
+		aspectRatio={1}
+		objectFit="contain"
+	/>
+	<SlideImage.Caption>Spinning cat</SlideImage.Caption>
+</SlideImage>
+```
+
+## Reference
+### Image
+Use this component to add an image to your slide. This wraps [Aspect Ratio](https://ui.shadcn.com/docs/components/aspect-ratio) from shadcn as well as [Image](https://nextjs.org/docs/app/api-reference/components/image) from NextJs.
+<TypeTable
+	type={{
+		aspectRatio: {
+			type: "number",
+			description: "This specifies the ratio between the width and height for your media.",
+			default: 16/9
+		},
+		fillContainer: {
+			type: "boolean",
+			description: "This will force your media to fill the parent container. This will ignore anything set in aspect ratio",
+			default: false
+		},
+	}}
+/>
+
+### Caption
+You can use this component to add a caption to your media.
