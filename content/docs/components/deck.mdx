@@ -1,0 +1,74 @@
+---
+title: Deck
+description: The main component to create a slide deck
+---
+
+## Overview
+This is the root component of your presentation. It controls which slide is shown. 
+
+The Deck component handles everything from Keyboard navigations and swipe guestures, to animations and more.
+
+The children of this component are the different slides of the presentation.
+
+## Installation
+<InstallCommand packageName="slide-cn@deck" />
+
+## Demo
+<ComponentDemo description="A mini deck with keyboard navigation (use arrow keys or swipe)" className="p-8">
+  <div className="relative w-full max-w-4xl h-[500px] bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-950 rounded-lg overflow-hidden border-2 border-slate-300 dark:border-slate-700">
+    <Deck>
+      <Slide key={0}>
+        <div className="flex items-center justify-center h-full bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+          <div className="text-center p-8">
+            <h2 className="text-4xl font-bold mb-4">Slide 1</h2>
+            <p className="text-xl">Use arrow keys to navigate →</p>
+          </div>
+        </div>
+      </Slide>
+      <Slide key={1}>
+        <div className="flex items-center justify-center h-full bg-gradient-to-br from-green-500 to-teal-600 text-white">
+          <div className="text-center p-8">
+            <h2 className="text-4xl font-bold mb-4">Slide 2</h2>
+            <p className="text-xl">Keep going! →</p>
+          </div>
+        </div>
+      </Slide>
+      <Slide key={2}>
+        <div className="flex items-center justify-center h-full bg-gradient-to-br from-pink-500 to-rose-600 text-white">
+          <div className="text-center p-8">
+            <h2 className="text-4xl font-bold mb-4">Slide 3</h2>
+            <p className="text-xl">Last slide! ← Go back or start over</p>
+          </div>
+        </div>
+      </Slide>
+    </Deck>
+  </div>
+</ComponentDemo>
+
+
+## Usage
+```tsx
+<Deck>
+	<Slide key={0}>
+		<FirstSlide />
+	</Slide>
+	<Slide key={1}>
+		<SecondSlide />
+	</Slide>
+</Deck>
+```
+
+## Reference
+### useDeck()
+This hook allows you to control the slide navigation. For most use cases it is already taken care of, but if you want a fine grained way of going to the next/previous slide, or jumping to any slide, then you can use this hook.
+
+You can use this as follows:
+```tsx
+const deck = useDeck();
+
+function handleContactInfoClick() {
+	deck.goTo(CONTACT_INFO_SLIDE);
+}
+```
+
+For more info checkout the [useDeck hook](./index.mdx)

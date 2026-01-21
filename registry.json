@@ -1,80 +1,100 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "Slide-CN",
+  "homepage": "https://slide-cn.com",
   "items": [
-    {
-      "name": "hello-world",
-      "type": "registry:component",
-      "title": "Hello World",
-      "description": "A simple hello world component",
-      "registryDependencies": ["button"],
-      "files": [
-        {
-          "path": "registry/new-york/blocks/hello-world/hello-world.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "example-form",
-      "type": "registry:component",
-      "title": "Example Form",
-      "description": "A contact form with Zod validation.",
-      "dependencies": ["zod"],
-      "registryDependencies": ["button", "input", "label", "textarea", "card"],
-      "files": [
-        {
-          "path": "registry/new-york/blocks/example-form/example-form.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "complex-component",
-      "type": "registry:component",
-      "title": "Complex Component",
-      "description": "A complex component showing hooks, libs and components.",
-      "registryDependencies": ["card"],
-      "files": [
-        {
-          "path": "registry/new-york/blocks/complex-component/page.tsx",
-          "type": "registry:page",
-          "target": "app/pokemon/page.tsx"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/components/pokemon-card.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/components/pokemon-image.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/lib/pokemon.ts",
-          "type": "registry:lib"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/hooks/use-pokemon.ts",
-          "type": "registry:hook"
-        }
-      ]
-    },
-    {
-      "name": "example-with-css",
-      "type": "registry:component",
-      "title": "Example with CSS",
-      "description": "A login form with a CSS file.",
-      "files": [
-        {
-          "path": "registry/new-york/blocks/example-with-css/example-card.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/example-with-css/example-card.css",
-          "type": "registry:component"
-        }
-      ]
-    }
+		{
+			"name": "deck",
+			"type": "registry:component",
+			"title": "Deck",
+			"description": "A Deck component that is the core of the presenation",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/deck/deck.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "header-with-content",
+			"type": "registry:component",
+			"title": "Header with content",
+			"description": "A layout with a header, and some content space",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/header-with-content/header-with-content.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "slide-nav",
+			"type": "registry:component",
+			"title": "Slide Nav",
+			"description": "Navigation for your slides",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/slide-nav/slide-nav.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "slide",
+			"type": "registry:component",
+			"title": "Slide",
+			"description": "Basic slide component",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/slide/slide.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "two-column",
+			"type": "registry:component",
+			"title": "Two column",
+			"description": "A slide layout with two columns in it",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/two-column/two-column.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "title-slide",
+			"type": "registry:component",
+			"title": "Title slide",
+			"description": "Set of components to easily create a title slide",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/title-slide/title-slide.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "slide-image",
+			"type": "registry:component",
+			"title": "Slide image",
+			"description": "Set of components to add an image and caption to a slide",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/slide-image/slide-image.tsx",
+					"type": "registry:component"
+				}
+			]
+		}
+
+
   ]
 }

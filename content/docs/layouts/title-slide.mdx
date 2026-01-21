@@ -1,0 +1,45 @@
+---
+title: Title Slide
+---
+
+## Overview
+This layout gives you an easy way to create a title slide for your presentation. It comes with a Heading, Sub-Heading and a Meta component.
+
+## Installation
+<InstallCommand packageName="slide-cn@title-slide" />
+
+## Demo
+<ComponentDemo description="A centered layout perfect for title slides">
+  <TitleSlide className="h-96 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-950 dark:to-indigo-950 rounded-lg">
+    <TitleSlide.Heading>Welcome to Slide-CN</TitleSlide.Heading>
+    <TitleSlide.SubHeading>Create beautiful presentations using code</TitleSlide.SubHeading>
+    <TitleSlide.Meta>Internal architecture review - Jan 2026</TitleSlide.Meta>
+  </TitleSlide>
+</ComponentDemo>
+
+## Usage
+Use this component as follows:
+```tsx
+<TitleSlide>
+	<TitleSlide.Heading>
+		<AuroraText>Welcome to Slide-CN</AuroraText>
+	</TitleSlide.Heading>
+	<TitleSlide.SubHeading>
+		<TypingAnimation>Create beautiful presentations using code</TypingAnimation>
+	</TitleSlide.SubHeading>
+	<TitleSlide.Meta>
+		Internal architecture review - Jan 2026
+	</TitleSlide.Meta>
+</TitleSlide>
+```
+
+## Reference
+<TypeTable
+  type={{
+    children: {
+      type: "ReactNode",
+      description: "The content of the slide",
+    }
+  }}
+/>
+

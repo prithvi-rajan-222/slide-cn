@@ -6,6 +6,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card"
+import { Reveal } from "@/registry/slide-cn/reveal/reveal";
 
 export function FourthSlide() {
 	return (
@@ -13,15 +14,17 @@ export function FourthSlide() {
 			<HeaderWithContent.Header>Cool things you can do with slide-cn</HeaderWithContent.Header>
 			<HeaderWithContent.Content>
 				<div className="grid grid-cols-2 gap-8 w-full">
-					<Card>
-						<CardHeader>
-							<CardTitle>Completely Customizable</CardTitle>
-							<CardDescription>Tailor every aspect to your needs.</CardDescription>
-						</CardHeader>
-						<CardContent>
-							You can change colors, fonts, and layouts with ease.
-						</CardContent>
-					</Card>
+					<Reveal>
+						<Card>
+							<CardHeader>
+								<CardTitle>Completely Customizable</CardTitle>
+								<CardDescription>Tailor every aspect to your needs.</CardDescription>
+							</CardHeader>
+							<CardContent>
+								You can change colors, fonts, and layouts with ease.
+							</CardContent>
+						</Card>
+					</Reveal>
 					<Card>
 						<CardHeader>
 							<CardTitle>React Components</CardTitle>
