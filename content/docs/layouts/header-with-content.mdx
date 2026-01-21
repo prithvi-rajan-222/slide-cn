@@ -9,6 +9,22 @@ This is the most basic layout for a slide. You can modify/extend these component
 ## Installation
 <InstallCommand packageName="slide-cn@header-with-content" />
 
+## Demo
+<ComponentDemo description="A simple layout with a header and flexible content area">
+  <HeaderWithContent className="h-96 bg-gradient-to-br from-slate-50 to-gray-100 dark:from-slate-950 dark:to-gray-950 rounded-lg">
+    <HeaderWithContent.Header className="pb-4 border-b border-border">
+      Benefits of Slide-CN
+    </HeaderWithContent.Header>
+    <HeaderWithContent.Content className="pt-4">
+      <ul className="list-disc list-inside space-y-2">
+        <li>Coding is more consistent than drag and drop</li>
+        <li>Git allows multiple people to work on your presentation at once</li>
+        <li>You can vibe code your presentation, and get much better results</li>
+      </ul>
+    </HeaderWithContent.Content>
+  </HeaderWithContent>
+</ComponentDemo>
+
 ## Usage
 ```tsx
 <HeaderWithContent>

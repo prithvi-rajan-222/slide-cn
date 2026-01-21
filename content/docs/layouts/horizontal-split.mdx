@@ -9,6 +9,24 @@ Use this component within a slide to split any content horizontally.
 ## Installation
 <InstallCommand packageName="slide-cn@horizontal-split" />
 
+## Demo
+<ComponentDemo description="Split content horizontally with a customizable ratio">
+  <HorizontalSplit ratio={0.4} className="h-96 rounded-lg overflow-hidden">
+    <HorizontalSplit.Left className="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-950 dark:to-pink-950 flex items-center justify-center p-8">
+      <div className="text-center">
+        <h3 className="text-2xl font-bold mb-2">Left Side (40%)</h3>
+        <p className="text-muted-foreground">This side takes up 40% of the space</p>
+      </div>
+    </HorizontalSplit.Left>
+    <HorizontalSplit.Right className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-950 dark:to-emerald-950 flex items-center justify-center p-8">
+      <div className="text-center">
+        <h3 className="text-2xl font-bold mb-2">Right Side (60%)</h3>
+        <p className="text-muted-foreground">This side takes up the remaining 60%</p>
+      </div>
+    </HorizontalSplit.Right>
+  </HorizontalSplit>
+</ComponentDemo>
+
 ## Usage
 ```tsx
 <HorizontalSplit ratio=0.4 >

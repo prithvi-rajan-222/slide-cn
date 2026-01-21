@@ -8,9 +8,9 @@ export function VerticalSplit({ children, ratio = 0.5, className, style, ...prop
     const clampedRatio = Math.max(0.2, Math.min(0.8, ratio));
     return (
         <div
-            className={cn("grid h-full w-full grid-cols-1 gap-8 items-center", className)}
+            className={cn("grid h-full w-full", className)}
             style={{
-                gridTemplateRows: `${clampedRatio}fr ${1 - clampedRatio}fr`,
+                gridTemplateRows: `${clampedRatio * 100}% ${(1 - clampedRatio) * 100}%`,
                 ...style,
             }}
             {...props}

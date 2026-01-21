@@ -10,6 +10,23 @@ Use the reveal component to dictate what to reveal and when.
 ## Installation
 <InstallCommand packageName="slide-cn@reveal" />
 
+## Demo
+<ComponentDemo  
+  description="Click on the card below to reveal its content"
+>
+  <Reveal>
+    <Card className="w-80">
+      <CardHeader>
+        <CardTitle>Secret Content</CardTitle>
+        <CardDescription>This content was hidden until you clicked!</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>🎉 You've successfully revealed the content! The Reveal component uses a blur effect to hide content until the user interacts with it.</p>
+      </CardContent>
+    </Card>
+  </Reveal>
+</ComponentDemo>
+
 ## Usage
 ```tsx
 <Reveal>
@@ -17,13 +34,14 @@ Use the reveal component to dictate what to reveal and when.
 </Reveal>
 ```
 
+
+
 ## Reference
 <TypeTable
   type={{
     children: {
       type: "ReactNode",
       description: "The content to be revealed",
-      default: "-"
     }
   }}
 />

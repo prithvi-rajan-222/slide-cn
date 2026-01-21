@@ -11,6 +11,14 @@ import {
 	TypeTable
 } from "fumadocs-ui/components/type-table";
 import { InstallCommand } from "./components/docs/InstallCommand"
+import { ComponentDemo } from "./components/docs/ComponentDemo"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "./components/ui/card"
+import { Reveal } from "./registry/slide-cn/reveal/reveal"
+import { TitleSlide } from "./registry/slide-cn/title-slide/title-slide"
+import { HorizontalSplit } from "./registry/slide-cn/horizontal-split/horizontal-split"
+import { VerticalSplit } from "./registry/slide-cn/vertical-split/vertical-split"
+import { HeaderWithContent } from "./registry/slide-cn/header-with-content/header-with-content"
+
 export function getMDXComponents(
 	components?: MDXComponents
 ): MDXComponents {
@@ -28,6 +36,21 @@ export function getMDXComponents(
 		TabsContent,
 		TypeTable,
 		InstallCommand,
+		ComponentDemo,
+		// Card components
+		Card,
+		CardHeader,
+		CardTitle,
+		CardDescription,
+		CardContent,
+		CardFooter,
+		// Reveal component
+		Reveal,
+		// Layout components
+		TitleSlide,
+		HorizontalSplit,
+		VerticalSplit,
+		HeaderWithContent,
 
 		...components,
 	}
