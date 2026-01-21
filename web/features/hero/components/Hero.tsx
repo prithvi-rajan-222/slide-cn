@@ -2,6 +2,7 @@
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { GitHub } from "@/components/logos/github";
 
 export function Hero() {
 
@@ -12,7 +13,7 @@ export function Hero() {
 	}
 
 	function navigateToTemplates() {
-		router.push("/docs/templates");
+		router.push("https://github.com/prithvi-rajan-222/slide-cn");
 	}
 	return (
 		<section className="relative w-full py-32 md:py-48 overflow-hidden">
@@ -25,7 +26,7 @@ export function Hero() {
 				</div>
 				<div className="flex flex-row gap-4 items-center justify-center">
 					<Button onClick={navigateToComponents} size="lg" variant="default">View Components</Button>
-					<Button onClick={navigateToTemplates} size="lg" variant="outline">Try Templates</Button>
+					<Button onClick={navigateToTemplates} size="lg" variant="outline"><GitHub className="size-4" />View on Github</Button>
 				</div>
 			</div>
 		</section >
