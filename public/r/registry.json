@@ -11,21 +11,22 @@
 			"dependencies": [
 				"motion"
 			],
-			"registryDependencies": [
-				"slide-nav"
-			],
+			"registryDependencies": [],
 			"files": [
 				{
 					"path": "registry/slide-cn/deck/deck.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/layouts/deck.tsx"
 				},
 				{
 					"path": "registry/slide-cn/mechanics/use-deck-controller.ts",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/mechanics/use-deck-controller.ts"
 				},
 				{
 					"path": "registry/slide-cn/mechanics/use-keyboard-navigation.ts",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/mechanics/use-keyboard-navigation.ts"
 				}
 			]
 		},
@@ -38,7 +39,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/header-with-content/header-with-content.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/layouts/header-with-content.tsx"
 				}
 			]
 		},
@@ -54,7 +56,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/slide-nav/slide-nav.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/navigation/slide-nav.tsx"
 				}
 			]
 		},
@@ -72,7 +75,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/slide/slide.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/components/slide.tsx"
 				}
 			]
 		},
@@ -85,7 +89,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/horizontal-split/horizontal-split.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/layouts/horizontal-split.tsx"
 				}
 			]
 		},
@@ -98,7 +103,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/vertical-split/vertical-split.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/layouts/vertical-split.tsx"
 				}
 			]
 		},
@@ -111,7 +117,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/title-slide/title-slide.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/layouts/title-slide.tsx"
 				}
 			]
 		},
@@ -129,7 +136,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/slide-image/slide-image.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/components/slide-image.tsx"
 				}
 			]
 		},
@@ -145,7 +153,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/callout/callout.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/components/callout.tsx"
 				}
 			]
 		},
@@ -160,7 +169,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/code-block/code-block.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/components/code-block.tsx"
 				}
 			]
 		},
@@ -175,7 +185,8 @@
 			"files": [
 				{
 					"path": "registry/slide-cn/reveal/reveal.tsx",
-					"type": "registry:component"
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/components/reveal.tsx"
 				}
 			]
 		}

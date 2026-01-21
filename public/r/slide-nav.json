@@ -11,7 +11,8 @@
     {
       "path": "registry/slide-cn/slide-nav/slide-nav.tsx",
       "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { useDeck } from \"../deck/deck\";\n\nexport function SlideNav() {\n\tconst deck = useDeck();\n\n\treturn (\n\t\t<>\n\t\t\t{/* LEFT ZONE */}\n\t\t\t<div className=\"hidden md:block pointer-events-none absolute inset-y-0 left-0 w-24\">\n\t\t\t\t<div className=\"group pointer-events-auto h-full w-full flex items-center\">\n\t\t\t\t\t<Button\n\t\t\t\t\t\ttype=\"button\"\n\t\t\t\t\t\tonClick={deck.prev}\n\t\t\t\t\t\tclassName=\"\n\t\t\t\t\t\t\tml-4\n\t\t\t\t\t\t\topacity-0\n\t\t\t\t\t\t\ttransition-opacity\n\t\t\t\t\t\t\tgroup-hover:opacity-100\"\n\t\t\t\t\t>\n\t\t\t\t\t\tPrev\n\t\t\t\t\t</Button>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t{/* RIGHT ZONE */}\n\t\t\t<div className=\"hidden md:block pointer-events-none absolute inset-y-0 right-0 w-24\">\n\t\t\t\t<div className=\"group pointer-events-auto h-full w-full flex items-center justify-end\">\n\t\t\t\t\t<Button\n\t\t\t\t\t\ttype=\"button\"\n\t\t\t\t\t\tonClick={deck.next}\n\t\t\t\t\t\tclassName=\"\n              mr-4\n              opacity-0\n              transition-opacity\n              group-hover:opacity-100\n            \"\n\t\t\t\t\t>\n\t\t\t\t\t\tNext\n\t\t\t\t\t</Button>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</>\n\t);\n}\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "components/ui/slide-cn/navigation/slide-nav.tsx"
     }
   ],
   "type": "registry:component"
