@@ -34,7 +34,11 @@ export default function RootLayout({
 					defaultTheme="light"
 					disableTransitionOnChange
 				>
-					<RootProvider>
+					<RootProvider
+						search={{
+							enabled: false
+						}}
+					>
 						{children}
 					</RootProvider>
 				</ThemeProvider>

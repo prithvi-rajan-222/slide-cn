@@ -9,7 +9,7 @@ export function SlideNav() {
 	return (
 		<>
 			{/* LEFT ZONE */}
-			<div className="hidden md:block pointer-events-none fixed inset-y-0 left-0 w-24">
+			<div className="hidden md:block pointer-events-none absolute inset-y-0 left-0 w-24">
 				<div className="group pointer-events-auto h-full w-full flex items-center">
 					<Button
 						type="button"
@@ -26,7 +26,7 @@ export function SlideNav() {
 			</div>
 
 			{/* RIGHT ZONE */}
-			<div className="hidden md:block pointer-events-none fixed inset-y-0 right-0 w-24">
+			<div className="hidden md:block pointer-events-none absolute inset-y-0 right-0 w-24">
 				<div className="group pointer-events-auto h-full w-full flex items-center justify-end">
 					<Button
 						type="button"

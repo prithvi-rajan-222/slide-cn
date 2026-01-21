@@ -9,6 +9,22 @@ Use this component to add any form of media to your slides. You can specify if y
 ## Installation
 <InstallCommand packageName="slide-cn@slide-image" />
 
+## Demo
+<ComponentDemo description="Display media with optional captions" className="p-8">
+  <div className="w-full max-w-2xl">
+    <SlideImage>
+      <SlideImage.Image
+        src="/Wallpaper.jpg"
+        alt="Wallpaper"
+        aspectRatio={16/9}
+        objectFit="cover"
+      />
+      <SlideImage.Caption>Modern presentation visuals</SlideImage.Caption>
+    </SlideImage>
+  </div>
+</ComponentDemo>
+
+
 ## Usage
 ```tsx
 <SlideImage className="my-auto">

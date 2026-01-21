@@ -11,20 +11,20 @@ Use the reveal component to dictate what to reveal and when.
 <InstallCommand packageName="slide-cn@reveal" />
 
 ## Demo
-<ComponentDemo  
-  description="Click on the card below to reveal its content"
->
-  <Reveal>
-    <Card className="w-80">
-      <CardHeader>
-        <CardTitle>Secret Content</CardTitle>
-        <CardDescription>This content was hidden until you clicked!</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <p>🎉 You've successfully revealed the content! The Reveal component uses a blur effect to hide content until the user interacts with it.</p>
-      </CardContent>
-    </Card>
-  </Reveal>
+<ComponentDemo description="Click on the card below to reveal its content" className="p-8">
+  <div className="flex items-center justify-center w-full min-h-[300px] bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950 dark:to-slate-900 rounded-lg p-8">
+    <Reveal>
+      <Card className="w-80 border-orange-200 dark:border-orange-900 shadow-xl">
+        <CardHeader>
+          <CardTitle>Secret Content</CardTitle>
+          <CardDescription>This content was hidden until you clicked!</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>🎉 You've successfully revealed the content! The Reveal component uses a blur effect to hide content until the user interacts with it.</p>
+        </CardContent>
+      </Card>
+    </Reveal>
+  </div>
 </ComponentDemo>
 
 ## Usage

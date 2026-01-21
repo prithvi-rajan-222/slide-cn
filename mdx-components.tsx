@@ -18,6 +18,11 @@ import { TitleSlide } from "./registry/slide-cn/title-slide/title-slide"
 import { HorizontalSplit } from "./registry/slide-cn/horizontal-split/horizontal-split"
 import { VerticalSplit } from "./registry/slide-cn/vertical-split/vertical-split"
 import { HeaderWithContent } from "./registry/slide-cn/header-with-content/header-with-content"
+import { Callout } from "./registry/slide-cn/callout/callout"
+import { CodeBlock as CodeBlockComponent } from "./registry/slide-cn/code-block/code-block"
+import { Slide } from "./registry/slide-cn/slide/slide"
+import { SlideImage } from "./registry/slide-cn/slide-image/slide-image"
+import { Deck } from "./registry/slide-cn/deck/deck"
 
 export function getMDXComponents(
 	components?: MDXComponents
@@ -51,6 +56,12 @@ export function getMDXComponents(
 		HorizontalSplit,
 		VerticalSplit,
 		HeaderWithContent,
+		// Component components
+		Callout,
+		CodeBlockComponent,
+		Slide,
+		SlideImage,
+		Deck,
 
 		...components,
 	}

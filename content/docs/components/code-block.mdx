@@ -9,6 +9,18 @@ Add a code block to your slide. You can use it to display code snippets with syn
 ## Installation
 <InstallCommand packageName="slide-cn@code-block" />
 
+## Demo
+<ComponentDemo description="A code block with syntax highlighting and line numbers" className="p-8">
+  <div className="w-full max-w-2xl">
+    <CodeBlockComponent 
+      code={`function greet(name) {\n  console.log("Hello, " + name + "!");\n  return true;\n}\n\nconst result = greet("World");`}
+      language="javascript"
+      showLineNumbers={true}
+    />
+  </div>
+</ComponentDemo>
+
+
 ## Usage
 ```tsx
 import { CodeBlock } from "@/registry/slide-cn/code-block/code-block"

@@ -9,6 +9,25 @@ Add a callout to your slide. You can use it to display success messages, warning
 ## Installation
 <InstallCommand packageName="callout" />
 
+## Demo
+<ComponentDemo description="Callouts with different variants" className="p-8">
+  <div className="space-y-4 w-full max-w-2xl">
+    <Callout title="Info" variant="info">
+      This is an information message to help guide users.
+    </Callout>
+    <Callout title="Success" variant="success">
+      Operation completed successfully!
+    </Callout>
+    <Callout title="Warning" variant="warning">
+      Proceed with caution when making this change.
+    </Callout>
+    <Callout title="Error" variant="error">
+      An error occurred while processing your request.
+    </Callout>
+  </div>
+</ComponentDemo>
+
+
 ## Usage
 ```tsx
 <Callout title="Info" variant="info">
