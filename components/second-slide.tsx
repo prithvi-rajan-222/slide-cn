@@ -1,9 +1,9 @@
 "use client";
-import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/header-with-content";
-import { SlideImage } from "@/registry/slide-cn/slide-image/slide-image";
+import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
+import { SlideImage } from "@/components/ui/slide-cn/slide-image";
 import LiquidEther from "./LiquidEther.jsx"
-import { HorizontalSplit } from "@/registry/slide-cn/horizontal-split/horizontal-split";
-import { VerticalSplit } from "@/registry/slide-cn/vertical-split/vertical-split";
+import { HorizontalSplit } from "@/components/ui/slide-cn/horizontal-split";
+import { VerticalSplit } from "@/components/ui/slide-cn/vertical-split";
 
 export function SecondSlide() {
 	return (

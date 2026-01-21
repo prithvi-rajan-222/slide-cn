@@ -1,6 +1,6 @@
-import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/header-with-content"
-import { CodeBlock } from "@/registry/slide-cn/code-block/code-block"
-import { Callout } from "@/registry/slide-cn/callout/callout"
+import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content"
+import { CodeBlock } from "@/components/ui/slide-cn/code-block"
+import { Callout } from "@/components/ui/slide-cn/callout"
 
 const sampleCode = `function greet(name) {
   return "Hello, " + name;

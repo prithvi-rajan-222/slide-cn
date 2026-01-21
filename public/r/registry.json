@@ -14,17 +14,17 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/deck/deck.tsx",
+					"path": "components/ui/slide-cn/deck/deck.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/layouts/deck.tsx"
+					"target": "components/ui/slide-cn/deck/deck.tsx"
 				},
 				{
-					"path": "registry/slide-cn/mechanics/use-deck-controller.ts",
+					"path": "components/ui/slide-cn/mechanics/use-deck-controller.ts",
 					"type": "registry:component",
 					"target": "components/ui/slide-cn/mechanics/use-deck-controller.ts"
 				},
 				{
-					"path": "registry/slide-cn/mechanics/use-keyboard-navigation.ts",
+					"path": "components/ui/slide-cn/mechanics/use-keyboard-navigation.ts",
 					"type": "registry:component",
 					"target": "components/ui/slide-cn/mechanics/use-keyboard-navigation.ts"
 				}
@@ -38,9 +38,9 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/header-with-content/header-with-content.tsx",
+					"path": "components/ui/slide-cn/header-with-content/header-with-content.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/layouts/header-with-content.tsx"
+					"target": "components/ui/slide-cn/header-with-content/header-with-content.tsx"
 				}
 			]
 		},
@@ -55,9 +55,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/slide-nav/slide-nav.tsx",
+					"path": "components/ui/slide-cn/slide-nav/slide-nav.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/navigation/slide-nav.tsx"
+					"target": "components/ui/slide-cn/slide-nav/slide-nav.tsx"
 				}
 			]
 		},
@@ -74,9 +74,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/slide/slide.tsx",
+					"path": "components/ui/slide-cn/slide/slide.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/components/slide.tsx"
+					"target": "components/ui/slide-cn/slide/slide.tsx"
 				}
 			]
 		},
@@ -88,9 +88,9 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/horizontal-split/horizontal-split.tsx",
+					"path": "components/ui/slide-cn/horizontal-split/horizontal-split.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/layouts/horizontal-split.tsx"
+					"target": "components/ui/slide-cn/horizontal-split/horizontal-split.tsx"
 				}
 			]
 		},
@@ -102,9 +102,9 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/vertical-split/vertical-split.tsx",
+					"path": "components/ui/slide-cn/vertical-split/vertical-split.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/layouts/vertical-split.tsx"
+					"target": "components/ui/slide-cn/vertical-split/vertical-split.tsx"
 				}
 			]
 		},
@@ -116,9 +116,9 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/title-slide/title-slide.tsx",
+					"path": "components/ui/slide-cn/title-slide/title-slide.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/layouts/title-slide.tsx"
+					"target": "components/ui/slide-cn/title-slide/title-slide.tsx"
 				}
 			]
 		},
@@ -135,9 +135,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/slide-image/slide-image.tsx",
+					"path": "components/ui/slide-cn/slide-image/slide-image.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/components/slide-image.tsx"
+					"target": "components/ui/slide-cn/slide-image/slide-image.tsx"
 				}
 			]
 		},
@@ -152,9 +152,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/callout/callout.tsx",
+					"path": "components/ui/slide-cn/callout/callout.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/components/callout.tsx"
+					"target": "components/ui/slide-cn/callout/callout.tsx"
 				}
 			]
 		},
@@ -168,9 +168,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/code-block/code-block.tsx",
+					"path": "components/ui/slide-cn/code-block/code-block.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/components/code-block.tsx"
+					"target": "components/ui/slide-cn/code-block/code-block.tsx"
 				}
 			]
 		},
@@ -184,9 +184,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/reveal/reveal.tsx",
+					"path": "components/ui/slide-cn/reveal/reveal.tsx",
 					"type": "registry:component",
-					"target": "components/ui/slide-cn/components/reveal.tsx"
+					"target": "components/ui/slide-cn/reveal/reveal.tsx"
 				}
 			]
 		}

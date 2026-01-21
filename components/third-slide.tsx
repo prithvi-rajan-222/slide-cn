@@ -1,8 +1,8 @@
 "use client";
-import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/header-with-content";
-import { SlideImage } from "@/registry/slide-cn/slide-image/slide-image";
+import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
+import { SlideImage } from "@/components/ui/slide-cn/slide-image";
 import FloatingLines from "./FloatingLines";
-import { Reveal } from "@/registry/slide-cn/reveal/reveal";
+import { Reveal } from "@/components/ui/slide-cn/reveal";
 
 export function ThirdSlide() {
 	return (

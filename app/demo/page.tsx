@@ -4,8 +4,8 @@ import { SecondSlide } from "@/components/second-slide"
 import { ThirdSlide } from "@/components/third-slide"
 import { FourthSlide } from "@/components/fourth-slide"
 import { FifthSlide } from "@/components/fifth-slide"
-import { Deck } from "@/registry/slide-cn/deck/deck"
-import { Slide } from "@/registry/slide-cn/slide/slide"
+import { Deck } from "@/components/ui/slide-cn/deck"
+import { Slide } from "@/components/ui/slide-cn/slide"
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
 

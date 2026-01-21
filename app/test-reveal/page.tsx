@@ -1,6 +1,6 @@
 "use client";
 
-import { Reveal } from "@/registry/slide-cn/reveal/reveal";
+import { Reveal } from "@/components/ui/slide-cn/reveal";
 
 export default function TestRevealPage() {
     return (

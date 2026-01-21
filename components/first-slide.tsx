@@ -1,5 +1,5 @@
 "use client";
-import { TitleSlide } from "@/registry/slide-cn/title-slide/title-slide";
+import { TitleSlide } from "@/components/ui/slide-cn/title-slide";
 import { AuroraText } from "./ui/aurora-text";
 import { TypingAnimation } from "./ui/typing-animation";
 import Aurora from "./Aurora";

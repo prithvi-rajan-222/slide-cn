@@ -1,4 +1,4 @@
-import { HeaderWithContent } from "@/registry/slide-cn/header-with-content/header-with-content";
+import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
 import {
 	Card,
 	CardContent,
@@ -6,7 +6,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card"
-import { Reveal } from "@/registry/slide-cn/reveal/reveal";
+import { Reveal } from "@/components/ui/slide-cn/reveal";
 
 export function FourthSlide() {
 	return (

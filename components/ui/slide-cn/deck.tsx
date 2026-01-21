@@ -1,9 +1,9 @@
 "use client";
-import { useDeckController } from "@registry/slide-cn/mechanics/use-deck-controller";
-import { useKeyboardNavigation } from "@registry/slide-cn/mechanics/use-keyboard-navigation";
+import { useDeckController } from "@/components/ui/slide-cn/use-deck-controller";
+import { useKeyboardNavigation } from "@/components/ui/slide-cn/use-keyboard-navigation";
 import React from "react";
 import { AnimatePresence } from "motion/react";
-import { SlideNav } from "@registry/slide-cn/slide-nav/slide-nav";
+import { SlideNav } from "@/components/ui/slide-cn/slide-nav";
 
 const DeckContext = React.createContext<ReturnType<
 	typeof useDeckController
