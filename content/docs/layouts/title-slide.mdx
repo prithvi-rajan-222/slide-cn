@@ -2,11 +2,13 @@
 title: Title Slide
 ---
 
-## Usage
-
+## Overview
 This layout gives you an easy way to create a title slide for your presentation. It comes with a Heading, Sub-Heading and a Meta component.
 
+## Installation
+<InstallCommand packageName="slide-cn@title-slide" />
 
+## Usage
 Use this component as follows:
 ```tsx
 <TitleSlide>
@@ -21,4 +23,15 @@ Use this component as follows:
 	</TitleSlide.Meta>
 </TitleSlide>
 ```
+
+## Reference
+<TypeTable
+  type={{
+    children: {
+      type: "ReactNode",
+      description: "The content of the slide",
+      default: "-"
+    }
+  }}
+/>
 

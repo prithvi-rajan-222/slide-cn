@@ -3,8 +3,13 @@ title: Header with Content
 description: A basic layout for a slide with a header and some content
 ---
 
-## Usage
+## Overview
+This is the most basic layout for a slide. You can modify/extend these components however you want. By using this component, your slides will look consistent across your presentation.
 
+## Installation
+<InstallCommand packageName="slide-cn@header-with-content" />
+
+## Usage
 ```tsx
 <HeaderWithContent>
 	<HeaderWithContent.Header>
@@ -23,5 +28,14 @@ description: A basic layout for a slide with a header and some content
 </HeaderWithContent>
 ```
 
-This is the most basic layout for a slide. You can modify/extend these components however you want. By using this component, your slides will look consistent across your presentation.
+## Reference
+<TypeTable
+  type={{
+    children: {
+      type: "ReactNode",
+      description: "The content of the layout",
+      default: "-"
+    }
+  }}
+/>
 
