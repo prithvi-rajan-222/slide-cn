@@ -26,7 +26,7 @@ export function InstallCommand({ packageName }: InstallCommandProps) {
 				<CodeBlock>
 					<Pre>
 						<code className="language-bash px-4">
-							{`pnpm add ${packageName}`}
+							{`pnpm dlx shadcn@latest add ${packageName}`}
 						</code>
 					</Pre>
 				</CodeBlock>
@@ -36,7 +36,7 @@ export function InstallCommand({ packageName }: InstallCommandProps) {
 				<CodeBlock>
 					<Pre>
 						<code className="language-bash px-4">
-							{`npm install ${packageName}`}
+							{`npx shadcn@latest add ${packageName}`}
 						</code>
 					</Pre>
 				</CodeBlock>
@@ -46,7 +46,7 @@ export function InstallCommand({ packageName }: InstallCommandProps) {
 				<CodeBlock>
 					<Pre>
 						<code className="language-bash px-4">
-							{`yarn add ${packageName}`}
+							{`yarn dlx shadcn@latest add ${packageName}`}
 						</code>
 					</Pre>
 				</CodeBlock>
@@ -56,7 +56,7 @@ export function InstallCommand({ packageName }: InstallCommandProps) {
 				<CodeBlock>
 					<Pre>
 						<code className="language-bash px-4">
-							{`bun add ${packageName}`}
+							{`bunx --bun shadcn@latest add ${packageName}`}
 						</code>
 					</Pre>
 				</CodeBlock>
