@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import { ReactNode } from 'react';
 
 interface ComponentDemoProps {
@@ -33,14 +34,14 @@ export function ComponentDemo({
                         <h4 className="text-sm font-semibold mb-1">{title}</h4>
                     )}
                     {description && (
-                        <p className="text-sm text-muted-foreground">{description}</p>
+                        <p className="text-sm text-muted-foreground mb-2">{description}</p>
                     )}
                 </div>
             )}
             <div
-                className={`relative rounded-lg border bg-gradient-to-b from-fd-background to-fd-muted/20 ${className}`}
+                className={`relative rounded-lg border bg-gradient-to-b from-fd-background to-fd-muted/20`}
             >
-                <div className="flex items-center justify-center min-h-[200px]">
+                <div className={cn("flex items-center justify-center min-h-[200px]", className)}>
                     {children}
                 </div>
             </div>
