@@ -1,17 +1,30 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "Slide-CN",
-  "homepage": "https://slide-cn.com",
-  "items": [
+	"$schema": "https://ui.shadcn.com/schema/registry.json",
+	"name": "Slide-CN",
+	"homepage": "https://slide-cn.com",
+	"items": [
 		{
 			"name": "deck",
 			"type": "registry:component",
 			"title": "Deck",
 			"description": "A Deck component that is the core of the presenation",
-			"registryDependencies": [],
+			"dependencies": [
+				"motion"
+			],
+			"registryDependencies": [
+				"slide-nav"
+			],
 			"files": [
 				{
 					"path": "registry/slide-cn/deck/deck.tsx",
+					"type": "registry:component"
+				},
+				{
+					"path": "registry/slide-cn/mechanics/use-deck-controller.ts",
+					"type": "registry:component"
+				},
+				{
+					"path": "registry/slide-cn/mechanics/use-keyboard-navigation.ts",
 					"type": "registry:component"
 				}
 			]
@@ -34,7 +47,10 @@
 			"type": "registry:component",
 			"title": "Slide Nav",
 			"description": "Navigation for your slides",
-			"registryDependencies": [],
+			"registryDependencies": [
+				"button",
+				"deck"
+			],
 			"files": [
 				{
 					"path": "registry/slide-cn/slide-nav/slide-nav.tsx",
@@ -47,7 +63,12 @@
 			"type": "registry:component",
 			"title": "Slide",
 			"description": "Basic slide component",
-			"registryDependencies": [],
+			"dependencies": [
+				"motion"
+			],
+			"registryDependencies": [
+				"deck"
+			],
 			"files": [
 				{
 					"path": "registry/slide-cn/slide/slide.tsx",
@@ -56,14 +77,27 @@
 			]
 		},
 		{
-			"name": "two-column",
+			"name": "horizontal-split",
 			"type": "registry:component",
-			"title": "Two column",
-			"description": "A slide layout with two columns in it",
+			"title": "Horizontal split",
+			"description": "A slide layout with two columns split horizontally",
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/two-column/two-column.tsx",
+					"path": "registry/slide-cn/horizontal-split/horizontal-split.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "vertical-split",
+			"type": "registry:component",
+			"title": "Vertical split",
+			"description": "A slide layout with two rows split vertically",
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "registry/slide-cn/vertical-split/vertical-split.tsx",
 					"type": "registry:component"
 				}
 			]
@@ -86,15 +120,64 @@
 			"type": "registry:component",
 			"title": "Slide image",
 			"description": "Set of components to add an image and caption to a slide",
-			"registryDependencies": [],
+			"dependencies": [
+				"next"
+			],
+			"registryDependencies": [
+				"aspect-ratio"
+			],
 			"files": [
 				{
 					"path": "registry/slide-cn/slide-image/slide-image.tsx",
 					"type": "registry:component"
 				}
 			]
+		},
+		{
+			"name": "callout",
+			"type": "registry:component",
+			"title": "Callout",
+			"description": "A callout component for highlighting information",
+			"dependencies": [
+				"lucide-react",
+				"class-variance-authority"
+			],
+			"files": [
+				{
+					"path": "registry/slide-cn/callout/callout.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "code-block",
+			"type": "registry:component",
+			"title": "Code block",
+			"description": "A code block component with syntax highlighting",
+			"dependencies": [
+				"react-syntax-highlighter"
+			],
+			"files": [
+				{
+					"path": "registry/slide-cn/code-block/code-block.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "reveal",
+			"type": "registry:component",
+			"title": "Reveal",
+			"description": "A component that reveals its content on click",
+			"dependencies": [
+				"motion"
+			],
+			"files": [
+				{
+					"path": "registry/slide-cn/reveal/reveal.tsx",
+					"type": "registry:component"
+				}
+			]
 		}
-
-
-  ]
+	]
 }

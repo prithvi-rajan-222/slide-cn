@@ -15,14 +15,6 @@ export function UIHeader() {
 		{
 			label: "Demo",
 			href: "/demo"
-		},
-		{
-			label: "Components",
-			href: "/components"
-		},
-		{
-			label: "Templates",
-			href: "/templates"
 		}
 	];
 	const [open, setOpen] = useState(false);
