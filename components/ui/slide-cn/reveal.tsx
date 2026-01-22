@@ -18,6 +18,7 @@ export function Reveal({ children, className }: RevealProps) {
 			className={cn(isRevealed ? "" : "cursor-pointer", className)} // Show pointer if clickable
 		>
 			<motion.div
+				className="h-full"
 				initial={{ filter: "blur(5px)", opacity: 0.6 }}
 				animate={
 					isRevealed
@@ -26,7 +27,7 @@ export function Reveal({ children, className }: RevealProps) {
 				}
 				transition={{ duration: 0.5, ease: "easeInOut" }}
 			>
-				<div className={cn("select-none", isRevealed && "select-text")}>
+				<div className={cn("select-none h-full", isRevealed && "select-text")}>
 					{children}
 				</div>
 			</motion.div>
