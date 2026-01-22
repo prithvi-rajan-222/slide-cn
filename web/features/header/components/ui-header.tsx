@@ -11,6 +11,10 @@ export function UIHeader() {
 		{
 			label: "Docs",
 			href: "/docs"
+		},
+		{
+			label: "Demo",
+			href: "/demos/slide-cn-introduction"
 		}
 	];
 	const [open, setOpen] = useState(false);
@@ -49,7 +53,8 @@ export function UIHeader() {
 				direction="right"
 				isOpen={open}
 				onToggle={setOpen}
-				contentClassName="bg-background"
+				contentClassName="bg-background text-foreground"
+				backgroundColor="bg-popover"
 				overlayClassName="backdrop-blur-sm"
 				animationConfig={{ duration: 0.2 }}
 				buttonOpeningVariants="merge"
@@ -61,7 +66,7 @@ export function UIHeader() {
 						<Link
 							key={item.label}
 							href={item.href as Route}
-							className="text-lg font-medium text-foreground/80 hover:text-foreground transition-colors"
+							className="text-lg font-medium text-popover-foreground/80 hover:text-popover-foreground transition-colors"
 							onClick={() => setOpen(false)}
 						>
 							{item.label}

@@ -5,14 +5,20 @@ import { useDeck } from "@/components/ui/slide-cn/deck";
 
 type SlideProps = {
 	children: React.ReactNode;
+	background?: React.ReactNode;
 };
 
-export function Slide({ children }: SlideProps) {
+export function Slide({ children, background }: SlideProps) {
 	const deck = useDeck();
+
 	return (
 		<motion.div
 			data-slide
-			className="absolute inset-0"
+			className="
+        relative w-full h-screen
+        overflow-hidden
+        md:absolute md:inset-0
+      "
 			exit={{ opacity: 0 }}
 			drag="x"
 			dragConstraints={{ left: 0, right: 0 }}
@@ -26,27 +32,34 @@ export function Slide({ children }: SlideProps) {
 				const DISTANCE_THRESHOLD = 60;
 				const VELOCITY_THRESHOLD = 600;
 
-				const isSwipeRight =
+				if (Math.abs(info.offset.y) > Math.abs(info.offset.x)) return;
+
+				if (
 					swipeDistance > DISTANCE_THRESHOLD ||
-					swipeVelocity > VELOCITY_THRESHOLD;
-
-				const isSwipeLeft =
-					swipeDistance < -DISTANCE_THRESHOLD ||
-					swipeVelocity < -VELOCITY_THRESHOLD;
-
-				// Extra safety: ignore mostly-vertical gestures
-				if (Math.abs(info.offset.y) > Math.abs(info.offset.x)) {
-					return;
-				}
-
-				if (isSwipeRight) {
+					swipeVelocity > VELOCITY_THRESHOLD
+				) {
 					deck.prev();
-				} else if (isSwipeLeft) {
+				} else if (
+					swipeDistance < -DISTANCE_THRESHOLD ||
+					swipeVelocity < -DISTANCE_THRESHOLD
+				) {
 					deck.next();
 				}
 			}}
 		>
-			{children}
+			{/* Background layer (viewport-scoped, never scrolls) */}
+			{background && (
+				<div className="absolute inset-0 pointer-events-none">
+					{background}
+				</div>
+			)}
+
+			{/* Scroll layer (mobile scroll lives here) */}
+			<div className="relative z-10 h-full w-full overflow-y-auto md:overflow-hidden">
+				<div className="h-full w-full">
+					{children}
+				</div>
+			</div>
 		</motion.div>
 	);
 }

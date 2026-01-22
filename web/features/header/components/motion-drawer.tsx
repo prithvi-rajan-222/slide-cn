@@ -246,7 +246,7 @@ const MotionDrawer: React.FC<SideMenuProps> = ({
 							{/* Close Button */}
 							{showToggleButton && (
 								<motion.button
-									className='absolute top-2 right-4 p-2 text-black cursor-pointer'
+									className='absolute top-2 right-4 p-2 text-popover-foreground cursor-pointer'
 									onClick={() => setIsOpen(false)}
 									whileHover={{ scale: 1.1 }}
 									whileTap={{ scale: 0.9 }}
