@@ -5,16 +5,14 @@ import { useDeck } from "@/components/ui/slide-cn/deck";
 
 type SlideProps = {
 	children: React.ReactNode;
-	key: number;
 };
 
-export function Slide({ children, key }: SlideProps) {
+export function Slide({ children }: SlideProps) {
 	const deck = useDeck();
 	return (
 		<motion.div
 			data-slide
 			className="absolute inset-0"
-			key={key}
 			exit={{ opacity: 0 }}
 			drag="x"
 			dragConstraints={{ left: 0, right: 0 }}
