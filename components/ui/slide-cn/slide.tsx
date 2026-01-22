@@ -12,7 +12,7 @@ export function Slide({ children }: SlideProps) {
 	return (
 		<motion.div
 			data-slide
-			className="absolute inset-0"
+			className="absolute inset-0 overflow-y-auto md:overflow-hidden"
 			exit={{ opacity: 0 }}
 			drag="x"
 			dragConstraints={{ left: 0, right: 0 }}
