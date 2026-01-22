@@ -31,9 +31,9 @@ export default function SlideCnIntroductionPage() {
 				<Slide background={<PixelSnow />}>
 					<BenefitsSlide />
 				</Slide>
-				<Slide background={<PixelSnow />}>
+				{/* <Slide background={<PixelSnow />}>
 					<ExistingToolsSlide />
-				</Slide>
+				</Slide> */}
 				<Slide background={<PixelSnow />}>
 					<ClosingSlide />
 				</Slide>
