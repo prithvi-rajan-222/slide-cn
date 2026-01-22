@@ -25,8 +25,7 @@ export function Deck({ children }: { children: React.ReactNode }) {
 			<div className="absolute inset-0 overflow-hidden touch-pan-y md:touch-none">
 
 				<SlideNav />
-				<div className="absolute inset-0">
-
+				<div className="absolute inset-0 overflow-y-auto md:overflow-hidden">
 					<AnimatePresence mode="wait">
 						{slides[deck.index]}
 					</AnimatePresence>

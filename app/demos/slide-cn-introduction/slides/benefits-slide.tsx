@@ -2,13 +2,12 @@ import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content"
 import { Reveal } from "@/components/ui/slide-cn/reveal";
 import { Rocket, Palette, Users2, Sparkles as SparklesIcon } from "lucide-react";
 import PixelSnow from "@/components/PixelSnow";
-import Link from "next/link";
 
 export function BenefitsSlide() {
 	return (
 		<div className="relative h-full w-full">
 			<PixelSnow />
-			<div className="relative z-10 p-8 md:p-12 lg:p-16 h-full flex flex-col">
+			<div className="relative z-10 p-8 md:p-12 lg:p-16">
 				<HeaderWithContent>
 			<HeaderWithContent.Header>Key Benefits</HeaderWithContent.Header>
 			<HeaderWithContent.Content>
@@ -66,11 +65,6 @@ export function BenefitsSlide() {
 				</div>
 			</HeaderWithContent.Content>
 		</HeaderWithContent>
-				<footer className="mt-auto pt-4 flex justify-center">
-					<Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-						← Back to Home
-					</Link>
-				</footer>
 			</div>
 		</div>
 	);

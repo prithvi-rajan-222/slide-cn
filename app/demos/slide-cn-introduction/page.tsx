@@ -9,6 +9,7 @@ import { SolutionSlide } from "./slides/solution-slide";
 import { BenefitsSlide } from "./slides/benefits-slide";
 import { ExistingToolsSlide } from "./slides/existing-tools-slide";
 import { ClosingSlide } from "./slides/closing-slide";
+import { LongSlide } from "./slides/long-slide";
 
 export default function SlideCnIntroductionPage() {
 	return (
