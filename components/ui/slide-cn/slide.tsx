@@ -56,7 +56,7 @@ export function Slide({ children, background }: SlideProps) {
 
 			{/* Scroll layer (mobile scroll lives here) */}
 			<div className="relative z-10 h-full w-full overflow-y-auto md:overflow-hidden">
-				<div className="min-h-full w-full">
+				<div className="h-full w-full">
 					{children}
 				</div>
 			</div>
