@@ -6,10 +6,10 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "components/ui/slide-cn/title-slide/title-slide.tsx",
+      "path": "components/ui/slide-cn/title-slide.tsx",
       "content": "import { cn } from \"@/lib/utils\"\n\nexport function TitleSlide({ children, className, ...props }: React.ComponentProps<\"div\">) {\n\treturn (\n\t\t<div className={cn(\n\t\t\t\"flex h-full w-full flex-col items-center justify-center text-center gap-4\",\n\t\t\tclassName\n\t\t)}\n\t\t\t{...props}\n\t\t>\n\t\t\t{children}\n\t\t</div>\n\t)\n}\n\nTitleSlide.Heading = function Heading({ children, className, ...props }: React.ComponentProps<\"h1\">) {\n\treturn (\n\t\t<h1\n\t\t\tclassName={cn(\n\t\t\t\t\"text-6xl font-bold text-foreground tracking-tight\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\t{...props}\n\t\t>\n\t\t\t{children}\n\t\t</h1>\n\t)\n}\n\nTitleSlide.SubHeading = function Subheading({ children, className, ...props }: React.ComponentProps<\"p\">) {\n\treturn (\n\t\t<p\n\t\t\tclassName={cn(\n\t\t\t\t\"text-2xl text-muted-foreground\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\t{...props}\n\t\t>\n\t\t\t{children}\n\t\t</p>\n\n\t)\n}\n\nTitleSlide.Meta = function Meta({ children, className, ...props }: React.ComponentProps<\"p\">) {\n\treturn (\n\t\t<p\n\t\t\tclassName={cn(\n\t\t\t\t\"text-sm text-muted-foreground\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\t{...props}\n\t\t>\n\t\t\t{children}\n\t\t</p>\n\t);\n}\n",
       "type": "registry:component",
-      "target": "components/ui/slide-cn/title-slide/title-slide.tsx"
+      "target": "components/ui/slide-cn/title-slide.tsx"
     }
   ],
   "type": "registry:component"

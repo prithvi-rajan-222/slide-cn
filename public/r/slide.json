@@ -6,15 +6,37 @@
   "dependencies": [
     "motion"
   ],
-  "registryDependencies": [
-    "deck"
-  ],
+  "registryDependencies": [],
   "files": [
     {
-      "path": "components/ui/slide-cn/slide/slide.tsx",
-      "content": "\"use client\";\nimport React from \"react\";\nimport { motion } from \"motion/react\";\nimport { useDeck } from \"../deck/deck\";\n\ntype SlideProps = {\n\tchildren: React.ReactNode;\n\tkey: number;\n};\n\nexport function Slide({ children, key }: SlideProps) {\n\tconst deck = useDeck();\n\treturn (\n\t\t<motion.div\n\t\t\tdata-slide\n\t\t\tclassName=\"absolute inset-0\"\n\t\t\tkey={key}\n\t\t\texit={{ opacity: 0 }}\n\t\t\tdrag=\"x\"\n\t\t\tdragConstraints={{ left: 0, right: 0 }}\n\t\t\tdragElastic={0.25}\n\t\t\tdragMomentum={false}\n\t\t\twhileDrag={{ scale: 1 }}\n\t\t\tonDragEnd={(event, info) => {\n\t\t\t\tconst swipeDistance = info.offset.x;\n\t\t\t\tconst swipeVelocity = info.velocity.x;\n\n\t\t\t\tconst DISTANCE_THRESHOLD = 60;\n\t\t\t\tconst VELOCITY_THRESHOLD = 600;\n\n\t\t\t\tconst isSwipeRight =\n\t\t\t\t\tswipeDistance > DISTANCE_THRESHOLD ||\n\t\t\t\t\tswipeVelocity > VELOCITY_THRESHOLD;\n\n\t\t\t\tconst isSwipeLeft =\n\t\t\t\t\tswipeDistance < -DISTANCE_THRESHOLD ||\n\t\t\t\t\tswipeVelocity < -VELOCITY_THRESHOLD;\n\n\t\t\t\t// Extra safety: ignore mostly-vertical gestures\n\t\t\t\tif (Math.abs(info.offset.y) > Math.abs(info.offset.x)) {\n\t\t\t\t\treturn;\n\t\t\t\t}\n\n\t\t\t\tif (isSwipeRight) {\n\t\t\t\t\tdeck.prev();\n\t\t\t\t} else if (isSwipeLeft) {\n\t\t\t\t\tdeck.next();\n\t\t\t\t}\n\t\t\t}}\n\t\t>\n\t\t\t{children}\n\t\t</motion.div>\n\t);\n}\n",
+      "path": "components/ui/slide-cn/deck.tsx",
+      "content": "\"use client\";\nimport { useDeckController } from \"@/components/ui/slide-cn/use-deck-controller\";\nimport { useKeyboardNavigation } from \"@/components/ui/slide-cn/use-keyboard-navigation\";\nimport React from \"react\";\nimport { AnimatePresence } from \"motion/react\";\nimport { SlideNav } from \"@/components/ui/slide-cn/slide-nav\";\n\nconst DeckContext = React.createContext<ReturnType<\n\ttypeof useDeckController\n> | null>(null);\n\nexport function Deck({ children }: { children: React.ReactNode }) {\n\tconst slides = React.Children.toArray(children);\n\tconst deck = useDeckController(slides.length);\n\tuseKeyboardNavigation({\n\t\tonNext: deck.next,\n\t\tonPrev: deck.prev\n\t});\n\n\n\treturn (\n\t\t<DeckContext.Provider\n\t\t\tvalue={deck}\n\t\t>\n\t\t\t<div className=\"absolute inset-0 overflow-hidden touch-none\">\n\n\t\t\t\t<SlideNav />\n\t\t\t\t<div className=\"absolute inset-0\">\n\n\t\t\t\t\t<AnimatePresence mode=\"wait\">\n\t\t\t\t\t\t{slides[deck.index]}\n\t\t\t\t\t</AnimatePresence>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\n\t\t</DeckContext.Provider>\n\t);\n}\n\nexport function useDeck() {\n\tconst ctx = React.useContext(DeckContext);\n\tif (!ctx) throw new Error(\"useDeck must be used inside Deck\");\n\treturn ctx;\n}\n\n",
       "type": "registry:component",
-      "target": "components/ui/slide-cn/slide/slide.tsx"
+      "target": "components/ui/slide-cn/deck.tsx"
+    },
+    {
+      "path": "components/ui/slide-cn/slide.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\nimport { motion } from \"motion/react\";\nimport { useDeck } from \"@/components/ui/slide-cn/deck\";\n\ntype SlideProps = {\n\tchildren: React.ReactNode;\n\tkey: number;\n};\n\nexport function Slide({ children, key }: SlideProps) {\n\tconst deck = useDeck();\n\treturn (\n\t\t<motion.div\n\t\t\tdata-slide\n\t\t\tclassName=\"absolute inset-0\"\n\t\t\tkey={key}\n\t\t\texit={{ opacity: 0 }}\n\t\t\tdrag=\"x\"\n\t\t\tdragConstraints={{ left: 0, right: 0 }}\n\t\t\tdragElastic={0.25}\n\t\t\tdragMomentum={false}\n\t\t\twhileDrag={{ scale: 1 }}\n\t\t\tonDragEnd={(event, info) => {\n\t\t\t\tconst swipeDistance = info.offset.x;\n\t\t\t\tconst swipeVelocity = info.velocity.x;\n\n\t\t\t\tconst DISTANCE_THRESHOLD = 60;\n\t\t\t\tconst VELOCITY_THRESHOLD = 600;\n\n\t\t\t\tconst isSwipeRight =\n\t\t\t\t\tswipeDistance > DISTANCE_THRESHOLD ||\n\t\t\t\t\tswipeVelocity > VELOCITY_THRESHOLD;\n\n\t\t\t\tconst isSwipeLeft =\n\t\t\t\t\tswipeDistance < -DISTANCE_THRESHOLD ||\n\t\t\t\t\tswipeVelocity < -VELOCITY_THRESHOLD;\n\n\t\t\t\t// Extra safety: ignore mostly-vertical gestures\n\t\t\t\tif (Math.abs(info.offset.y) > Math.abs(info.offset.x)) {\n\t\t\t\t\treturn;\n\t\t\t\t}\n\n\t\t\t\tif (isSwipeRight) {\n\t\t\t\t\tdeck.prev();\n\t\t\t\t} else if (isSwipeLeft) {\n\t\t\t\t\tdeck.next();\n\t\t\t\t}\n\t\t\t}}\n\t\t>\n\t\t\t{children}\n\t\t</motion.div>\n\t);\n}\n",
+      "type": "registry:component",
+      "target": "components/ui/slide-cn/slide.tsx"
+    },
+    {
+      "path": "components/ui/slide-cn/slide-nav.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { useDeck } from \"@/components/ui/slide-cn/deck\";\n\nexport function SlideNav() {\n\tconst deck = useDeck();\n\n\treturn (\n\t\t<>\n\t\t\t{/* LEFT ZONE */}\n\t\t\t<div className=\"hidden md:block pointer-events-none absolute inset-y-0 left-0 w-24\">\n\t\t\t\t<div className=\"group pointer-events-auto h-full w-full flex items-center\">\n\t\t\t\t\t<Button\n\t\t\t\t\t\ttype=\"button\"\n\t\t\t\t\t\tonClick={deck.prev}\n\t\t\t\t\t\tclassName=\"\n\t\t\t\t\t\t\tml-4\n\t\t\t\t\t\t\topacity-0\n\t\t\t\t\t\t\ttransition-opacity\n\t\t\t\t\t\t\tgroup-hover:opacity-100\"\n\t\t\t\t\t>\n\t\t\t\t\t\tPrev\n\t\t\t\t\t</Button>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t{/* RIGHT ZONE */}\n\t\t\t<div className=\"hidden md:block pointer-events-none absolute inset-y-0 right-0 w-24\">\n\t\t\t\t<div className=\"group pointer-events-auto h-full w-full flex items-center justify-end\">\n\t\t\t\t\t<Button\n\t\t\t\t\t\ttype=\"button\"\n\t\t\t\t\t\tonClick={deck.next}\n\t\t\t\t\t\tclassName=\"\n              mr-4\n              opacity-0\n              transition-opacity\n              group-hover:opacity-100\n            \"\n\t\t\t\t\t>\n\t\t\t\t\t\tNext\n\t\t\t\t\t</Button>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</>\n\t);\n}\n",
+      "type": "registry:component",
+      "target": "components/ui/slide-cn/slide-nav.tsx"
+    },
+    {
+      "path": "components/ui/slide-cn/use-deck-controller.ts",
+      "content": "\"use client\";\nimport { useCallback, useState } from 'react';\n\nexport function useDeckController(slideCount: number) {\n\tconst [index, setIndex] = useState(0);\n\n\tconst clamp = useCallback(\n\t\t(slideIndex: number) => {\n\t\t\tif (slideIndex < 0) return 0;\n\t\t\tif (slideIndex >= slideCount) return slideCount - 1;\n\t\t\treturn slideIndex;\n\t\t},\n\t\t[slideCount]\n\t);\n\n\tconst next = useCallback(() => {\n\t\tsetIndex((i) => clamp(i + 1));\n\t}, [clamp]);\n\n\tconst prev = useCallback(() => {\n\t\tsetIndex((i) => clamp(i - 1));\n\t}, [clamp]);\n\n\tconst goTo = useCallback(\n\t\t(target: number) => {\n\t\t\tsetIndex(clamp(target));\n\t\t},\n\t\t[clamp]\n\t);\n\n\treturn {\n\t\tindex,\n\t\tnext,\n\t\tprev,\n\t\tgoTo,\n\t};\n}\n",
+      "type": "registry:component",
+      "target": "components/ui/slide-cn/use-deck-controller.ts"
+    },
+    {
+      "path": "components/ui/slide-cn/use-keyboard-navigation.ts",
+      "content": "import { useEffect } from \"react\";\n\ntype KeyboardNavigationOptions = {\n\tonNext: () => void;\n\tonPrev: () => void;\n\tdisabled?: boolean;\n};\n\nexport function useKeyboardNavigation({\n\tonNext,\n\tonPrev,\n\tdisabled = false,\n}: KeyboardNavigationOptions) {\n\tuseEffect(() => {\n\t\tif (disabled) return;\n\n\t\tconst handler = (e: KeyboardEvent) => {\n\t\t\t// Ignore key repeat (holding down key)\n\t\t\tif (e.repeat) return;\n\n\t\t\tif (e.key === \"ArrowRight\" || e.key === \" \") {\n\t\t\t\te.preventDefault();\n\t\t\t\tonNext();\n\t\t\t}\n\n\t\t\tif (e.key === \"ArrowLeft\") {\n\t\t\t\te.preventDefault();\n\t\t\t\tonPrev();\n\t\t\t}\n\t\t};\n\n\t\twindow.addEventListener(\"keydown\", handler);\n\t\treturn () => {\n\t\t\twindow.removeEventListener(\"keydown\", handler);\n\t\t};\n\t}, [onNext, onPrev, disabled]);\n}\n",
+      "type": "registry:component",
+      "target": "components/ui/slide-cn/use-keyboard-navigation.ts"
     }
   ],
   "type": "registry:component"

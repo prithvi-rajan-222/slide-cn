@@ -6,10 +6,10 @@
   "registryDependencies": [],
   "files": [
     {
-      "path": "components/ui/slide-cn/header-with-content/header-with-content.tsx",
+      "path": "components/ui/slide-cn/header-with-content.tsx",
       "content": "import { cn } from \"@/lib/utils\";\n\nexport function HeaderWithContent({ children, className, ...props }: React.ComponentProps<\"div\">) {\n\treturn (\n\t\t<div\n\t\t\tclassName={cn(\n\t\t\t\t\"flex flex-col w-full h-full p-8 gap-4\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\t{...props}\n\t\t>\n\t\t\t{children}\n\t\t</div>\n\t)\n}\n\nHeaderWithContent.Header = function Header({ children, className, ...props }: React.ComponentProps<\"h1\">) {\n\treturn (\n\t\t<h1\n\t\t\tclassName={cn(\n\t\t\t\t\"font-bold text-foreground text-2xl md:text-4xl lg:text-6xl tracking-tight antialiased\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\t{...props}\n\t\t>\n\t\t\t{children}\n\t\t</h1>\n\t)\n}\n\nHeaderWithContent.Content = function Content({ children, className, ...props }: React.ComponentProps<\"div\">) {\n\treturn (\n\t\t<div\n\t\t\tclassName={cn(\n\t\t\t\t\"text-muted-foreground text-sm md:text-xl lg:text-2xl flex-1\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\t{...props}\n\t\t>\n\t\t\t{children}\n\t\t</div>\n\t)\n}\n\n",
       "type": "registry:component",
-      "target": "components/ui/slide-cn/header-with-content/header-with-content.tsx"
+      "target": "components/ui/slide-cn/header-with-content.tsx"
     }
   ],
   "type": "registry:component"
