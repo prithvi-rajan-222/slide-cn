@@ -8,9 +8,10 @@
   ],
   "files": [
     {
-      "path": "registry/slide-cn/code-block/code-block.tsx",
+      "path": "components/ui/slide-cn/code-block.tsx",
       "content": "import { Prism as SyntaxHighlighter } from \"react-syntax-highlighter\"\nimport { vscDarkPlus } from \"react-syntax-highlighter/dist/esm/styles/prism\"\n\ninterface CodeBlockProps {\n\tcode: string\n\tlanguage?: string\n\tshowLineNumbers?: boolean\n}\n\nexport function CodeBlock({\n\tcode,\n\tlanguage = \"javascript\",\n\tshowLineNumbers = true,\n}: CodeBlockProps) {\n\treturn (\n\t\t<div className=\"w-full text-sm\">\n\t\t\t<SyntaxHighlighter\n\t\t\t\tlanguage={language}\n\t\t\t\tstyle={vscDarkPlus}\n\t\t\t\tshowLineNumbers={showLineNumbers}\n\t\t\t\tcustomStyle={{\n\t\t\t\t\tmargin: 0,\n\t\t\t\t\tborderRadius: \"0.5rem\",\n\t\t\t\t\tpadding: \"1.5rem\",\n\t\t\t\t}}\n\t\t\t>\n\t\t\t\t{code}\n\t\t\t</SyntaxHighlighter>\n\t\t</div>\n\t)\n}\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "components/ui/slide-cn/code-block.tsx"
     }
   ],
   "type": "registry:component"

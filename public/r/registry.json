@@ -7,25 +7,36 @@
 			"name": "deck",
 			"type": "registry:component",
 			"title": "Deck",
-			"description": "A Deck component that is the core of the presenation",
+			"description": "A Deck component that is the core of the presentation",
 			"dependencies": [
 				"motion"
 			],
-			"registryDependencies": [
-				"slide-nav"
-			],
+			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/deck/deck.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/deck.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/deck.tsx"
 				},
 				{
-					"path": "registry/slide-cn/mechanics/use-deck-controller.ts",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/slide.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/slide.tsx"
 				},
 				{
-					"path": "registry/slide-cn/mechanics/use-keyboard-navigation.ts",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/slide-nav.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/slide-nav.tsx"
+				},
+				{
+					"path": "components/ui/slide-cn/use-deck-controller.ts",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/use-deck-controller.ts"
+				},
+				{
+					"path": "components/ui/slide-cn/use-keyboard-navigation.ts",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/use-keyboard-navigation.ts"
 				}
 			]
 		},
@@ -37,8 +48,9 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/header-with-content/header-with-content.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/header-with-content.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/header-with-content.tsx"
 				}
 			]
 		},
@@ -48,13 +60,13 @@
 			"title": "Slide Nav",
 			"description": "Navigation for your slides",
 			"registryDependencies": [
-				"button",
-				"deck"
+				"button"
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/slide-nav/slide-nav.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/slide-nav.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/slide-nav.tsx"
 				}
 			]
 		},
@@ -66,13 +78,32 @@
 			"dependencies": [
 				"motion"
 			],
-			"registryDependencies": [
-				"deck"
-			],
+			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/slide/slide.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/deck.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/deck.tsx"
+				},
+				{
+					"path": "components/ui/slide-cn/slide.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/slide.tsx"
+				},
+				{
+					"path": "components/ui/slide-cn/slide-nav.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/slide-nav.tsx"
+				},
+				{
+					"path": "components/ui/slide-cn/use-deck-controller.ts",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/use-deck-controller.ts"
+				},
+				{
+					"path": "components/ui/slide-cn/use-keyboard-navigation.ts",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/use-keyboard-navigation.ts"
 				}
 			]
 		},
@@ -84,8 +115,9 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/horizontal-split/horizontal-split.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/horizontal-split.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/horizontal-split.tsx"
 				}
 			]
 		},
@@ -97,8 +129,9 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/vertical-split/vertical-split.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/vertical-split.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/vertical-split.tsx"
 				}
 			]
 		},
@@ -110,8 +143,9 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "registry/slide-cn/title-slide/title-slide.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/title-slide.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/title-slide.tsx"
 				}
 			]
 		},
@@ -128,8 +162,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/slide-image/slide-image.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/slide-image.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/slide-image.tsx"
 				}
 			]
 		},
@@ -144,8 +179,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/callout/callout.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/callout.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/callout.tsx"
 				}
 			]
 		},
@@ -159,8 +195,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/code-block/code-block.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/code-block.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/code-block.tsx"
 				}
 			]
 		},
@@ -174,8 +211,9 @@
 			],
 			"files": [
 				{
-					"path": "registry/slide-cn/reveal/reveal.tsx",
-					"type": "registry:component"
+					"path": "components/ui/slide-cn/reveal.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/reveal.tsx"
 				}
 			]
 		}

@@ -26,9 +26,6 @@
       "@/*": [
         "./*"
       ],
-      "@registry/*": [
-        "./registry/*"
-      ],
       "fumadocs-mdx:collections/*": [
         "./.source/*"
       ]
