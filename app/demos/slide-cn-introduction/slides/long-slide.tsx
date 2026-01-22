@@ -1,9 +1,6 @@
-import PixelSnow from "@/components/PixelSnow";
-
 export function LongSlide() {
     return (
         <div className="relative h-full w-full">
-            <PixelSnow />
             <div className="relative z-10 p-8 md:p-12 lg:p-16">
                 <h1 className="text-4xl font-bold mb-8">Long Slide Test</h1>
                 {Array.from({ length: 20 }).map((_, i) => (

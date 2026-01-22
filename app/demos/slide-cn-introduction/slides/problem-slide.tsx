@@ -1,13 +1,8 @@
 import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
 import { X, GitBranch, Copy } from "lucide-react";
-import PixelSnow from "@/components/PixelSnow";
-
 export function ProblemSlide() {
 	return (
 		<div className="relative h-full w-full">
-			<div className="absolute inset-0 pointer-events-none">
-				<PixelSnow />
-			</div>
 			<div className="relative z-10 p-8 md:p-12 lg:p-16">
 				<HeaderWithContent>
 					<HeaderWithContent.Header>The Problem</HeaderWithContent.Header>

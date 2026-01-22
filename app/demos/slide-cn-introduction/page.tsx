@@ -10,30 +10,31 @@ import { BenefitsSlide } from "./slides/benefits-slide";
 import { ExistingToolsSlide } from "./slides/existing-tools-slide";
 import { ClosingSlide } from "./slides/closing-slide";
 import { LongSlide } from "./slides/long-slide";
+import PixelSnow from "@/components/PixelSnow";
 
 export default function SlideCnIntroductionPage() {
 	return (
 		<div className="fixed inset-0">
 			<Deck>
-				<Slide key={0}>
+				<Slide background={<PixelSnow />}>
 					<TitleSlideComponent />
 				</Slide>
-				<Slide key={1}>
+				<Slide background={<PixelSnow />}>
 					<ProblemSlide />
 				</Slide>
-				<Slide key={2}>
+				<Slide background={<PixelSnow />}>
 					<TargetAudienceSlide />
 				</Slide>
-				<Slide key={3}>
+				<Slide background={<PixelSnow />}>
 					<SolutionSlide />
 				</Slide>
-				<Slide key={4}>
+				<Slide background={<PixelSnow />}>
 					<BenefitsSlide />
 				</Slide>
-				<Slide key={5}>
+				<Slide background={<PixelSnow />}>
 					<ExistingToolsSlide />
 				</Slide>
-				<Slide key={6}>
+				<Slide background={<PixelSnow />}>
 					<ClosingSlide />
 				</Slide>
 			</Deck>

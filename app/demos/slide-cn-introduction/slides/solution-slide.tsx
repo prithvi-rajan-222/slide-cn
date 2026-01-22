@@ -1,12 +1,9 @@
 import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
 import { HorizontalSplit } from "@/components/ui/slide-cn/horizontal-split";
 import { FileCode, GitBranch, Box, Zap } from "lucide-react";
-import PixelSnow from "@/components/PixelSnow";
-
 export function SolutionSlide() {
 	return (
 		<div className="relative h-full w-full">
-			<PixelSnow />
 			<div className="relative z-10 p-8 md:p-12 lg:p-16">
 				<HeaderWithContent>
 					<HeaderWithContent.Header>The Solution</HeaderWithContent.Header>
