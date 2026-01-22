@@ -11,6 +11,10 @@ export function UIHeader() {
 		{
 			label: "Docs",
 			href: "/docs"
+		},
+		{
+			label: "Demo",
+			href: "/demos/slide-cn-introduction"
 		}
 	];
 	const [open, setOpen] = useState(false);
