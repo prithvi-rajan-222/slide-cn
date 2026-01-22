@@ -1,23 +1,73 @@
-# registry-template
+# Slide-CN
 
-You can use the `shadcn` CLI to run your own component registry. Running your own
-component registry allows you to distribute your custom components, hooks, pages, and
-other files to any React project.
+Code-first presentations built with React and Shadcn-UI.
 
-> [!IMPORTANT]  
-> This template uses Tailwind v4. For Tailwind v3, see [registry-template-v3](https://github.com/shadcn-ui/registry-template-v3).
+Slide-CN is a framework for building interactive presentations using React 19, Next.js, Framer Motion, and Tailwind CSS.
 
-## Getting Started
+---
 
-This is a template for creating a custom registry using Next.js.
+## Why Slide-CN?
 
-- The template uses a `registry.json` file to define components and their files.
-- The `shadcn build` command is used to build the registry.
-- The registry items are served as static files under `public/r/[name].json`.
-- The template also includes a route handler for serving registry items.
-- Every registry item are compatible with the `shadcn` CLI.
-- We have also added v0 integration using the `Open in v0` api.
+Traditional presentation tools often feel restrictive for developers. Slide-CN allows you to build and manage presentations using the same workflow you use for web applications.
+
+- **Developer Workflow**: Draft, version control, and deploy presentations like any other codebase.
+- **Full Ecosystem Support**: Leverage the power of React to integrate charts, 3D models with Three.js, or live data visualizations.
+- **Design System Consistency**: Built on Shadcn-UI, providing a consistent aesthetic and a customizable theme out of the box.
+- **Interactivity**: Create transitions and components that respond to user input or adapt dynamically.
+- **Registry Integration**: Add components to your own projects directly using the shadcn CLI.
+
+## Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Registry**: [Shadcn UI](https://ui.shadcn.com/)
+- **Documentation**: [Fumadocs](https://fumadocs.com/)
+
+## Components
+
+Slide-CN includes a collection of primitive components and layouts optimized for presentations.
+
+[View the components documentation](https://slide-cn.com/docs/components)
+
+## Quick Start
+
+### Local Development
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/prithvi-rajan-222/slide-cn.git
+   cd slide-cn
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   pnpm dev
+   ```
+
+4. **Build the registry**:
+   ```bash
+   pnpm registry:build
+   ```
+
+### Using Slide-CN in your project
+
+Add Slide-CN components to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://slide-cn.com/r/[component-name].json
+```
 
 ## Documentation
 
-Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view the full documentation.
+Full documentation, including installation guides and component demos, is available at [slide-cn.com/docs](https://slide-cn.com/docs).
+
+## License
+
+MIT License.
+
