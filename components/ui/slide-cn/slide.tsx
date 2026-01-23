@@ -20,32 +20,7 @@ export function Slide({ children, background }: SlideProps) {
         md:absolute md:inset-0
       "
 			exit={{ opacity: 0 }}
-			drag="x"
-			dragConstraints={{ left: 0, right: 0 }}
-			dragElastic={0.25}
-			dragMomentum={false}
-			whileDrag={{ scale: 1 }}
-			onDragEnd={(event, info) => {
-				const swipeDistance = info.offset.x;
-				const swipeVelocity = info.velocity.x;
 
-				const DISTANCE_THRESHOLD = 60;
-				const VELOCITY_THRESHOLD = 600;
-
-				if (Math.abs(info.offset.y) > Math.abs(info.offset.x)) return;
-
-				if (
-					swipeDistance > DISTANCE_THRESHOLD ||
-					swipeVelocity > VELOCITY_THRESHOLD
-				) {
-					deck.prev();
-				} else if (
-					swipeDistance < -DISTANCE_THRESHOLD ||
-					swipeVelocity < -DISTANCE_THRESHOLD
-				) {
-					deck.next();
-				}
-			}}
 		>
 			{/* Background layer (viewport-scoped, never scrolls) */}
 			{background && (
@@ -55,11 +30,38 @@ export function Slide({ children, background }: SlideProps) {
 			)}
 
 			{/* Scroll layer (mobile scroll lives here) */}
-			<div className="relative z-10 h-full w-full overflow-y-auto md:overflow-hidden">
+			<motion.div className="relative z-10 h-full w-full overflow-y-auto md:overflow-hidden"
+				drag="x"
+				dragConstraints={{ left: 0, right: 0 }}
+				dragElastic={0.25}
+				dragMomentum={false}
+				whileDrag={{ scale: 1 }}
+				onDragEnd={(event, info) => {
+					const swipeDistance = info.offset.x;
+					const swipeVelocity = info.velocity.x;
+
+					const DISTANCE_THRESHOLD = 60;
+					const VELOCITY_THRESHOLD = 600;
+
+					if (Math.abs(info.offset.y) > Math.abs(info.offset.x)) return;
+
+					if (
+						swipeDistance > DISTANCE_THRESHOLD ||
+						swipeVelocity > VELOCITY_THRESHOLD
+					) {
+						deck.prev();
+					} else if (
+						swipeDistance < -DISTANCE_THRESHOLD ||
+						swipeVelocity < -DISTANCE_THRESHOLD
+					) {
+						deck.next();
+					}
+				}}
+			>
 				<div className="h-full w-full">
 					{children}
 				</div>
-			</div>
+			</motion.div>
 		</motion.div>
 	);
 }
