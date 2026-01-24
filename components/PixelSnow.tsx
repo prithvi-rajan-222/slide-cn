@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useMemo, useCallback } from 'react';
 import {
   Scene,
