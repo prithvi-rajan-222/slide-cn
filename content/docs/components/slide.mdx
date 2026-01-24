@@ -10,15 +10,16 @@ This is the main Slide component. Use this as the root component for each of you
 <InstallCommand packageName="slide" />
 
 ## Demo
-<ComponentDemo description="A basic slide component displaying content" className="p-8">
-  <div className="relative w-full max-w-2xl h-96 bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-950 dark:to-pink-950 rounded-lg">
-    <div className="flex items-center justify-center h-full">
-      <div className="text-center p-8">
-        <h2 className="text-4xl font-bold mb-4">Introduction to Operating Systems</h2>
-        <p className="text-lg text-muted-foreground">Understanding the core concepts</p>
-      </div>
-    </div>
-  </div>
+<ComponentDemo description="A slide component" className="p-8 h-96 rounded-lg">
+<Deck>
+  <Slide>
+  <TitleSlide className="h-96 rounded-lg">
+    <TitleSlide.Heading>Welcome to Slide-CN</TitleSlide.Heading>
+    <TitleSlide.SubHeading>Create beautiful presentations using code</TitleSlide.SubHeading>
+    <TitleSlide.Meta>Internal architecture review - Jan 2026</TitleSlide.Meta>
+  </TitleSlide>
+  </Slide>
+</Deck>
 </ComponentDemo>
 
 
@@ -26,12 +27,51 @@ This is the main Slide component. Use this as the root component for each of you
 ```tsx
 export function FirstSlide() {
 	return (
-		<Slide>
-			Introduction to Operating Systems
-		</Slide>
+    <Deck>
+      <Slide>
+      <TitleSlide className="h-96 rounded-lg">
+        <TitleSlide.Heading>Welcome to Slide-CN</TitleSlide.Heading>
+        <TitleSlide.SubHeading>Create beautiful presentations using code</TitleSlide.SubHeading>
+        <TitleSlide.Meta>Internal architecture review - Jan 2026</TitleSlide.Meta>
+      </TitleSlide>
+      </Slide>
+    </Deck>
 	);
 }
 ```
+
+### With Background
+<ComponentDemo description="A slide component with a custom background" className="p-8 h-96 rounded-lg">
+<Deck>
+  <Slide background={<PixelSnow />}>
+  <TitleSlide className="h-96 rounded-lg">
+    <TitleSlide.Heading>Welcome to Slide-CN</TitleSlide.Heading>
+    <TitleSlide.SubHeading>Create beautiful presentations using code</TitleSlide.SubHeading>
+    <TitleSlide.Meta>Internal architecture review - Jan 2026</TitleSlide.Meta>
+  </TitleSlide>
+  </Slide>
+</Deck>
+</ComponentDemo>
+```tsx
+export function FirstSlide() {
+	return (
+    <Deck>
+      <Slide background={<PixelSnow/>}>
+      <TitleSlide className="h-96 rounded-lg">
+        <TitleSlide.Heading>Welcome to Slide-CN</TitleSlide.Heading>
+        <TitleSlide.SubHeading>Create beautiful presentations using code</TitleSlide.SubHeading>
+        <TitleSlide.Meta>Internal architecture review - Jan 2026</TitleSlide.Meta>
+      </TitleSlide>
+      </Slide>
+    </Deck>
+	);
+}
+```
+
+This is an easy way to add a background to your slide. Any react component can be used as a background.
+For this example I used the `PixelSnow` component from [ReactBits](https://reactbits.dev/components/pixel-snow).
+
+
 
 ## Reference
 <TypeTable
@@ -39,6 +79,10 @@ export function FirstSlide() {
     children: {
       type: "ReactNode",
       description: "The content of the slide",
+    },
+    background: {
+      type: "ReactNode",
+      description: "The background you want to set for the slide"
     }
   }}
 />

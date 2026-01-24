@@ -23,6 +23,7 @@ import { CodeBlock as CodeBlockComponent } from "@/components/ui/slide-cn/code-b
 import { Slide } from "@/components/ui/slide-cn/slide"
 import { SlideImage } from "@/components/ui/slide-cn/slide-image"
 import { Deck } from "@/components/ui/slide-cn/deck"
+import PixelSnow from "@/components/PixelSnow";
 
 export function getMDXComponents(
 	components?: MDXComponents
@@ -62,6 +63,7 @@ export function getMDXComponents(
 		Slide,
 		SlideImage,
 		Deck,
+		PixelSnow,
 
 		...components,
 	}
