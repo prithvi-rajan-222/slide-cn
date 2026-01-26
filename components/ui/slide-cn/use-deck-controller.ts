@@ -33,5 +33,6 @@ export function useDeckController(slideCount: number) {
 		next,
 		prev,
 		goTo,
+		total: slideCount,
 	};
 }
