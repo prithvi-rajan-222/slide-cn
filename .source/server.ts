@@ -1,11 +1,12 @@
 // @ts-nocheck
-import * as __fd_glob_15 from "../content/docs/layouts/vertical-split.mdx?collection=docs"
-import * as __fd_glob_14 from "../content/docs/layouts/title-slide.mdx?collection=docs"
-import * as __fd_glob_13 from "../content/docs/layouts/index.mdx?collection=docs"
-import * as __fd_glob_12 from "../content/docs/layouts/horizontal-split.mdx?collection=docs"
-import * as __fd_glob_11 from "../content/docs/layouts/header-with-content.mdx?collection=docs"
-import * as __fd_glob_10 from "../content/docs/components/slide.mdx?collection=docs"
-import * as __fd_glob_9 from "../content/docs/components/slide-image.mdx?collection=docs"
+import * as __fd_glob_16 from "../content/docs/layouts/vertical-split.mdx?collection=docs"
+import * as __fd_glob_15 from "../content/docs/layouts/title-slide.mdx?collection=docs"
+import * as __fd_glob_14 from "../content/docs/layouts/index.mdx?collection=docs"
+import * as __fd_glob_13 from "../content/docs/layouts/horizontal-split.mdx?collection=docs"
+import * as __fd_glob_12 from "../content/docs/layouts/header-with-content.mdx?collection=docs"
+import * as __fd_glob_11 from "../content/docs/components/slide.mdx?collection=docs"
+import * as __fd_glob_10 from "../content/docs/components/slide-image.mdx?collection=docs"
+import * as __fd_glob_9 from "../content/docs/components/slide-footer.mdx?collection=docs"
 import * as __fd_glob_8 from "../content/docs/components/reveal.mdx?collection=docs"
 import * as __fd_glob_7 from "../content/docs/components/index.mdx?collection=docs"
 import * as __fd_glob_6 from "../content/docs/components/deck.mdx?collection=docs"
@@ -23,4 +24,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content/docs", {}, {"index.mdx": __fd_glob_0, "installation.mdx": __fd_glob_1, "components/accordion.mdx": __fd_glob_2, "components/callout.mdx": __fd_glob_3, "components/card.mdx": __fd_glob_4, "components/code-block.mdx": __fd_glob_5, "components/deck.mdx": __fd_glob_6, "components/index.mdx": __fd_glob_7, "components/reveal.mdx": __fd_glob_8, "components/slide-image.mdx": __fd_glob_9, "components/slide.mdx": __fd_glob_10, "layouts/header-with-content.mdx": __fd_glob_11, "layouts/horizontal-split.mdx": __fd_glob_12, "layouts/index.mdx": __fd_glob_13, "layouts/title-slide.mdx": __fd_glob_14, "layouts/vertical-split.mdx": __fd_glob_15, });
+export const docs = await create.docs("docs", "content/docs", {}, {"index.mdx": __fd_glob_0, "installation.mdx": __fd_glob_1, "components/accordion.mdx": __fd_glob_2, "components/callout.mdx": __fd_glob_3, "components/card.mdx": __fd_glob_4, "components/code-block.mdx": __fd_glob_5, "components/deck.mdx": __fd_glob_6, "components/index.mdx": __fd_glob_7, "components/reveal.mdx": __fd_glob_8, "components/slide-footer.mdx": __fd_glob_9, "components/slide-image.mdx": __fd_glob_10, "components/slide.mdx": __fd_glob_11, "layouts/header-with-content.mdx": __fd_glob_12, "layouts/horizontal-split.mdx": __fd_glob_13, "layouts/index.mdx": __fd_glob_14, "layouts/title-slide.mdx": __fd_glob_15, "layouts/vertical-split.mdx": __fd_glob_16, });
