@@ -4,7 +4,7 @@ description: The main component for a slide
 ---
 
 ## Overview
-This is the main Slide component. Use this as the root component for each of your slides.
+This is the main Slide component. Use this as the root component for each of your slides. You can add a background to your slide by passing a component to the `background` prop. You can also add a footer to your slide by passing a component to the `footer` prop. See [SlideFooter](./slide-footer) for more information.
 
 ## Installation
 <InstallCommand packageName="slide" />
@@ -83,6 +83,10 @@ For this example I used the `PixelSnow` component from [ReactBits](https://react
     background: {
       type: "ReactNode",
       description: "The background you want to set for the slide"
+    },
+    footer: {
+      type: "ReactNode",
+      description: "The footer you want to set for the slide. Set to null to remove the footer."
     }
   }}
 />

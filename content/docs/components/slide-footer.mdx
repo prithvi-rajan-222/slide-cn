@@ -21,5 +21,34 @@ Use this component to add a footer to your slides. The default footer shows the 
 </ComponentDemo>
 
 ## Usage
+The slide compoonent already has a footer by default. You can customize it by passing your own footer component, or by modifying the footer component directly.
+```tsx
+<Slide background={<PixelSnow />} footer={<SlideFooter showAdd={true} />}>
+  <TitleSlideComponent />
+</Slide>
+```
 
 ## Reference
+<TypeTable
+  type={{
+    className: {
+      type: "string",
+      description: "Optional class name to apply to the footer",
+    },
+    showProgress: {
+      type: "boolean",
+      description: "Whether to show the slide progress",
+      default: "true",
+    },
+    showHint: {
+      type: "boolean",
+      description: "Whether to show the navigation hint",
+      default: "true",
+    },
+    showAdd: {
+      type: "boolean",
+      description: "Whether to show a link to a website",
+      default: "false",
+    },
+  }}
+/>
