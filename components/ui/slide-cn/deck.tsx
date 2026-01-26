@@ -4,12 +4,13 @@ import { useKeyboardNavigation } from "@/components/ui/slide-cn/use-keyboard-nav
 import React from "react";
 import { AnimatePresence } from "motion/react";
 import { SlideNav } from "@/components/ui/slide-cn/slide-nav";
+import { cn } from "@/lib/utils";
 
 const DeckContext = React.createContext<ReturnType<
 	typeof useDeckController
 > | null>(null);
 
-export function Deck({ children }: { children: React.ReactNode }) {
+export function Deck({ children, className }: { children: React.ReactNode, className?: string }) {
 	const slides = React.Children.toArray(children);
 	const deck = useDeckController(slides.length);
 	useKeyboardNavigation({
@@ -22,10 +23,10 @@ export function Deck({ children }: { children: React.ReactNode }) {
 		<DeckContext.Provider
 			value={deck}
 		>
-			<div className="absolute inset-0 overflow-hidden touch-pan-y md:touch-none">
+			<div className={cn("absolute inset-0 overflow-hidden touch-pan-y md:touch-none h-screen", className)}>
 
 				<SlideNav />
-				<div className="absolute inset-0 overflow-y-auto md:overflow-hidden">
+				<div className="absolute inset-0 overflow-y-auto md:overflow-hidden h-full">
 					<AnimatePresence mode="wait">
 						{slides[deck.index]}
 					</AnimatePresence>

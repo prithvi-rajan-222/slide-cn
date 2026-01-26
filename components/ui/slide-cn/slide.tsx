@@ -17,7 +17,7 @@ export function Slide({ children, background, footer = <SlideFooter /> }: SlideP
 		<motion.div
 			data-slide
 			className="
-        relative w-full h-screen
+        relative w-full h-full
         overflow-hidden
         md:absolute md:inset-0
       "
