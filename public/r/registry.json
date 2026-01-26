@@ -24,6 +24,11 @@
 					"target": "components/ui/slide-cn/slide.tsx"
 				},
 				{
+					"path": "components/ui/slide-cn/slide-footer.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/slide-footer.tsx"
+				},
+				{
 					"path": "components/ui/slide-cn/slide-nav.tsx",
 					"type": "registry:component",
 					"target": "components/ui/slide-cn/slide-nav.tsx"
@@ -71,6 +76,23 @@
 			]
 		},
 		{
+			"name": "slide-footer",
+			"type": "registry:component",
+			"title": "Slide footer",
+			"description": "Footer for your slides",
+			"dependencies": [
+				"lucide-react"
+			],
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "components/ui/slide-cn/slide-footer.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/slide-footer.tsx"
+				}
+			]
+		},
+		{
 			"name": "slide",
 			"type": "registry:component",
 			"title": "Slide",
@@ -94,6 +116,11 @@
 					"path": "components/ui/slide-cn/slide-nav.tsx",
 					"type": "registry:component",
 					"target": "components/ui/slide-cn/slide-nav.tsx"
+				},
+				{
+					"path": "components/ui/slide-cn/slide-footer.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/slide-footer.tsx"
 				},
 				{
 					"path": "components/ui/slide-cn/use-deck-controller.ts",
