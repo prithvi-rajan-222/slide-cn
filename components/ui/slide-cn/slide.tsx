@@ -2,13 +2,15 @@
 import React from "react";
 import { motion } from "motion/react";
 import { useDeck } from "@/components/ui/slide-cn/deck";
+import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
 
 type SlideProps = {
 	children: React.ReactNode;
 	background?: React.ReactNode;
+	footer?: React.ReactNode;
 };
 
-export function Slide({ children, background }: SlideProps) {
+export function Slide({ children, background, footer = <SlideFooter /> }: SlideProps) {
 	const deck = useDeck();
 
 	return (
@@ -58,8 +60,16 @@ export function Slide({ children, background }: SlideProps) {
 					}
 				}}
 			>
-				<div className="h-full w-full">
-					{children}
+				<div className="h-full w-full flex flex-col">
+					<div className="flex-1">
+						{children}
+					</div>
+
+					{footer && (
+						<div className="mt-4">
+							{footer}
+						</div>
+					)}
 				</div>
 			</motion.div>
 		</motion.div>
