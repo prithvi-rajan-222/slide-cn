@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slide-cn-default",
+  "title": "Slide-CN Default Preset",
+  "description": "Installs the recommended Slide-CN layouts and components.",
+  "registryDependencies": [
+    "https://slide-cn.com/r/slide.json",
+    "https://slide-cn.com/r/deck.json",
+    "https://slide-cn.com/r/header-with-content.json",
+    "https://slide-cn.com/r/slide-nav.json",
+    "https://slide-cn.com/r/slide-footer.json",
+    "https://slide-cn.com/r/horizontal-split.json",
+    "https://slide-cn.com/r/vertical-split.json",
+    "https://slide-cn.com/r/title-slide.json",
+    "https://slide-cn.com/r/slide-image.json",
+    "https://slide-cn.com/r/callout.json",
+    "https://slide-cn.com/r/code-block.json",
+    "https://slide-cn.com/r/reveal.json",
+    "accordion",
+    "card"
+  ],
+  "type": "registry:lib"
+}

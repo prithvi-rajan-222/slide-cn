@@ -24,6 +24,7 @@ import { Slide } from "@/components/ui/slide-cn/slide"
 import { SlideImage } from "@/components/ui/slide-cn/slide-image"
 import { Deck } from "@/components/ui/slide-cn/deck"
 import PixelSnow from "@/components/PixelSnow";
+import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
 
 export function getMDXComponents(
 	components?: MDXComponents
@@ -64,6 +65,7 @@ export function getMDXComponents(
 		SlideImage,
 		Deck,
 		PixelSnow,
+		SlideFooter,
 
 		...components,
 	}

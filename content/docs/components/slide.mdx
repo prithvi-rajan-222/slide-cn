@@ -11,9 +11,9 @@ This is the main Slide component. Use this as the root component for each of you
 
 ## Demo
 <ComponentDemo description="A slide component" className="p-8 h-96 rounded-lg">
-<Deck>
+<Deck className="h-96">
   <Slide>
-  <TitleSlide className="h-96 rounded-lg">
+  <TitleSlide>
     <TitleSlide.Heading>Welcome to Slide-CN</TitleSlide.Heading>
     <TitleSlide.SubHeading>Create beautiful presentations using code</TitleSlide.SubHeading>
     <TitleSlide.Meta>Internal architecture review - Jan 2026</TitleSlide.Meta>
@@ -42,9 +42,9 @@ export function FirstSlide() {
 
 ### With Background
 <ComponentDemo description="A slide component with a custom background" className="p-8 h-96 rounded-lg">
-<Deck>
+<Deck className="h-96">
   <Slide background={<PixelSnow />}>
-  <TitleSlide className="h-96 rounded-lg">
+  <TitleSlide>
     <TitleSlide.Heading>Welcome to Slide-CN</TitleSlide.Heading>
     <TitleSlide.SubHeading>Create beautiful presentations using code</TitleSlide.SubHeading>
     <TitleSlide.Meta>Internal architecture review - Jan 2026</TitleSlide.Meta>
@@ -57,7 +57,7 @@ export function FirstSlide() {
 	return (
     <Deck>
       <Slide background={<PixelSnow/>}>
-      <TitleSlide className="h-96 rounded-lg">
+      <TitleSlide>
         <TitleSlide.Heading>Welcome to Slide-CN</TitleSlide.Heading>
         <TitleSlide.SubHeading>Create beautiful presentations using code</TitleSlide.SubHeading>
         <TitleSlide.Meta>Internal architecture review - Jan 2026</TitleSlide.Meta>
