@@ -3,37 +3,45 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { GitHub } from "@/components/logos/github";
+import { Demo } from "../../demo/components/demo";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export function Hero() {
 
 	const router = useRouter();
+	const isMobile = useIsMobile();
 
-	function navigateToComponents() {
-		router.push("/docs/components");
+	function navigateToDocs() {
+		router.push("/docs");
 	}
 
-	function navigateToTemplates() {
-		router.push("https://github.com/prithvi-rajan-222/slide-cn");
+	function navigateToDemo() {
+		router.push("/demos/slide-cn-introduction");
 	}
 	return (
-		<section className="relative w-full px-4 py-12 md:py-24 lg:py-32 overflow-hidden flex items-center justify-center min-h-[60vh] md:min-h-[80vh]">
-			<div className="max-w-7xl mx-auto text-center">
-				<h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.1]">
+		<section className="relative w-full px-4 pt-10 pb-6 md:pt-24 md:pb-12 overflow-hidden flex flex-col items-center justify-center bg-background text-foreground">
+			<div className="max-w-4xl mx-auto text-center z-10 relative">
+				<h1 className="text-3xl md:text-6xl font-semibold tracking-tight leading-[1.1]">
 					Create <AuroraText>beautiful</AuroraText> presentations using code
 				</h1>
-				<div className="text-muted-foreground text-lg md:text-xl lg:text-2xl py-6 md:p-8 max-w-2xl mx-auto">
+				<div className="text-muted-foreground text-base md:text-xl py-6 max-w-2xl mx-auto">
 					Easily make slides and presentations using react components
 				</div>
-				<div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-4">
-					<Button onClick={navigateToComponents} variant="default" className="w-full sm:w-auto px-8 py-6 text-lg">
-						View Components
+				<div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-2">
+					<Button onClick={navigateToDocs} variant="default" className="w-full sm:w-auto px-6 py-5 text-base">
+						Get Started
 					</Button>
-					<Button onClick={navigateToTemplates} variant="outline" className="w-full sm:w-auto px-8 py-6 text-lg">
-						<GitHub className="size-5" />
-						View on Github
+					<Button onClick={navigateToDemo} variant="outline" className="w-full sm:w-auto px-6 py-5 text-base">
+						View Demo
 					</Button>
 				</div>
 			</div>
+
+			{!isMobile && <div className="w-full max-w-6xl mx-auto mt-16 md:mt-24 h-200 bg-neutral-900 rounded-md relative z-10">
+				<Demo />
+			</div>}
+
+			<div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
 		</section>
 	)
 }

@@ -4,6 +4,35 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
+
+/**
+ * Reveal
+ *
+ * Progressive disclosure wrapper that reveals its content on click.
+ *
+ * Responsibilities:
+ * - Visually obscures content until revealed
+ * - Handles one-way reveal interaction
+ * - Works with any child content (text, cards, layouts)
+ *
+ * Interaction model:
+ * - Click to reveal
+ * - One-way only (cannot be hidden again)
+ * - No hover or keyboard interaction by default
+ *
+ * Usage:
+ * ```tsx
+ * <Reveal>
+ *   <p>This bullet is revealed on click</p>
+ * </Reveal>
+ * ```
+ *
+ * Notes:
+ * - Reveal is a presentation affordance, not a security feature
+ * - Intended for step-by-step storytelling inside slides
+ */
+
+
 interface RevealProps {
 	children: React.ReactNode;
 	className?: string; // Optional: Allow custom styles

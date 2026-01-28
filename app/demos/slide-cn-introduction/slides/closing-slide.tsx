@@ -9,7 +9,7 @@ export function ClosingSlide() {
 					Build beautiful presentations with code
 				</TitleSlide.SubHeading>
 				<TitleSlide.Meta className="mt-12 text-lg opacity-70">
-					<Link className="underline" href="/">Start creating your first slide deck today</Link>
+					<Link className="underline" href="/docs">Start creating your first slide deck today</Link>
 				</TitleSlide.Meta>
 			</TitleSlide>
 		</div>

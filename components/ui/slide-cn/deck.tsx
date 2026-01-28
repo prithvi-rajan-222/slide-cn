@@ -6,6 +6,40 @@ import { AnimatePresence } from "motion/react";
 import { SlideNav } from "@/components/ui/slide-cn/slide-nav";
 import { cn } from "@/lib/utils";
 
+
+
+/**
+ * Deck
+ *
+ * Root container for a slide presentation.
+ *
+ * Responsibilities:
+ * - Owns viewport height (`h-screen`)
+ * - Manages active slide index
+ * - Handles global navigation (keyboard, nav UI)
+ * - Provides deck state via context
+ *
+ * Non-responsibilities:
+ * - Does NOT manage slide layout or content
+ * - Does NOT manage per-slide scroll behavior
+ * - Does NOT impose styling on slides
+ *
+ * Usage:
+ * ```tsx
+ * <Deck>
+ *   <Slide>...</Slide>
+ *   <Slide>...</Slide>
+ * </Deck>
+ * ```
+ *
+ * Notes:
+ * - Deck must be mounted in a client component
+ * - Slides are rendered one at a time via AnimatePresence
+ * - Height is fixed to the viewport; do not nest Deck inside another Deck
+ */
+
+
+
 const DeckContext = React.createContext<ReturnType<
 	typeof useDeckController
 > | null>(null);

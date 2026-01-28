@@ -4,6 +4,31 @@ import { motion } from "motion/react";
 import { useDeck } from "@/components/ui/slide-cn/deck";
 import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
 
+
+/**
+ * Slide
+ *
+ * Main container for each slide.
+ *
+ * Responsibilities:
+ * - Handles the transition animation between slides
+ * - Handles swipe navigation on mobile
+ * - Renders a background for the slide if provided, and a footer by default
+ *
+ * Non Responsibilities:
+ * - Does not handle slide layout
+ * 
+ * Usage:
+ * ```tsx
+ * <Deck>
+ * 	<Slide background={<BackgroundComponent/>}>
+ * 		{slide content}
+ * 	</Slide>
+ * </Deck>
+ * ```
+ */
+
+
 type SlideProps = {
 	children: React.ReactNode;
 	background?: React.ReactNode;
