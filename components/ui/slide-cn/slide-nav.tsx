@@ -1,7 +1,12 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import { useDeck } from "@/components/ui/slide-cn/deck";
+
+/**
+ * SlideNav
+ *
+ * SlideNav is already included in the deck component by default. You dont need to touch this component unless you want to modify how changing slides works
+ */
 
 export function SlideNav() {
 	const deck = useDeck();
