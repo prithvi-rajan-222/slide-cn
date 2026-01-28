@@ -3,6 +3,7 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { GitHub } from "@/components/logos/github";
+import { Demo } from "../../demo/components/demo";
 
 export function Hero() {
 
@@ -35,10 +36,8 @@ export function Hero() {
 				</div>
 			</div>
 
-			<div className="w-full max-w-6xl mx-auto mt-16 md:mt-24 relative z-10">
-				<div className="w-full aspect-video rounded-xl border bg-muted/30 flex items-center justify-center text-muted-foreground">
-					Demo Placeholder
-				</div>
+			<div className="w-full max-w-6xl mx-auto mt-16 md:mt-24 h-200 bg-neutral-900 rounded-md relative z-10">
+				<Demo />
 			</div>
 
 			<div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
