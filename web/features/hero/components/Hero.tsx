@@ -4,17 +4,19 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { GitHub } from "@/components/logos/github";
 import { Demo } from "../../demo/components/demo";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export function Hero() {
 
 	const router = useRouter();
+	const isMobile = useIsMobile();
 
 	function navigateToDocs() {
 		router.push("/docs");
 	}
 
-	function navigateToTemplates() {
-		router.push("https://github.com/prithvi-rajan-222/slide-cn");
+	function navigateToDemo() {
+		router.push("/demos/slide-cn-introduction");
 	}
 	return (
 		<section className="relative w-full px-4 pt-10 pb-6 md:pt-24 md:pb-12 overflow-hidden flex flex-col items-center justify-center bg-background text-foreground">
@@ -29,16 +31,15 @@ export function Hero() {
 					<Button onClick={navigateToDocs} variant="default" className="w-full sm:w-auto px-6 py-5 text-base">
 						Get Started
 					</Button>
-					<Button onClick={navigateToTemplates} variant="outline" className="w-full sm:w-auto px-6 py-5 text-base">
-						<GitHub className="size-5 mr-2" />
-						View on Github
+					<Button onClick={navigateToDemo} variant="outline" className="w-full sm:w-auto px-6 py-5 text-base">
+						View Demo
 					</Button>
 				</div>
 			</div>
 
-			<div className="w-full max-w-6xl mx-auto mt-16 md:mt-24 h-200 bg-neutral-900 rounded-md relative z-10">
+			{!isMobile && <div className="w-full max-w-6xl mx-auto mt-16 md:mt-24 h-200 bg-neutral-900 rounded-md relative z-10">
 				<Demo />
-			</div>
+			</div>}
 
 			<div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
 		</section>

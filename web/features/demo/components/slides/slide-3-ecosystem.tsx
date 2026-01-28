@@ -32,7 +32,7 @@ export function Slide3Ecosystem() {
                     </div>
                 </HorizontalSplit.Left>
                 <HorizontalSplit.Right>
-                    <div className="flex items-center justify-center h-full bg-muted/20">
+                    <div className="flex items-center justify-center h-full">
                         <div className="grid grid-cols-2 gap-4 p-4">
                             <div className="h-32 w-32 bg-blue-100 dark:bg-blue-900/20 rounded-xl flex items-center justify-center border-2 border-blue-500/20">
                                 <PieChart className="size-12 text-blue-500" />

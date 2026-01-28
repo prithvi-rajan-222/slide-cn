@@ -15,6 +15,10 @@ export function UIHeader() {
 		{
 			label: "Demo",
 			href: "/demos/slide-cn-introduction"
+		},
+		{
+			label: "GitHub",
+			href: "https://github.com/prithvi-rajan-222/slide-cn"
 		}
 	];
 	const [open, setOpen] = useState(false);

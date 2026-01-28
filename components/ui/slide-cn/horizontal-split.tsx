@@ -8,11 +8,14 @@ export function HorizontalSplit({ children, ratio = 0.5, className, style, ...pr
 	const clampedRatio = Math.max(0.2, Math.min(0.8, ratio));
 	return (
 		<div
-			className={cn("grid h-full w-full grid-cols-2 items-center", className)}
+			className={cn(
+				"grid h-full w-full grid-cols-1 md:grid-cols-[var(--split-ratio)_1fr] items-center",
+				className
+			)}
 			style={{
-				gridTemplateColumns: `${clampedRatio * 100}% ${(1 - clampedRatio) * 100}%`,
+				"--split-ratio": `${clampedRatio * 100}%`,
 				...style,
-			}}
+			} as React.CSSProperties}
 			{...props}
 		>
 			{children}
