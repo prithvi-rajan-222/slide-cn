@@ -1,5 +1,27 @@
 import { cn } from "@/lib/utils";
 
+/**
+ * HeaderWithContent
+ *
+ * A simple layout for a slide. Very lightly styled. Can be overwritten using the className prop
+ *
+ * Usage
+ * ```tsx
+ * <Deck>
+ * 	<Slide background={<BackgroundComponent/>}>
+ * 		<HeaderWithContent>
+ * 			<HeaderWithContent.Header>
+ * 				Welcome to slide-cn
+ * 			</HeaderWithContent.Header>
+ * 			<HeaderWithContent.Content>
+ * 				Content of the slide
+ * 			</HeaderWithContent.Content>
+ * 		</HeaderWithContent>
+ * 	</Slide>
+ * </Deck>
+ * ```
+ */
+
 export function HeaderWithContent({ children, className, ...props }: React.ComponentProps<"div">) {
 	return (
 		<div
