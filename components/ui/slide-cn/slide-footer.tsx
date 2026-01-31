@@ -4,7 +4,6 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { useDeck } from "@/components/ui/slide-cn/deck";
 import { useIsMobile } from "@/hooks/use-mobile";
-import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 /**
@@ -76,7 +75,7 @@ export function SlideFooter({
 			<div className="flex justify-center">
 				{showAdd && (
 					<span className="opacity-50 hover:opacity-100 transition-opacity flex items-center gap-1.5 text-xs">
-						Built with <Link href={"https://slide-cn.com"} target="_blank" className="font-semibold hover:underline">Slide-CN</Link>
+						Built with <a href={"https://slide-cn.com"} target="_blank" className="font-semibold hover:underline">Slide-CN</a>
 					</span>
 				)}
 			</div>
