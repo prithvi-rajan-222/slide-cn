@@ -2,13 +2,13 @@ import { Slide } from "@/components/ui/slide-cn/slide";
 import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
 import { Reveal } from "@/components/ui/slide-cn/reveal";
 import { GitBranch, User, Globe } from "lucide-react";
-import LightRays from "@/components/LightRays";
+import { GradientBackground } from "@/components/ui/slide-cn/backgrounds/dark-mode-gradient";
 
 export function Slide4Workflow() {
     return (
-        <Slide background={<LightRays />}>
+        <Slide background={<GradientBackground />}>
             <HeaderWithContent>
-                <HeaderWithContent.Header className="text-center">Better Workflow</HeaderWithContent.Header>
+                <HeaderWithContent.Header className="text-center pt-4">Better Workflow</HeaderWithContent.Header>
                 <HeaderWithContent.Content className="flex flex-col justify-center items-center">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full px-8">
 

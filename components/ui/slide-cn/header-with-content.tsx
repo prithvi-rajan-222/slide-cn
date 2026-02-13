@@ -26,7 +26,7 @@ export function HeaderWithContent({ children, className, ...props }: React.Compo
 	return (
 		<div
 			className={cn(
-				"flex flex-col w-full h-full p-8 gap-4",
+				"flex flex-col w-full h-full p-4 md:p-8 gap-4",
 				className
 			)}
 			{...props}
