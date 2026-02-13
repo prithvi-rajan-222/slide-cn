@@ -37,7 +37,7 @@ export function Hero() {
 				</div>
 			</div>
 
-			{!isMobile && <div className="w-full max-w-6xl mx-auto mt-16 md:mt-24 h-200 bg-neutral-900 rounded-md relative z-10">
+			{<div className="w-full max-w-6xl mx-auto mt-16 md:mt-24 h-220 md:h-200 bg-neutral-900 rounded-md relative z-10">
 				<Demo />
 			</div>}
 
