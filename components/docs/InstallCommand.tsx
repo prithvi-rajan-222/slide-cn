@@ -16,7 +16,7 @@ type InstallCommandProps = {
 export function InstallCommand({ packageName, repackaged = false }: InstallCommandProps) {
 	let registryUrl = packageName;
 	if (!repackaged) {
-		registryUrl = `https://slide-cn.com/r/${packageName}.json`;
+		registryUrl = `@slide-cn/${packageName}`;
 	}
 	return (
 		<Tabs defaultValue="pnpm">

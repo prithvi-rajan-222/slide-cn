@@ -1,11 +1,11 @@
 import { HorizontalSplit } from "@/components/ui/slide-cn/horizontal-split";
 import { Layers, PieChart, Box } from "lucide-react";
 import { Slide } from "@/components/ui/slide-cn/slide";
-import LightRays from "@/components/LightRays";
+import { GradientBackground } from "@/components/ui/slide-cn/backgrounds/dark-mode-gradient";
 
 export function Slide3Ecosystem() {
     return (
-        <Slide background={<LightRays />}>
+        <Slide background={<GradientBackground />}>
             <HorizontalSplit>
                 <HorizontalSplit.Left>
                     <div className="p-8 space-y-6 text-lg flex flex-col justify-center h-full">

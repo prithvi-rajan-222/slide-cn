@@ -27,17 +27,17 @@ export function Hero() {
 				<div className="text-muted-foreground text-base md:text-xl py-6 max-w-2xl mx-auto">
 					Easily make slides and presentations using react components
 				</div>
-				<div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-2">
-					<Button onClick={navigateToDocs} variant="default" className="w-full sm:w-auto px-6 py-5 text-base">
+				<div className="flex flex-row gap-4 items-center justify-center mt-2">
+					<Button onClick={navigateToDocs} variant="default" className="w-auto px-6 py-5 text-base">
 						Get Started
 					</Button>
-					<Button onClick={navigateToDemo} variant="outline" className="w-full sm:w-auto px-6 py-5 text-base">
+					<Button onClick={navigateToDemo} variant="outline" className="w-auto px-6 py-5 text-base">
 						View Demo
 					</Button>
 				</div>
 			</div>
 
-			{!isMobile && <div className="w-full max-w-6xl mx-auto mt-16 md:mt-24 h-200 bg-neutral-900 rounded-md relative z-10">
+			{<div className="w-full max-w-6xl mx-auto mt-16 md:mt-24 h-220 md:h-200 bg-black rounded-md relative z-10">
 				<Demo />
 			</div>}
 
