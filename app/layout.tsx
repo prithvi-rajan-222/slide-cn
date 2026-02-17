@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from '@vercel/analytics/next';
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/seo";
 
 
 const geistSans = Geist({
@@ -17,8 +18,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Slide-CN",
-	description: "Create beautiful presentations using code",
+	metadataBase: new URL(SITE_URL),
+	title: {
+		default: `${SITE_NAME} - Create Beautiful Presentations Using Code`,
+		template: `%s | ${SITE_NAME}`,
+	},
+	description: SITE_DESCRIPTION,
+	keywords: [
+		"presentation framework",
+		"react slides",
+		"code presentations",
+		"jsx slides",
+		"developer presentations",
+		"slide-cn",
+		"react presentation",
+		"code-first slides",
+	],
+	authors: [{ name: "Slide-CN" }],
+	creator: "Slide-CN",
+	openGraph: {
+		type: "website",
+		locale: "en_US",
+		siteName: SITE_NAME,
+		title: `${SITE_NAME} - Create Beautiful Presentations Using Code`,
+		description: SITE_DESCRIPTION,
+		images: [
+			{
+				url: "/og-image.png",
+				width: 1200,
+				height: 630,
+				alt: SITE_NAME,
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: `${SITE_NAME} - Create Beautiful Presentations Using Code`,
+		description: SITE_DESCRIPTION,
+		images: ["/og-image.png"],
+	},
 	icons: {
 		icon: [
 			{ url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
+import { SITE_URL } from '@/lib/seo';
 
 import { DocsFooter } from '@/components/docs-footer';
 
@@ -45,8 +46,19 @@ export async function generateMetadata(props: PageProps<'/docs/[[...slug]]'>): P
 	const page = source.getPage(params.slug);
 	if (!page) notFound();
 
+	const url = `${SITE_URL}${page.url}`;
+
 	return {
 		title: page.data.title,
 		description: page.data.description,
+		openGraph: {
+			title: page.data.title,
+			description: page.data.description ?? undefined,
+			type: "article",
+			url,
+		},
+		alternates: {
+			canonical: url,
+		},
 	};
 }
