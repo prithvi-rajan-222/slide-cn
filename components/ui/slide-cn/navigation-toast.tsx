@@ -45,7 +45,9 @@ export function NavigationToast({
 					animate={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: 10 }}
 					transition={{ duration: 0.3, ease: "easeOut" }}
+					onClick={() => setVisible(false)}
 					className={cn(
+						"cursor-pointer",
 						"absolute bottom-20 left-1/2 -translate-x-1/2 z-50",
 						"flex items-center gap-3 px-5 py-3 rounded-full",
 						"bg-foreground/10 backdrop-blur-xl border border-foreground/10",

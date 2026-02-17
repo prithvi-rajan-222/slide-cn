@@ -7,7 +7,7 @@ import { Slide5Interactive } from "./slides/slide-5-interactive";
 
 export function Demo() {
 	return (
-		<Deck className="h-full">
+		<Deck showNavigationToast navigationToastProps={{ duration: 15000 }} className="h-full">
 			<Slide1Title />
 			<Slide2Consistency />
 			<Slide3Ecosystem />
