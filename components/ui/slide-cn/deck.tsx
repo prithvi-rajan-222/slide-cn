@@ -1,6 +1,7 @@
 "use client";
 import { useDeckController } from "@/components/ui/slide-cn/use-deck-controller";
 import { useKeyboardNavigation } from "@/components/ui/slide-cn/use-keyboard-navigation";
+import { NavigationToast } from "@/components/ui/slide-cn/navigation-toast";
 import React from "react";
 import { AnimatePresence } from "motion/react";
 import { SlideNav } from "@/components/ui/slide-cn/slide-nav";
@@ -44,7 +45,21 @@ const DeckContext = React.createContext<ReturnType<
 	typeof useDeckController
 > | null>(null);
 
-export function Deck({ children, className }: { children: React.ReactNode, className?: string }) {
+type NavigationToastProps = {
+	duration?: number;
+	desktopMessage?: string;
+	mobileMessage?: string;
+	className?: string;
+};
+
+type DeckProps = {
+	children: React.ReactNode;
+	className?: string;
+	showNavigationToast?: boolean;
+	navigationToastProps?: NavigationToastProps;
+};
+
+export function Deck({ children, className, showNavigationToast = true, navigationToastProps }: DeckProps) {
 	const slides = React.Children.toArray(children);
 	const deck = useDeckController(slides.length);
 	useKeyboardNavigation({
@@ -65,6 +80,7 @@ export function Deck({ children, className }: { children: React.ReactNode, class
 						{slides[deck.index]}
 					</AnimatePresence>
 				</div>
+				{showNavigationToast && <NavigationToast {...navigationToastProps} />}
 
 			</div>
 

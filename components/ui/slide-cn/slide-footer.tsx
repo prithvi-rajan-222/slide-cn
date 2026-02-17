@@ -6,6 +6,14 @@ import { useDeck } from "@/components/ui/slide-cn/deck";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+function FooterKeyCap({ children }: { children: React.ReactNode }) {
+	return (
+		<span className="inline-flex items-center justify-center w-5 h-5 rounded bg-foreground/10 border border-foreground/15 text-[10px] font-mono leading-none">
+			{children}
+		</span>
+	);
+}
+
 /**
  * SlideFooter
  *
@@ -83,18 +91,17 @@ export function SlideFooter({
 			{/* Right: Hint */}
 			<div className="flex justify-end">
 				{showHint && (
-					<span className="hidden sm:flex items-center gap-1.5 opacity-50 hover:opacity-100 transition-opacity">
-						<span className="text-xs uppercase tracking-wider font-semibold">Navigate</span>
-						<div className="flex items-center gap-0.5 bg-foreground/5 rounded-md px-1 py-0.5">
-							<ChevronLeft className="w-3 h-3" />
-							<ChevronRight className="w-3 h-3" />
-						</div>
+					<span className="hidden sm:flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+						<FooterKeyCap>&#8592;</FooterKeyCap>
+						<FooterKeyCap>&#8594;</FooterKeyCap>
 					</span>
 				)}
 				{/* Mobile simplified hint */}
 				{showHint && (
-					<span className="sm:hidden opacity-50 text-xs">
-						Swipe to nav
+					<span className="sm:hidden flex items-center gap-1.5 opacity-70 hover:opacity-100 transition-opacity text-xs">
+						<span>Swipe</span>
+						<ChevronLeft className="w-3 h-3" />
+						<ChevronRight className="w-3 h-3" />
 					</span>
 				)}
 			</div>

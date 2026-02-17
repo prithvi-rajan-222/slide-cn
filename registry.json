@@ -14,6 +14,7 @@
 				"https://slide-cn.com/r/header-with-content.json",
 				"https://slide-cn.com/r/slide-nav.json",
 				"https://slide-cn.com/r/slide-footer.json",
+				"https://slide-cn.com/r/navigation-toast.json",
 				"https://slide-cn.com/r/horizontal-split.json",
 				"https://slide-cn.com/r/vertical-split.json",
 				"https://slide-cn.com/r/title-slide.json",
@@ -54,6 +55,11 @@
 					"path": "components/ui/slide-cn/slide-nav.tsx",
 					"type": "registry:component",
 					"target": "components/ui/slide-cn/slide-nav.tsx"
+				},
+				{
+					"path": "components/ui/slide-cn/navigation-toast.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/navigation-toast.tsx"
 				},
 				{
 					"path": "components/ui/slide-cn/use-deck-controller.ts",
@@ -115,6 +121,23 @@
 			]
 		},
 		{
+			"name": "navigation-toast",
+			"type": "registry:component",
+			"title": "Navigation Toast",
+			"description": "Toast overlay that shows navigation hints on first load",
+			"dependencies": [
+				"motion"
+			],
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "components/ui/slide-cn/navigation-toast.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/navigation-toast.tsx"
+				}
+			]
+		},
+		{
 			"name": "slide",
 			"type": "registry:component",
 			"title": "Slide",
@@ -143,6 +166,11 @@
 					"path": "components/ui/slide-cn/slide-footer.tsx",
 					"type": "registry:component",
 					"target": "components/ui/slide-cn/slide-footer.tsx"
+				},
+				{
+					"path": "components/ui/slide-cn/navigation-toast.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/navigation-toast.tsx"
 				},
 				{
 					"path": "components/ui/slide-cn/use-deck-controller.ts",
