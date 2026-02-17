@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import MotionDrawer from "./motion-drawer";
 import { Route } from "next";
+import { Star } from "lucide-react";
+
+const GITHUB_URL = "https://github.com/prithvi-rajan-222/slide-cn";
 
 export function UIHeader() {
 
@@ -15,10 +18,6 @@ export function UIHeader() {
 		{
 			label: "Demo",
 			href: "/demos/slide-cn-introduction"
-		},
-		{
-			label: "GitHub",
-			href: "https://github.com/prithvi-rajan-222/slide-cn"
 		}
 	];
 	const [open, setOpen] = useState(false);
@@ -40,6 +39,15 @@ export function UIHeader() {
 								{item.label}
 							</Link>
 						))}
+						<a
+							href={GITHUB_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-1.5 rounded-md border border-border/60 bg-muted/50 px-3 py-1.5 text-sm font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-foreground"
+						>
+							<Star className="h-3.5 w-3.5" />
+							Star on GitHub
+						</a>
 					</nav>
 
 					{/* Mobile Button */}
@@ -76,6 +84,16 @@ export function UIHeader() {
 							{item.label}
 						</Link>
 					))}
+					<a
+						href={GITHUB_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center gap-2 text-lg font-medium text-popover-foreground/80 hover:text-popover-foreground transition-colors"
+						onClick={() => setOpen(false)}
+					>
+						<Star className="h-4 w-4" />
+						Star on GitHub
+					</a>
 				</div>
 			</MotionDrawer>
 		</>
