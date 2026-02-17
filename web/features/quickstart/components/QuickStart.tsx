@@ -1,9 +1,15 @@
+"use client";
+
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 const steps = [
 	{
 		number: 1,
 		title: "Install",
 		description: "Add Slide-CN to your Next.js project with a single command.",
 		code: "pnpm dlx shadcn@latest add @slide-cn/slide-cn-default",
+		language: "bash",
 	},
 	{
 		number: 2,
@@ -16,12 +22,14 @@ const steps = [
     </SlideTitle>
   </Slide>
 </Deck>`,
+		language: "tsx",
 	},
 	{
 		number: 3,
 		title: "Present",
 		description: "Run your Next.js app and present directly from the browser.",
 		code: "pnpm dev",
+		language: "bash",
 	},
 ];
 
@@ -45,9 +53,23 @@ export function QuickStart() {
 								<h3 className="text-lg font-semibold">{step.title}</h3>
 							</div>
 							<p className="text-muted-foreground text-sm">{step.description}</p>
-							<pre className="bg-muted/50 border rounded-lg p-3 text-sm font-mono">
-								<code>{step.code}</code>
-							</pre>
+							<div className="rounded-lg border bg-muted/50 overflow-hidden">
+								<SyntaxHighlighter
+									language={step.language}
+									style={vscDarkPlus}
+									showLineNumbers={false}
+									wrapLongLines={true}
+									customStyle={{
+										margin: 0,
+										padding: "0.75rem",
+										background: "transparent",
+										fontSize: "0.875rem",
+										lineHeight: "1.625",
+									}}
+								>
+									{step.code}
+								</SyntaxHighlighter>
+							</div>
 						</div>
 					))}
 				</div>
