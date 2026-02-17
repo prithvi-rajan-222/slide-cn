@@ -11,7 +11,9 @@ const steps = [
 		description: "Create a deck using React components. Each slide is a component.",
 		code: `<Deck>
   <Slide>
-    <SlideTitle>My Presentation</SlideTitle>
+    <SlideTitle>
+      My Presentation
+    </SlideTitle>
   </Slide>
 </Deck>`,
 	},
@@ -43,7 +45,7 @@ export function QuickStart() {
 								<h3 className="text-lg font-semibold">{step.title}</h3>
 							</div>
 							<p className="text-muted-foreground text-sm">{step.description}</p>
-							<pre className="bg-muted/50 border rounded-lg p-3 text-sm font-mono overflow-x-auto">
+							<pre className="bg-muted/50 border rounded-lg p-3 text-sm font-mono">
 								<code>{step.code}</code>
 							</pre>
 						</div>

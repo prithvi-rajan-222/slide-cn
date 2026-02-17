@@ -58,7 +58,7 @@ export function Hero() {
 				</div>
 			</div>
 
-			<div className="w-full max-w-6xl mx-auto mt-12 md:mt-20 h-220 md:h-200 bg-black rounded-md relative z-10">
+			<div className="border-border border-2 w-full max-w-6xl mx-auto mt-12 md:mt-20 h-220 md:h-200 bg-black rounded-md relative z-10">
 				<Demo />
 			</div>
 
