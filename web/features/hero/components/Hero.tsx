@@ -44,9 +44,9 @@ export function Hero() {
 					</Button>
 				</div>
 
-				<div className="mt-6 sm:mt-8 flex items-center justify-center px-0">
-					<div className="flex items-center gap-2 sm:gap-3 bg-muted/50 border rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 font-mono text-xs sm:text-sm text-muted-foreground max-w-full overflow-x-auto">
-						<code className="whitespace-nowrap">{INSTALL_COMMAND}</code>
+				<div className="mt-6 sm:mt-8 flex items-center justify-center w-full min-w-0">
+					<div className="flex items-center gap-2 sm:gap-3 bg-muted/50 border rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 font-mono text-[10px] sm:text-xs md:text-sm text-muted-foreground min-w-0 max-w-full overflow-x-auto">
+						<code className="">{INSTALL_COMMAND}</code>
 						<button
 							onClick={copyInstallCommand}
 							className="shrink-0 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
