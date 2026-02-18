@@ -18,6 +18,9 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
 	return (
 		<DocsPage
 			toc={page.data.toc}
+			tableOfContent={{
+				style: 'clerk'
+			}}
 			full={page.data.full}
 			footer={{
 				children: <DocsFooter />,
