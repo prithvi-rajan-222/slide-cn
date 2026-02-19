@@ -63,7 +63,7 @@ export function Slide({ children, background, footer = <SlideFooter /> }: SlideP
 				dragElastic={0.25}
 				dragMomentum={false}
 				whileDrag={{ scale: 1 }}
-				onDragEnd={(event, info) => {
+				onDragEnd={(_, info) => {
 					const swipeDistance = info.offset.x;
 					const swipeVelocity = info.velocity.x;
 
