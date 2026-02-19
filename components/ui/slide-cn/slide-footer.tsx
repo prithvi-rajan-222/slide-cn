@@ -3,7 +3,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { useDeck } from "@/components/ui/slide-cn/deck";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function FooterKeyCap({ children }: { children: React.ReactNode }) {
@@ -58,7 +57,6 @@ export function SlideFooter({
 	showAdd = false,
 }: SlideFooterProps) {
 	const deck = useDeck();
-	const isMobile = useIsMobile();
 
 	// Using grid layout for precise alignment: Left (Progress), Center (Branding), Right (Hint)
 	return (
