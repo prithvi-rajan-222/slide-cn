@@ -6,7 +6,9 @@
   "dependencies": [
     "motion"
   ],
-  "registryDependencies": [],
+  "registryDependencies": [
+    "use-mobile"
+  ],
   "files": [
     {
       "path": "components/ui/slide-cn/navigation-toast.tsx",

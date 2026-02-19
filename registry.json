@@ -111,7 +111,7 @@
 			"dependencies": [
 				"lucide-react"
 			],
-			"registryDependencies": [],
+			"registryDependencies": ["use-mobile"],
 			"files": [
 				{
 					"path": "components/ui/slide-cn/slide-footer.tsx",
@@ -128,7 +128,7 @@
 			"dependencies": [
 				"motion"
 			],
-			"registryDependencies": [],
+			"registryDependencies": ["use-mobile"],
 			"files": [
 				{
 					"path": "components/ui/slide-cn/navigation-toast.tsx",
@@ -268,7 +268,8 @@
 			"title": "Code block",
 			"description": "A code block component with syntax highlighting",
 			"dependencies": [
-				"react-syntax-highlighter"
+				"react-syntax-highlighter",
+				"@types/react-syntax-highlighter"
 			],
 			"files": [
 				{
