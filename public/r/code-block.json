@@ -4,7 +4,8 @@
   "title": "Code block",
   "description": "A code block component with syntax highlighting",
   "dependencies": [
-    "react-syntax-highlighter"
+    "react-syntax-highlighter",
+    "@types/react-syntax-highlighter"
   ],
   "files": [
     {

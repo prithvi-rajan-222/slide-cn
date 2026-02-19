@@ -6,7 +6,9 @@
   "dependencies": [
     "lucide-react"
   ],
-  "registryDependencies": [],
+  "registryDependencies": [
+    "use-mobile"
+  ],
   "files": [
     {
       "path": "components/ui/slide-cn/slide-footer.tsx",
