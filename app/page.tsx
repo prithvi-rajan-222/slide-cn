@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { UIHeader } from "@/web/features/header/components/ui-header"
 import { Hero } from "@/web/features/hero/components/Hero"
 import { Features } from "@/web/features/features/components/Features"
@@ -6,6 +7,12 @@ import { QuickStart } from "@/web/features/quickstart/components/QuickStart"
 import { CTA } from "@/web/features/cta/components/CTA"
 import { Footer } from "@/web/features/footer/components/Footer"
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/seo"
+
+export const metadata: Metadata = {
+	alternates: {
+		canonical: SITE_URL,
+	},
+}
 
 export default function Home() {
 	const jsonLd = {
