@@ -1,11 +1,10 @@
 ---
 title: Reveal
-description: A component that can hide and reveal certain parts of your slide.
+description: Hide content behind a card flip, reveal it on click.
 ---
 
 ## Overview
-Presentations are all about story-telling. Dictate what you reveal and when.
-Use the reveal component to dictate what to reveal and when.
+Wrap any content in `Reveal` to hide it until clicked. It flips like a card to uncover what's underneath — axis is picked automatically based on the content shape (landscape flips top-to-bottom, portrait flips left-to-right).
 
 ## Installation
 <InstallCommand packageName="reveal" />
@@ -20,7 +19,7 @@ Use the reveal component to dictate what to reveal and when.
           <CardDescription>This content was hidden until you clicked!</CardDescription>
         </CardHeader>
         <CardContent>
-          <p>🎉 You've successfully revealed the content! The Reveal component uses a blur effect to hide content until the user interacts with it.</p>
+          <p>🎉 You revealed it! Click to reveal uses a 3D card flip to uncover content.</p>
         </CardContent>
       </Card>
     </Reveal>
@@ -30,18 +29,20 @@ Use the reveal component to dictate what to reveal and when.
 ## Usage
 ```tsx
 <Reveal>
-	This content will be hidden until clicked
+  This content will be hidden until clicked
 </Reveal>
 ```
-
-
 
 ## Reference
 <TypeTable
   type={{
     children: {
       type: "ReactNode",
-      description: "The content to be revealed",
+      description: "The content to be revealed on click.",
+    },
+    className: {
+      type: "string",
+      description: "Optional class name applied to the outermost container.",
     }
   }}
 />
