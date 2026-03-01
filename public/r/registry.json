@@ -294,6 +294,29 @@
 					"target": "components/ui/slide-cn/reveal.tsx"
 				}
 			]
+		},
+		{
+			"name": "slide-cn-skill",
+			"type": "registry:file",
+			"title": "Slide-CN Claude Skill",
+			"description": "A Claude Code skill that teaches Claude how to build beautiful presentations with slide-cn. Install to enable AI-assisted slide creation in your project.",
+			"files": [
+				{
+					"path": "components/slide-cn-skill/SKILL.md",
+					"type": "registry:file",
+					"target": ".claude/skills/slide-cn/SKILL.md"
+				},
+				{
+					"path": "components/slide-cn-skill/references/components.md",
+					"type": "registry:file",
+					"target": ".claude/skills/slide-cn/references/components.md"
+				},
+				{
+					"path": "components/slide-cn-skill/references/patterns.md",
+					"type": "registry:file",
+					"target": ".claude/skills/slide-cn/references/patterns.md"
+				}
+			]
 		}
 	]
 }
