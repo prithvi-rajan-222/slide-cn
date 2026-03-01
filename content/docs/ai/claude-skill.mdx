@@ -1,0 +1,59 @@
+---
+title: Claude Code Skill
+description: Add AI-assisted slide creation to your project with the slide-cn Claude Code skill.
+---
+
+## Overview
+
+The slide-cn Claude Code skill gives [Claude Code](https://claude.ai/code) deep knowledge of the component API, layout patterns, and design conventions — so you can describe what you want in plain language and get production-quality slide code back.
+
+Without the skill, Claude knows React and Tailwind but has to guess at slide-cn specifics. With it, Claude knows exactly which component to reach for, how to structure the inner wrappers, which color pairs to use for dark mode, and how to compose a full deck.
+
+## Installation
+
+Run this in your project directory:
+
+<InstallCommand packageName="slide-cn-skill" />
+
+This installs three files into `.claude/skills/slide-cn/` in your project:
+
+| File | Purpose |
+|---|---|
+| `SKILL.md` | Core rules — component usage, layout selection, inner wrapper patterns, typography |
+| `references/components.md` | Full prop tables for every component |
+| `references/patterns.md` | Complete TSX source for a product pitch deck and a technical deep-dive deck |
+
+Claude Code automatically loads skills from `.claude/skills/` when they are relevant to the task.
+
+## Usage
+
+Once installed, just describe what you want:
+
+> "Create a 5-slide pitch deck for a dev tool startup"
+
+> "Add a slide with a code demo on the right and explanation on the left"
+
+> "Replace the benefits slide with reveal cards"
+
+Claude will apply the correct components, inner wrapper patterns, dark mode color pairs, and spacing rules — no guessing required.
+
+You can also invoke the skill explicitly with the `/slide-cn` slash command in Claude Code.
+
+## What the skill teaches Claude
+
+**Layout selection** — which component to use for each slide type (title slides, two-column layouts, header + content grids, code demos).
+
+**Inner wrapper patterns** — the exact `div` structure required around `TitleSlide` vs `HeaderWithContent` slides.
+
+**Component API** — props, defaults, and sub-components for `Deck`, `Slide`, `TitleSlide`, `HorizontalSplit`, `HeaderWithContent`, `Reveal`, `CodeBlock`, `Callout`, `SlideImage`, and `SlideFooter`.
+
+**Dark mode color pairs** — how to pair every Tailwind color with its dark variant so cards look right in both modes (e.g. `border-emerald-200 dark:border-emerald-900/50`).
+
+**Card and reveal patterns** — the full icon + title + description card pattern, the 2×2 reveal grid, gradient backgrounds.
+
+**File organization** — splitting each slide into its own component file inside a `slides/` directory.
+
+## Requirements
+
+- [Claude Code](https://claude.ai/code) installed and running in your project
+- slide-cn components already installed ([Installation guide](/docs/installation))
