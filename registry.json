@@ -304,17 +304,17 @@
 				{
 					"path": "components/slide-cn-skill/SKILL.md",
 					"type": "registry:file",
-					"target": ".claude/skills/slide-cn/SKILL.md"
+					"target": "~/.claude/skills/slide-cn/SKILL.md"
 				},
 				{
 					"path": "components/slide-cn-skill/references/components.md",
 					"type": "registry:file",
-					"target": ".claude/skills/slide-cn/references/components.md"
+					"target": "~/.claude/skills/slide-cn/references/components.md"
 				},
 				{
 					"path": "components/slide-cn-skill/references/patterns.md",
 					"type": "registry:file",
-					"target": ".claude/skills/slide-cn/references/patterns.md"
+					"target": "~/.claude/skills/slide-cn/references/patterns.md"
 				}
 			]
 		}
