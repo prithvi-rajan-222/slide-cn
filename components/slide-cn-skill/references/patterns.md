@@ -41,7 +41,6 @@ import { ClosingSlide } from "./slides/closing-slide";
 
 export default function PitchPage() {
   return (
-    <div className="fixed inset-0">
       <Deck>
         <Slide background={<GradientBackground />} footer={<SlideFooter showAdd />}>
           <TitleSlideContent />
@@ -62,7 +61,6 @@ export default function PitchPage() {
           <ClosingSlide />
         </Slide>
       </Deck>
-    </div>
   );
 }
 ```

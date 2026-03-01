@@ -24,12 +24,11 @@ import { Slide } from "@/components/ui/slide-cn/slide";
 
 ## 2. Deck Setup
 
-In a Next.js App Router page, wrap `<Deck>` in `<div className="fixed inset-0">`. This provides the positioned ancestor that `Deck` (`absolute inset-0 h-screen`) requires. Every `<Slide>` is a direct child of `<Deck>`.
+Every `<Slide>` is a direct child of `<Deck>`.
 
 ```tsx
 export default function PresentationPage() {
   return (
-    <div className="fixed inset-0">
       <Deck>
         <Slide>
           <TitleSlideContent />
@@ -38,7 +37,6 @@ export default function PresentationPage() {
           <AnotherSlideContent />
         </Slide>
       </Deck>
-    </div>
   );
 }
 ```
@@ -74,7 +72,6 @@ import { ClosingSlide } from "./slides/closing-slide";
 
 export default function PresentationPage() {
   return (
-    <div className="fixed inset-0">
       <Deck>
         <Slide footer={<SlideFooter showAdd />}>
           <TitleSlideContent />
@@ -89,7 +86,6 @@ export default function PresentationPage() {
           <ClosingSlide />
         </Slide>
       </Deck>
-    </div>
   );
 }
 ```
@@ -112,22 +108,16 @@ Every slide component needs a specific inner wrapper — never skip this.
 
 **TitleSlide slides** (centered, vertically + horizontally):
 ```tsx
-<div className="relative h-full w-full flex items-center justify-center p-8 md:p-12 lg:p-16">
   <TitleSlide>
     ...
   </TitleSlide>
-</div>
 ```
 
 **HeaderWithContent slides** (full height, z-stacking for backgrounds):
 ```tsx
-<div className="relative h-full w-full">
-  <div className="relative z-10 p-8 md:p-12 lg:p-16">
     <HeaderWithContent>
       ...
     </HeaderWithContent>
-  </div>
-</div>
 ```
 
 ## 6. TitleSlide Component

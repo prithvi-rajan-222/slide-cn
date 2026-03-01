@@ -13,7 +13,6 @@ Manages slide index via React context. Handles keyboard navigation (→/Space = 
 
 **Renders:** `<div className="absolute inset-0 overflow-hidden touch-pan-y md:touch-none h-screen">`
 
-**Required setup:** Wrap in `<div className="fixed inset-0">` in a Next.js page to provide the positioned ancestor.
 
 | Prop | Type | Default | Description |
 |---|---|---|---|
@@ -47,8 +46,6 @@ Individual slide wrapper. Handles swipe gestures (60px distance OR 600px/s veloc
 
 Compound component for title/section/closing slides. Renders centered content.
 
-**Usage pattern:** Always wrap in `<div className="relative h-full w-full flex items-center justify-center p-8 md:p-12 lg:p-16">`.
-
 | Sub-component | Element | Default classes | Notes |
 |---|---|---|---|
 | `TitleSlide` | `div` | `flex flex-col items-center text-center` | Root container |
@@ -68,13 +65,9 @@ Vertical layout: large header at top, flexible content area below.
 
 **Root styles:** `flex flex-col w-full h-full p-4 md:p-8 gap-4`
 
-**Usage pattern:** Always wrap in:
+**Usage pattern:** 
 ```tsx
-<div className="relative h-full w-full">
-  <div className="relative z-10 p-8 md:p-12 lg:p-16">
     <HeaderWithContent>...</HeaderWithContent>
-  </div>
-</div>
 ```
 
 | Sub-component | Element | Default classes | Notes |
