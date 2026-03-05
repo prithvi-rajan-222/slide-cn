@@ -7,30 +7,5 @@ Slide-CN uses the shadcn theming system — themes are just sets of CSS variable
 
 Each theme defines three background tokens (`--background`, `--background-2`, `--background-3`) that the gradient background components use to build the slide gradient, plus the full set of shadcn color tokens for light and dark mode.
 
-## Sky Theme
+<ThemePicker />
 
-A blue-purple gradient palette that transitions across cool hues. Works in both light and dark mode.
-
-<InstallCommand packageName="sky-theme" />
-
-Pair it with `RadialGradient` or `LinearGradient` to get the full effect:
-
-```tsx
-import { Deck } from "@/components/ui/slide-cn/deck";
-import { Slide } from "@/components/ui/slide-cn/slide";
-import { TitleSlide } from "@/components/ui/slide-cn/title-slide";
-import { RadialGradient } from "@/components/ui/slide-cn/backgrounds/gradients/radial";
-
-export default function MyDeck() {
-  return (
-    <Deck>
-      <Slide background={<RadialGradient />}>
-        <TitleSlide>
-          <TitleSlide.Heading>My Presentation</TitleSlide.Heading>
-          <TitleSlide.SubHeading>Styled with Sky Theme</TitleSlide.SubHeading>
-        </TitleSlide>
-      </Slide>
-    </Deck>
-  );
-}
-```

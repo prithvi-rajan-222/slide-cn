@@ -11,6 +11,7 @@ import {
 	TypeTable
 } from "fumadocs-ui/components/type-table";
 import { InstallCommand } from "./components/docs/InstallCommand"
+import { ThemePicker } from "./components/docs/ThemePicker"
 import { ComponentDemo } from "./components/docs/ComponentDemo"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "./components/ui/card"
 import { Reveal } from "@/components/ui/slide-cn/reveal"
@@ -45,6 +46,7 @@ export function getMDXComponents(
 		TabsContent,
 		TypeTable,
 		InstallCommand,
+		ThemePicker,
 		ComponentDemo,
 		// Card components
 		Card,
