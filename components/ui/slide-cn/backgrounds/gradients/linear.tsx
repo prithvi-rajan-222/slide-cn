@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-type GradientLinearProps = React.ComponentProps<"div">;
+type LinearGradientProps = React.ComponentProps<"div">;
 
 /**
  * GradientLinear
@@ -15,20 +15,24 @@ type GradientLinearProps = React.ComponentProps<"div">;
  * </Slide>
  * ```
  */
-export function GradientLinear({ className, style, ...props }: GradientLinearProps) {
-	return (
-		<div
-			className={cn("absolute inset-0", className)}
-			style={{
-				background: `linear-gradient(
+export function LinearGradient({
+  className,
+  style,
+  ...props
+}: LinearGradientProps) {
+  return (
+    <div
+      className={cn("absolute inset-0", className)}
+      style={{
+        background: `linear-gradient(
 					to bottom right,
 					var(--slide-grad-start),
 					var(--slide-grad-mid),
 					var(--slide-grad-end)
 				)`,
-				...style,
-			}}
-			{...props}
-		/>
-	);
+        ...style,
+      }}
+      {...props}
+    />
+  );
 }
