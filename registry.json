@@ -293,6 +293,19 @@
 			]
 		},
 		{
+			"name": "gradient-radial",
+			"type": "registry:component",
+			"title": "Radial Gradient Background",
+			"description": "A full-bleed radial gradient background emanating from the center using the slide-cn theme palette tokens (background, background-2, background-3).",
+			"files": [
+				{
+					"path": "components/ui/slide-cn/backgrounds/gradients/gradient-radial.tsx",
+					"type": "registry:component",
+					"target": "components/ui/slide-cn/backgrounds/gradients/gradient-radial.tsx"
+				}
+			]
+		},
+		{
 			"name": "reveal",
 			"type": "registry:component",
 			"title": "Reveal",
