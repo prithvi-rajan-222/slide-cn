@@ -1,0 +1,118 @@
+---
+title: Gradient Backgrounds
+description: Built-in gradient backgrounds for Slide-CN slides
+---
+
+## Overview
+
+Slide-CN ships two gradient background components — `LinearGradient` and `RadialGradient`. Both are full-bleed and driven by three CSS variables:
+
+| Variable | Description |
+|----------|-------------|
+| `--background` | Start color |
+| `--background-2` | Mid color |
+| `--background-3` | End color |
+
+You can provide these by installing a [theme](/docs/themes) (recommended) or by passing them inline via the `style` prop.
+
+## Installation
+
+<InstallCommand packageName="gradient-linear" />
+<InstallCommand packageName="gradient-radial" />
+
+## LinearGradient
+
+Renders a diagonal gradient from top-left to bottom-right.
+
+<ComponentDemo description="LinearGradient background" className="h-96 rounded-lg overflow-hidden">
+<Deck className="h-96">
+  <Slide background={<LinearGradient style={{"--background": "oklch(0.38 0.08 290)", "--background-2": "oklch(0.37 0.08 250)", "--background-3": "oklch(0.36 0.08 210)"}} />}>
+    <TitleSlide>
+      <TitleSlide.Heading>Linear Gradient</TitleSlide.Heading>
+      <TitleSlide.SubHeading>Top-left to bottom-right</TitleSlide.SubHeading>
+    </TitleSlide>
+  </Slide>
+</Deck>
+</ComponentDemo>
+
+```tsx
+import { LinearGradient } from "@/components/ui/slide-cn/backgrounds/gradients/linear";
+
+<Slide background={<LinearGradient />}>
+  {/* slide content */}
+</Slide>
+```
+
+### Inline colors
+
+If you aren't using a theme, pass the CSS variables via `style`:
+
+```tsx
+<Slide
+  background={
+    <LinearGradient
+      style={{
+        "--background": "oklch(0.38 0.08 290)",
+        "--background-2": "oklch(0.37 0.08 250)",
+        "--background-3": "oklch(0.36 0.08 210)",
+      } as React.CSSProperties}
+    />
+  }
+>
+  {/* slide content */}
+</Slide>
+```
+
+## RadialGradient
+
+Renders an elliptical gradient emanating from the center.
+
+<ComponentDemo description="RadialGradient background" className="h-96 rounded-lg overflow-hidden">
+<Deck className="h-96">
+  <Slide background={<RadialGradient style={{"--background": "oklch(0.38 0.08 290)", "--background-2": "oklch(0.37 0.08 250)", "--background-3": "oklch(0.36 0.08 210)"}} />}>
+    <TitleSlide>
+      <TitleSlide.Heading>Radial Gradient</TitleSlide.Heading>
+      <TitleSlide.SubHeading>Center outward</TitleSlide.SubHeading>
+    </TitleSlide>
+  </Slide>
+</Deck>
+</ComponentDemo>
+
+```tsx
+import { RadialGradient } from "@/components/ui/slide-cn/backgrounds/gradients/radial";
+
+<Slide background={<RadialGradient />}>
+  {/* slide content */}
+</Slide>
+```
+
+### Inline colors
+
+```tsx
+<Slide
+  background={
+    <RadialGradient
+      style={{
+        "--background": "oklch(0.38 0.08 290)",
+        "--background-2": "oklch(0.37 0.08 250)",
+        "--background-3": "oklch(0.36 0.08 210)",
+      } as React.CSSProperties}
+    />
+  }
+>
+  {/* slide content */}
+</Slide>
+```
+
+## Theming
+
+Installing a theme automatically defines `--background`, `--background-2`, and `--background-3` so both gradient components work without any extra configuration. See [Themes](/docs/themes).
+
+## Reference
+
+Both components accept all standard `<div>` props. `className` and `style` are merged with the component defaults.
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `className` | `string` | Merged with `absolute inset-0` |
+| `style` | `CSSProperties` | Merged with the gradient definition. Use this to pass `--background`, `--background-2`, `--background-3` inline. |

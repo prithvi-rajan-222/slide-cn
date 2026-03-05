@@ -1,322 +1,382 @@
 {
-	"$schema": "https://ui.shadcn.com/schema/registry.json",
-	"name": "Slide-CN",
-	"homepage": "https://slide-cn.com",
-	"items": [
-		{
-			"name": "slide-cn-default",
-			"type": "registry:lib",
-			"title": "Slide-CN Default Preset",
-			"description": "Installs the recommended Slide-CN layouts and components.",
-			"registryDependencies": [
-				"https://slide-cn.com/r/slide.json",
-				"https://slide-cn.com/r/deck.json",
-				"https://slide-cn.com/r/header-with-content.json",
-				"https://slide-cn.com/r/slide-nav.json",
-				"https://slide-cn.com/r/slide-footer.json",
-				"https://slide-cn.com/r/navigation-toast.json",
-				"https://slide-cn.com/r/horizontal-split.json",
-				"https://slide-cn.com/r/vertical-split.json",
-				"https://slide-cn.com/r/title-slide.json",
-				"https://slide-cn.com/r/slide-image.json",
-				"https://slide-cn.com/r/callout.json",
-				"https://slide-cn.com/r/code-block.json",
-				"https://slide-cn.com/r/reveal.json",
-				"accordion",
-				"card"
-			]
-		},
-		{
-			"name": "deck",
-			"type": "registry:component",
-			"title": "Deck",
-			"description": "A Deck component that is the core of the presentation",
-			"dependencies": [
-				"motion"
-			],
-			"registryDependencies": [],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/deck.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/deck.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/slide.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/slide.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/slide-footer.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/slide-footer.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/slide-nav.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/slide-nav.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/navigation-toast.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/navigation-toast.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/use-deck-controller.ts",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/use-deck-controller.ts"
-				},
-				{
-					"path": "components/ui/slide-cn/use-keyboard-navigation.ts",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/use-keyboard-navigation.ts"
-				}
-			]
-		},
-		{
-			"name": "header-with-content",
-			"type": "registry:component",
-			"title": "Header with content",
-			"description": "A layout with a header, and some content space",
-			"registryDependencies": [],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/header-with-content.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/header-with-content.tsx"
-				}
-			]
-		},
-		{
-			"name": "slide-nav",
-			"type": "registry:component",
-			"title": "Slide Nav",
-			"description": "Navigation for your slides",
-			"registryDependencies": [
-				"button"
-			],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/slide-nav.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/slide-nav.tsx"
-				}
-			]
-		},
-		{
-			"name": "slide-footer",
-			"type": "registry:component",
-			"title": "Slide footer",
-			"description": "Footer for your slides",
-			"dependencies": [
-				"lucide-react"
-			],
-			"registryDependencies": ["use-mobile"],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/slide-footer.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/slide-footer.tsx"
-				}
-			]
-		},
-		{
-			"name": "navigation-toast",
-			"type": "registry:component",
-			"title": "Navigation Toast",
-			"description": "Toast overlay that shows navigation hints on first load",
-			"dependencies": [
-				"motion"
-			],
-			"registryDependencies": ["use-mobile"],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/navigation-toast.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/navigation-toast.tsx"
-				}
-			]
-		},
-		{
-			"name": "slide",
-			"type": "registry:component",
-			"title": "Slide",
-			"description": "Basic slide component",
-			"dependencies": [
-				"motion"
-			],
-			"registryDependencies": [],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/deck.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/deck.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/slide.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/slide.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/slide-nav.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/slide-nav.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/slide-footer.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/slide-footer.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/navigation-toast.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/navigation-toast.tsx"
-				},
-				{
-					"path": "components/ui/slide-cn/use-deck-controller.ts",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/use-deck-controller.ts"
-				},
-				{
-					"path": "components/ui/slide-cn/use-keyboard-navigation.ts",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/use-keyboard-navigation.ts"
-				}
-			]
-		},
-		{
-			"name": "horizontal-split",
-			"type": "registry:component",
-			"title": "Horizontal split",
-			"description": "A slide layout with two columns split horizontally",
-			"registryDependencies": [],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/horizontal-split.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/horizontal-split.tsx"
-				}
-			]
-		},
-		{
-			"name": "vertical-split",
-			"type": "registry:component",
-			"title": "Vertical split",
-			"description": "A slide layout with two rows split vertically",
-			"registryDependencies": [],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/vertical-split.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/vertical-split.tsx"
-				}
-			]
-		},
-		{
-			"name": "title-slide",
-			"type": "registry:component",
-			"title": "Title slide",
-			"description": "Set of components to easily create a title slide",
-			"registryDependencies": [],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/title-slide.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/title-slide.tsx"
-				}
-			]
-		},
-		{
-			"name": "slide-image",
-			"type": "registry:component",
-			"title": "Slide image",
-			"description": "Set of components to add an image and caption to a slide",
-			"dependencies": [
-				"next"
-			],
-			"registryDependencies": [
-				"aspect-ratio"
-			],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/slide-image.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/slide-image.tsx"
-				}
-			]
-		},
-		{
-			"name": "callout",
-			"type": "registry:component",
-			"title": "Callout",
-			"description": "A callout component for highlighting information",
-			"dependencies": [
-				"lucide-react",
-				"class-variance-authority"
-			],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/callout.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/callout.tsx"
-				}
-			]
-		},
-		{
-			"name": "code-block",
-			"type": "registry:component",
-			"title": "Code block",
-			"description": "A code block component with syntax highlighting",
-			"dependencies": [
-				"react-syntax-highlighter",
-				"@types/react-syntax-highlighter"
-			],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/code-block.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/code-block.tsx"
-				}
-			]
-		},
-		{
-			"name": "reveal",
-			"type": "registry:component",
-			"title": "Reveal",
-			"description": "A component that reveals its content on click",
-			"dependencies": [
-				"motion"
-			],
-			"files": [
-				{
-					"path": "components/ui/slide-cn/reveal.tsx",
-					"type": "registry:component",
-					"target": "components/ui/slide-cn/reveal.tsx"
-				}
-			]
-		},
-		{
-			"name": "slide-cn-skill",
-			"type": "registry:file",
-			"title": "Slide-CN Claude Skill",
-			"description": "A Claude Code skill that teaches Claude how to build beautiful presentations with slide-cn. Install to enable AI-assisted slide creation in your project.",
-			"files": [
-				{
-					"path": "components/slide-cn-skill/SKILL.md",
-					"type": "registry:file",
-					"target": "~/.claude/skills/slide-cn/SKILL.md"
-				},
-				{
-					"path": "components/slide-cn-skill/references/components.md",
-					"type": "registry:file",
-					"target": "~/.claude/skills/slide-cn/references/components.md"
-				},
-				{
-					"path": "components/slide-cn-skill/references/patterns.md",
-					"type": "registry:file",
-					"target": "~/.claude/skills/slide-cn/references/patterns.md"
-				}
-			]
-		}
-	]
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Slide-CN",
+  "homepage": "https://slide-cn.com",
+  "items": [
+    {
+      "name": "slide-cn-default",
+      "type": "registry:lib",
+      "title": "Slide-CN Default Preset",
+      "description": "Installs the recommended Slide-CN layouts and components.",
+      "registryDependencies": [
+        "https://slide-cn.com/r/slide.json",
+        "https://slide-cn.com/r/deck.json",
+        "https://slide-cn.com/r/header-with-content.json",
+        "https://slide-cn.com/r/slide-nav.json",
+        "https://slide-cn.com/r/slide-footer.json",
+        "https://slide-cn.com/r/navigation-toast.json",
+        "https://slide-cn.com/r/horizontal-split.json",
+        "https://slide-cn.com/r/vertical-split.json",
+        "https://slide-cn.com/r/title-slide.json",
+        "https://slide-cn.com/r/slide-image.json",
+        "https://slide-cn.com/r/callout.json",
+        "https://slide-cn.com/r/code-block.json",
+        "https://slide-cn.com/r/reveal.json",
+        "accordion",
+        "card"
+      ]
+    },
+    {
+      "name": "deck",
+      "type": "registry:component",
+      "title": "Deck",
+      "description": "A Deck component that is the core of the presentation",
+      "dependencies": ["motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/deck.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/deck.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/slide.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/slide.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/slide-footer.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/slide-footer.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/slide-nav.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/slide-nav.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/navigation-toast.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/navigation-toast.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/use-deck-controller.ts",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/use-deck-controller.ts"
+        },
+        {
+          "path": "components/ui/slide-cn/use-keyboard-navigation.ts",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/use-keyboard-navigation.ts"
+        }
+      ]
+    },
+    {
+      "name": "header-with-content",
+      "type": "registry:component",
+      "title": "Header with content",
+      "description": "A layout with a header, and some content space",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/header-with-content.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/header-with-content.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slide-nav",
+      "type": "registry:component",
+      "title": "Slide Nav",
+      "description": "Navigation for your slides",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/slide-nav.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/slide-nav.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slide-footer",
+      "type": "registry:component",
+      "title": "Slide footer",
+      "description": "Footer for your slides",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["use-mobile"],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/slide-footer.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/slide-footer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "navigation-toast",
+      "type": "registry:component",
+      "title": "Navigation Toast",
+      "description": "Toast overlay that shows navigation hints on first load",
+      "dependencies": ["motion"],
+      "registryDependencies": ["use-mobile"],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/navigation-toast.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/navigation-toast.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slide",
+      "type": "registry:component",
+      "title": "Slide",
+      "description": "Basic slide component",
+      "dependencies": ["motion"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/deck.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/deck.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/slide.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/slide.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/slide-nav.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/slide-nav.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/slide-footer.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/slide-footer.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/navigation-toast.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/navigation-toast.tsx"
+        },
+        {
+          "path": "components/ui/slide-cn/use-deck-controller.ts",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/use-deck-controller.ts"
+        },
+        {
+          "path": "components/ui/slide-cn/use-keyboard-navigation.ts",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/use-keyboard-navigation.ts"
+        }
+      ]
+    },
+    {
+      "name": "horizontal-split",
+      "type": "registry:component",
+      "title": "Horizontal split",
+      "description": "A slide layout with two columns split horizontally",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/horizontal-split.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/horizontal-split.tsx"
+        }
+      ]
+    },
+    {
+      "name": "vertical-split",
+      "type": "registry:component",
+      "title": "Vertical split",
+      "description": "A slide layout with two rows split vertically",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/vertical-split.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/vertical-split.tsx"
+        }
+      ]
+    },
+    {
+      "name": "title-slide",
+      "type": "registry:component",
+      "title": "Title slide",
+      "description": "Set of components to easily create a title slide",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/title-slide.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/title-slide.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slide-image",
+      "type": "registry:component",
+      "title": "Slide image",
+      "description": "Set of components to add an image and caption to a slide",
+      "dependencies": ["next"],
+      "registryDependencies": ["aspect-ratio"],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/slide-image.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/slide-image.tsx"
+        }
+      ]
+    },
+    {
+      "name": "callout",
+      "type": "registry:component",
+      "title": "Callout",
+      "description": "A callout component for highlighting information",
+      "dependencies": ["lucide-react", "class-variance-authority"],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/callout.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/callout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:component",
+      "title": "Code block",
+      "description": "A code block component with syntax highlighting",
+      "dependencies": [
+        "react-syntax-highlighter",
+        "@types/react-syntax-highlighter"
+      ],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/code-block.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/code-block.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gradient-linear",
+      "type": "registry:component",
+      "title": "Linear Gradient Background",
+      "description": "A full-bleed linear gradient background (top-left to bottom-right) using the slide-cn theme palette tokens.",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/backgrounds/gradients/linear.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/backgrounds/gradients/linear.tsx"
+        }
+      ]
+    },
+    {
+      "name": "gradient-radial",
+      "type": "registry:component",
+      "title": "Radial Gradient Background",
+      "description": "A full-bleed radial gradient background emanating from the center using the slide-cn theme palette tokens (background, background-2, background-3).",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/backgrounds/gradients/radial.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/backgrounds/gradients/radial.tsx"
+        }
+      ]
+    },
+    {
+      "name": "reveal",
+      "type": "registry:component",
+      "title": "Reveal",
+      "description": "A component that reveals its content on click",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "components/ui/slide-cn/reveal.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/reveal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sky-theme",
+      "type": "registry:theme",
+      "title": "Sky Theme",
+      "description": "A cool blue-purple gradient theme for Slide-CN presentations.",
+      "cssVars": {
+        "theme": {
+          "--slide-grad-angle": "135deg",
+          "--slide-glow-opacity": "0.35",
+          "--slide-noise-opacity": "0.04"
+        },
+        "light": {
+          "--background": "oklch(0.8844 0.05781 210)",
+          "--background-2": "oklch(0.8892 0.05781 250)",
+          "--background-3": "oklch(0.8940 0.05781 290)",
+
+          "--card": "oklch(0.82 0.05 210)",
+          "--popover": "oklch(0.78 0.05 210)",
+          "--muted": "oklch(0.84 0.05 210)",
+
+          "--primary": "oklch(0.8892 0.05781 250)",
+          "--secondary": "oklch(0.70 0.03 250)",
+          "--accent": "oklch(0.8940 0.05781 290)",
+          "--destructive": "oklch(0.55 0.22 25)",
+          "--ring": "oklch(0.8892 0.05781 250)",
+
+          "--foreground": "oklch(0.13 0 0)",
+          "--card-foreground": "oklch(0.13 0 0)",
+          "--popover-foreground": "oklch(0.13 0 0)",
+          "--primary-foreground": "oklch(0.95 0 0)",
+          "--secondary-foreground": "oklch(0.13 0 0 / 80%)",
+          "--muted-foreground": "oklch(0.13 0 0 / 60%)",
+          "--accent-foreground": "oklch(0.13 0 0)",
+          "--destructive-foreground": "oklch(0.95 0 0)",
+          "--border": "oklch(0.13 0 0 / 10%)",
+          "--input": "oklch(0.13 0 0 / 10%)"
+        },
+        "dark": {
+          "--background": "oklch(0.3763 0.08125 290)",
+          "--background-2": "oklch(0.3684 0.08125 250)",
+          "--background-3": "oklch(0.3578 0.08125 210)",
+          "--card": "oklch(0.44 0.08 290)",
+          "--popover": "oklch(0.48 0.08 290)",
+          "--primary": "oklch(0.8892 0.05781 250)",
+          "--secondary": "oklch(0.25 0.04 250)",
+          "--muted": "oklch(0.42 0.08 290)",
+          "--accent": "oklch(0.45 0.10 210)",
+          "--destructive": "oklch(0.55 0.22 25)",
+          "--ring": "oklch(0.8892 0.05781 250)",
+
+          "--foreground": "oklch(0.95 0 0)",
+          "--card-foreground": "oklch(0.95 0 0)",
+          "--popover-foreground": "oklch(0.95 0 0)",
+          "--primary-foreground": "oklch(0.13 0 0)",
+          "--secondary-foreground": "oklch(0.95 0 0 / 80%)",
+          "--muted-foreground": "oklch(0.95 0 0 / 60%)",
+          "--accent-foreground": "oklch(0.95 0 0)",
+          "--destructive-foreground": "oklch(0.95 0 0)",
+          "--border": "oklch(0.95 0 0 / 10%)",
+          "--input": "oklch(0.95 0 0 / 10%)"
+        }
+      }
+    },
+    {
+      "name": "slide-cn-skill",
+      "type": "registry:file",
+      "title": "Slide-CN Claude Skill",
+      "description": "A Claude Code skill that teaches Claude how to build beautiful presentations with slide-cn. Install to enable AI-assisted slide creation in your project.",
+      "files": [
+        {
+          "path": "components/slide-cn-skill/SKILL.md",
+          "type": "registry:file",
+          "target": "~/.claude/skills/slide-cn/SKILL.md"
+        }
+      ]
+    }
+  ]
 }

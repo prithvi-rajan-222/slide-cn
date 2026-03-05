@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gradient-linear",
+  "title": "Linear Gradient Background",
+  "description": "A full-bleed linear gradient background (top-left to bottom-right) using the slide-cn theme palette tokens.",
+  "files": [
+    {
+      "path": "components/ui/slide-cn/backgrounds/gradients/linear.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\ntype LinearGradientProps = React.ComponentProps<\"div\">;\n\n/**\n * GradientLinear\n *\n * A full-bleed background that renders a linear gradient from top-left to\n * bottom-right using the slide-cn theme palette tokens.\n *\n * Usage:\n * ```tsx\n * <Slide background={<GradientLinear />}>\n *   {slide content}\n * </Slide>\n * ```\n */\nexport function LinearGradient({\n  className,\n  style,\n  ...props\n}: LinearGradientProps) {\n  return (\n    <div\n      className={cn(\"absolute inset-0\", className)}\n      style={{\n        background: `linear-gradient(\n\t\t\t\t\tto bottom right,\n\t\t\t\t\tvar(--background),\n\t\t\t\t\tvar(--background-2),\n\t\t\t\t\tvar(--background-3)\n\t\t\t\t)`,\n        ...style,\n      }}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/ui/slide-cn/backgrounds/gradients/linear.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

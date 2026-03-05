@@ -11,6 +11,7 @@ import {
 	TypeTable
 } from "fumadocs-ui/components/type-table";
 import { InstallCommand } from "./components/docs/InstallCommand"
+import { ThemePicker } from "./components/docs/ThemePicker"
 import { ComponentDemo } from "./components/docs/ComponentDemo"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "./components/ui/card"
 import { Reveal } from "@/components/ui/slide-cn/reveal"
@@ -25,6 +26,8 @@ import { SlideImage } from "@/components/ui/slide-cn/slide-image"
 import { Deck } from "@/components/ui/slide-cn/deck"
 import PixelSnow from "@/components/PixelSnow";
 import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
+import { LinearGradient } from "@/components/ui/slide-cn/backgrounds/gradients/linear";
+import { RadialGradient } from "@/components/ui/slide-cn/backgrounds/gradients/radial";
 
 export function getMDXComponents(
 	components?: MDXComponents
@@ -43,6 +46,7 @@ export function getMDXComponents(
 		TabsContent,
 		TypeTable,
 		InstallCommand,
+		ThemePicker,
 		ComponentDemo,
 		// Card components
 		Card,
@@ -66,6 +70,8 @@ export function getMDXComponents(
 		Deck,
 		PixelSnow,
 		SlideFooter,
+		LinearGradient,
+		RadialGradient,
 
 		...components,
 	}
