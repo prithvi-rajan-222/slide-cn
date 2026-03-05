@@ -1,64 +1,175 @@
 ---
 name: slide-cn-themes
 description: >
-  Use this skill when the user asks to "change a theme", "add a theme", "review themes",
-  "add a color scheme", "use a colour scheme", or describes a visual mood for their slides.
-version: 0.2.0
+  Use this skill when the user asks to "generate a theme", "create a colour scheme",
+  "add a theme", "change a theme", or provides background and primary colors for their
+  Slide-CN project. Trigger any time the user provides oklch color values and wants
+  a complete theme generated.
+version: 0.3.0
 ---
 
 # Slide-CN Theme Skill
 
-You are an expert designer. Create color schemes for Slide-CN by directly overriding
-Shadcn's CSS variables. Use `oklch` format throughout.
+Generate a complete Slide-CN color scheme for both light and dark mode given 4 input colors.
 
 ---
 
-## The Variables to Define
+## Inputs Required
 
-Standard Shadcn variables plus 3 extra background gradient colors:
+Ask the user for these 4 values if not already provided:
 
-```css
-:root {
-  --background:             /* main slide canvas */
-  --background-2:           /* gradient color 1 — complements background */
-  --background-3:           /* gradient color 2 — complements background */
-  --background-4:           /* gradient color 3 — complements background */
-  --foreground:             /* primary text */
+```
+bg1      oklch(...)   first background/gradient color
+bg2      oklch(...)   second background/gradient color
+bg3      oklch(...)   third background/gradient color
+primary  oklch(...)   primary brand/action color
+```
 
-  --card:
-  --card-foreground:
+---
 
-  --popover:
-  --popover-foreground:
+## Derivation Rules
 
-  --primary:
-  --primary-foreground:
+### Surfaces
+Derived from bg1's hue and chroma. In dark mode step lightness UP, in light mode step DOWN.
 
-  --secondary:
-  --secondary-foreground:
+```
+dark mode:
+--card:     bg1 lightness + 0.06
+--popover:  bg1 lightness + 0.10
+--muted:    bg1 lightness + 0.04
 
-  --muted:
-  --muted-foreground:
+light mode:
+--card:     bg1 lightness - 0.06
+--popover:  bg1 lightness - 0.10
+--muted:    bg1 lightness - 0.04
+```
 
-  --accent:
-  --accent-foreground:
+Keep the same hue and chroma as bg1 for all three.
 
-  --border:
-  --input:
-  --ring:
+### Secondary
+Same hue as primary, chroma halved, lightness pulled toward the background.
+```
+dark mode:  lightness 0.25, chroma primary_chroma / 2, same hue
+light mode: lightness 0.70, chroma primary_chroma / 2, same hue
+```
 
-  --destructive:
-  --destructive-foreground:
+### Accent
+Use bg3 directly. It's the most distinct of the three backgrounds.
+
+### Ring
+Same as primary.
+
+### Destructive
+Always fixed: `oklch(0.55 0.22 25)`
+
+---
+
+## Constants (never change per mode)
+
+### Dark mode constants
+```json
+"--foreground":             "oklch(0.95 0 0)",
+"--card-foreground":        "oklch(0.95 0 0)",
+"--popover-foreground":     "oklch(0.95 0 0)",
+"--primary-foreground":     "oklch(0.13 0 0)",
+"--secondary-foreground":   "oklch(0.95 0 0 / 80%)",
+"--muted-foreground":       "oklch(0.95 0 0 / 60%)",
+"--accent-foreground":      "oklch(0.95 0 0)",
+"--destructive-foreground": "oklch(0.95 0 0)",
+"--border":                 "oklch(0.95 0 0 / 10%)",
+"--input":                  "oklch(0.95 0 0 / 10%)"
+```
+
+### Light mode constants
+```json
+"--foreground":             "oklch(0.13 0 0)",
+"--card-foreground":        "oklch(0.13 0 0)",
+"--popover-foreground":     "oklch(0.13 0 0)",
+"--primary-foreground":     "oklch(0.95 0 0)",
+"--secondary-foreground":   "oklch(0.13 0 0 / 80%)",
+"--muted-foreground":       "oklch(0.13 0 0 / 60%)",
+"--accent-foreground":      "oklch(0.13 0 0)",
+"--destructive-foreground": "oklch(0.95 0 0)",
+"--border":                 "oklch(0.13 0 0 / 10%)",
+"--input":                  "oklch(0.13 0 0 / 10%)"
+```
+
+### Theme constants (both modes)
+```json
+"--slide-grad-angle":    "135deg",
+"--slide-glow-opacity":  "0.35",
+"--slide-noise-opacity": "0.04"
+```
+
+---
+
+## Output Format
+
+Always output the complete JSON block in this exact structure, ready to paste into a registry item:
+
+```json
+"cssVars": {
+  "theme": {
+    "--slide-grad-angle":    "135deg",
+    "--slide-glow-opacity":  "0.35",
+    "--slide-noise-opacity": "0.04"
+  },
+  "light": {
+    "--background":             "...",
+    "--background-2":           "...",
+    "--background-3":           "...",
+    "--foreground":             "oklch(0.13 0 0)",
+    "--card":                   "...",
+    "--card-foreground":        "oklch(0.13 0 0)",
+    "--popover":                "...",
+    "--popover-foreground":     "oklch(0.13 0 0)",
+    "--primary":                "...",
+    "--primary-foreground":     "oklch(0.95 0 0)",
+    "--secondary":              "...",
+    "--secondary-foreground":   "oklch(0.13 0 0 / 80%)",
+    "--muted":                  "...",
+    "--muted-foreground":       "oklch(0.13 0 0 / 60%)",
+    "--accent":                 "...",
+    "--accent-foreground":      "oklch(0.13 0 0)",
+    "--destructive":            "oklch(0.55 0.22 25)",
+    "--destructive-foreground": "oklch(0.95 0 0)",
+    "--border":                 "oklch(0.13 0 0 / 10%)",
+    "--input":                  "oklch(0.13 0 0 / 10%)",
+    "--ring":                   "..."
+  },
+  "dark": {
+    "--background":             "...",
+    "--background-2":           "...",
+    "--background-3":           "...",
+    "--foreground":             "oklch(0.95 0 0)",
+    "--card":                   "...",
+    "--card-foreground":        "oklch(0.95 0 0)",
+    "--popover":                "...",
+    "--popover-foreground":     "oklch(0.95 0 0)",
+    "--primary":                "...",
+    "--primary-foreground":     "oklch(0.13 0 0)",
+    "--secondary":              "...",
+    "--secondary-foreground":   "oklch(0.95 0 0 / 80%)",
+    "--muted":                  "...",
+    "--muted-foreground":       "oklch(0.95 0 0 / 60%)",
+    "--accent":                 "...",
+    "--accent-foreground":      "oklch(0.95 0 0)",
+    "--destructive":            "oklch(0.55 0.22 25)",
+    "--destructive-foreground": "oklch(0.95 0 0)",
+    "--border":                 "oklch(0.95 0 0 / 10%)",
+    "--input":                  "oklch(0.95 0 0 / 10%)",
+    "--ring":                   "..."
+  }
 }
 ```
 
 ---
 
-## Rules
+## Notes
 
-- Always use `oklch`
-- `--background-2/3/4` must complement `--background` — similar lightness, harmonious hues
-- Surfaces (`--card`, `--popover`, `--muted`) should be `--background` slightly lighter
-- Text should be white-based with opacity for secondary/muted — never introduce a new hue
-- `--destructive` is always red ~`oklch(0.55 0.22 25)`
-- Output only the CSS block, ready to paste into `globals.css`
+- `--background-2` = bg2, `--background-3` = bg3 — passed through unchanged in both modes
+- `--ring` = same as `--primary` in both modes
+- `--accent` = bg3 in both modes
+- Always round oklch values to 4 decimal places
+- If the user's primary is light (lightness > 0.70), use `oklch(0.13 0 0)` for `--primary-foreground` in dark mode and `oklch(0.95 0 0)` in light mode
+- If the user's primary is dark (lightness < 0.40), flip those foreground values
