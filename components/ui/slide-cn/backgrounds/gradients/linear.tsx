@@ -26,9 +26,9 @@ export function LinearGradient({
       style={{
         background: `linear-gradient(
 					to bottom right,
-					var(--slide-grad-start),
-					var(--slide-grad-mid),
-					var(--slide-grad-end)
+					var(--background),
+					var(--background-2),
+					var(--background-3)
 				)`,
         ...style,
       }}
