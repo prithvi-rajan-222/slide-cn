@@ -269,9 +269,9 @@
       "description": "A full-bleed linear gradient background (top-left to bottom-right) using the slide-cn theme palette tokens.",
       "files": [
         {
-          "path": "components/ui/slide-cn/backgrounds/gradients/gradient-linear.tsx",
+          "path": "components/ui/slide-cn/backgrounds/gradients/linear.tsx",
           "type": "registry:component",
-          "target": "components/ui/slide-cn/backgrounds/gradients/gradient-linear.tsx"
+          "target": "components/ui/slide-cn/backgrounds/gradients/linear.tsx"
         }
       ]
     },
@@ -282,9 +282,9 @@
       "description": "A full-bleed radial gradient background emanating from the center using the slide-cn theme palette tokens (background, background-2, background-3).",
       "files": [
         {
-          "path": "components/ui/slide-cn/backgrounds/gradients/gradient-radial.tsx",
+          "path": "components/ui/slide-cn/backgrounds/gradients/radial.tsx",
           "type": "registry:component",
-          "target": "components/ui/slide-cn/backgrounds/gradients/gradient-radial.tsx"
+          "target": "components/ui/slide-cn/backgrounds/gradients/radial.tsx"
         }
       ]
     },
@@ -303,10 +303,10 @@
       ]
     },
     {
-      "name": "slide-cn-theme",
+      "name": "sky-theme",
       "type": "registry:theme",
-      "title": "Slide-CN Default Theme",
-      "description": "Default dark, developer-focused color theme for Slide-CN presentations.",
+      "title": "Sky Theme",
+      "description": "A cool blue-purple gradient theme for Slide-CN presentations.",
       "cssVars": {
         "theme": {
           "--slide-grad-angle": "135deg",
@@ -375,16 +375,6 @@
           "path": "components/slide-cn-skill/SKILL.md",
           "type": "registry:file",
           "target": "~/.claude/skills/slide-cn/SKILL.md"
-        },
-        {
-          "path": "components/slide-cn-skill/references/components.md",
-          "type": "registry:file",
-          "target": "~/.claude/skills/slide-cn/references/components.md"
-        },
-        {
-          "path": "components/slide-cn-skill/references/patterns.md",
-          "type": "registry:file",
-          "target": "~/.claude/skills/slide-cn/references/patterns.md"
         }
       ]
     }

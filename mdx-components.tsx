@@ -25,6 +25,8 @@ import { SlideImage } from "@/components/ui/slide-cn/slide-image"
 import { Deck } from "@/components/ui/slide-cn/deck"
 import PixelSnow from "@/components/PixelSnow";
 import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
+import { LinearGradient } from "@/components/ui/slide-cn/backgrounds/gradients/linear";
+import { RadialGradient } from "@/components/ui/slide-cn/backgrounds/gradients/radial";
 
 export function getMDXComponents(
 	components?: MDXComponents
@@ -66,6 +68,8 @@ export function getMDXComponents(
 		Deck,
 		PixelSnow,
 		SlideFooter,
+		LinearGradient,
+		RadialGradient,
 
 		...components,
 	}

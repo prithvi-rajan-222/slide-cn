@@ -5,10 +5,10 @@
   "description": "A full-bleed radial gradient background emanating from the center using the slide-cn theme palette tokens (background, background-2, background-3).",
   "files": [
     {
-      "path": "components/ui/slide-cn/backgrounds/gradients/gradient-radial.tsx",
-      "content": "import { cn } from \"@/lib/utils\";\n\ntype GradientRadialProps = React.ComponentProps<\"div\">;\n\n/**\n * GradientRadial\n *\n * A full-bleed background that renders a radial gradient emanating from the\n * center using the slide-cn theme palette tokens: background, background-2,\n * and background-3.\n *\n * Usage:\n * ```tsx\n * <Slide background={<GradientRadial />}>\n *   {slide content}\n * </Slide>\n * ```\n */\nexport function GradientRadial({ className, style, ...props }: GradientRadialProps) {\n\treturn (\n\t\t<div\n\t\t\tclassName={cn(\"absolute inset-0\", className)}\n\t\t\tstyle={{\n\t\t\t\tbackground: `radial-gradient(\n\t\t\t\t\tellipse at center,\n\t\t\t\t\tvar(--background),\n\t\t\t\t\tvar(--background-2),\n\t\t\t\t\tvar(--background-3)\n\t\t\t\t)`,\n\t\t\t\t...style,\n\t\t\t}}\n\t\t\t{...props}\n\t\t/>\n\t);\n}\n",
+      "path": "components/ui/slide-cn/backgrounds/gradients/radial.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\ntype RadialGradientProps = React.ComponentProps<\"div\">;\n\n/**\n * RadialGradient\n *\n * A full-bleed background that renders a radial gradient emanating from the\n * center using the slide-cn theme palette tokens: background, background-2,\n * and background-3.\n *\n * Usage:\n * ```tsx\n * <Slide background={<RadialGradient />}>\n *   {slide content}\n * </Slide>\n * ```\n */\nexport function RadialGradient({\n  className,\n  style,\n  ...props\n}: RadialGradientProps) {\n  return (\n    <div\n      className={cn(\"absolute inset-0\", className)}\n      style={{\n        background: `radial-gradient(\n\t\t\t\t\tellipse at center,\n\t\t\t\t\tvar(--background),\n\t\t\t\t\tvar(--background-2),\n\t\t\t\t\tvar(--background-3)\n\t\t\t\t)`,\n        ...style,\n      }}\n      {...props}\n    />\n  );\n}\n",
       "type": "registry:component",
-      "target": "components/ui/slide-cn/backgrounds/gradients/gradient-radial.tsx"
+      "target": "components/ui/slide-cn/backgrounds/gradients/radial.tsx"
     }
   ],
   "type": "registry:component"

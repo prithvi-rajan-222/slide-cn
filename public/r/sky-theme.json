@@ -1,8 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "slide-cn-theme",
-  "title": "Slide-CN Default Theme",
-  "description": "Default dark, developer-focused color theme for Slide-CN presentations.",
+  "name": "sky-theme",
+  "title": "Sky Theme",
+  "description": "A cool blue-purple gradient theme for Slide-CN presentations.",
   "cssVars": {
     "theme": {
       "--slide-grad-angle": "135deg",
