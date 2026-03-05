@@ -4,6 +4,7 @@ import registry from "@/registry.json";
 import { useState } from "react";
 import { RadialGradient } from "@/components/ui/slide-cn/backgrounds/gradients/radial";
 import { cn } from "@/lib/utils";
+import { InstallCommand } from "@/components/docs/InstallCommand";
 
 type RegistryTheme = {
   name: string;
@@ -61,6 +62,8 @@ export function ThemePicker() {
           {dark ? "Light mode" : "Dark mode"}
         </button>
       </div>
+
+      <InstallCommand packageName={selectedTheme.name} />
 
       <div className="relative h-72 overflow-hidden rounded-lg" style={cssVars}>
         <RadialGradient />
