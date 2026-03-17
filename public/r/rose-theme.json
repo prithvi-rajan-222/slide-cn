@@ -1,0 +1,60 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "rose-theme",
+  "title": "Rose Theme",
+  "description": "A warm red-pink gradient theme for Slide-CN presentations.",
+  "cssVars": {
+    "theme": {
+      "--slide-grad-angle": "135deg",
+      "--slide-glow-opacity": "0.35",
+      "--slide-noise-opacity": "0.04"
+    },
+    "light": {
+      "--background": "oklch(0.9222 0.045312500000000006 20)",
+      "--background-2": "oklch(0.9668 0.01875 10)",
+      "--background-3": "oklch(0.9229 0.045312500000000006 0)",
+      "--card": "oklch(0.88 0.04 20)",
+      "--popover": "oklch(0.86 0.04 20)",
+      "--muted": "oklch(0.90 0.04 20)",
+      "--primary": "oklch(0.4219 0.14843750000000003 10)",
+      "--secondary": "oklch(0.80 0.03 10)",
+      "--accent": "oklch(0.9229 0.045312500000000006 0)",
+      "--destructive": "oklch(0.55 0.22 25)",
+      "--ring": "oklch(0.4219 0.14843750000000003 10)",
+      "--foreground": "oklch(0.13 0 0)",
+      "--card-foreground": "oklch(0.13 0 0)",
+      "--popover-foreground": "oklch(0.13 0 0)",
+      "--primary-foreground": "oklch(0.95 0 0)",
+      "--secondary-foreground": "oklch(0.13 0 0 / 80%)",
+      "--muted-foreground": "oklch(0.13 0 0 / 60%)",
+      "--accent-foreground": "oklch(0.13 0 0)",
+      "--destructive-foreground": "oklch(0.95 0 0)",
+      "--border": "oklch(0.13 0 0 / 10%)",
+      "--input": "oklch(0.13 0 0 / 10%)"
+    },
+    "dark": {
+      "--background": "oklch(0.4209 0.14843750000000003 20)",
+      "--background-2": "oklch(0.3057 0.10625000000000004 10)",
+      "--background-3": "oklch(0.4229 0.14843750000000003 0)",
+      "--card": "oklch(0.47 0.14 20)",
+      "--popover": "oklch(0.50 0.13 20)",
+      "--muted": "oklch(0.44 0.13 20)",
+      "--primary": "oklch(0.9226 0.045312500000000006 10)",
+      "--secondary": "oklch(0.27 0.07 10)",
+      "--accent": "oklch(0.46 0.15 0)",
+      "--destructive": "oklch(0.55 0.22 25)",
+      "--ring": "oklch(0.9226 0.045312500000000006 10)",
+      "--foreground": "oklch(0.95 0 0)",
+      "--card-foreground": "oklch(0.95 0 0)",
+      "--popover-foreground": "oklch(0.95 0 0)",
+      "--primary-foreground": "oklch(0.13 0 0)",
+      "--secondary-foreground": "oklch(0.95 0 0 / 80%)",
+      "--muted-foreground": "oklch(0.95 0 0 / 60%)",
+      "--accent-foreground": "oklch(0.95 0 0)",
+      "--destructive-foreground": "oklch(0.95 0 0)",
+      "--border": "oklch(0.95 0 0 / 10%)",
+      "--input": "oklch(0.95 0 0 / 10%)"
+    }
+  },
+  "type": "registry:theme"
+}
