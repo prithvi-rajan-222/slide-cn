@@ -33,10 +33,10 @@ const calloutVariants = cva(
 	{
 		variants: {
 			variant: {
-				info: "border-blue-200 bg-blue-50 text-blue-900 dark:border-blue-900/50 dark:bg-blue-950/50 dark:text-blue-200",
-				success: "border-green-200 bg-green-50 text-green-900 dark:border-green-900/50 dark:bg-green-950/50 dark:text-green-200",
-				warning: "border-yellow-200 bg-yellow-50 text-yellow-900 dark:border-yellow-900/50 dark:bg-yellow-950/50 dark:text-yellow-200",
-				error: "border-red-200 bg-red-50 text-red-900 dark:border-red-900/50 dark:bg-red-950/50 dark:text-red-200",
+				info: "border-blue-500/25 bg-blue-500/10 text-blue-900 dark:border-blue-900/50 dark:bg-blue-950/50 dark:text-blue-200",
+				success: "border-green-500/25 bg-green-500/10 text-green-900 dark:border-green-900/50 dark:bg-green-950/50 dark:text-green-200",
+				warning: "border-yellow-500/25 bg-yellow-500/10 text-yellow-900 dark:border-yellow-900/50 dark:bg-yellow-950/50 dark:text-yellow-200",
+				error: "border-red-500/25 bg-red-500/10 text-red-900 dark:border-red-900/50 dark:bg-red-950/50 dark:text-red-200",
 			},
 		},
 		defaultVariants: {

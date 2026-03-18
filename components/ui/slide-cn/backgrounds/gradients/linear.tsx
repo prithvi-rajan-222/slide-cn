@@ -26,8 +26,8 @@ export function LinearGradient({
       style={{
         background: `linear-gradient(
 					to bottom right,
-					var(--background),
 					var(--background-2),
+					var(--background),
 					var(--background-3)
 				)`,
         ...style,

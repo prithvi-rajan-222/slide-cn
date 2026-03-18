@@ -27,9 +27,9 @@ export function RadialGradient({
       style={{
         background: `radial-gradient(
 					ellipse at center,
+					var(--background-3),
 					var(--background),
-					var(--background-2),
-					var(--background-3)
+					var(--background-2)
 				)`,
         ...style,
       }}

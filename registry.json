@@ -366,6 +366,130 @@
       }
     },
     {
+      "name": "rose-theme",
+      "type": "registry:theme",
+      "title": "Rose Theme",
+      "description": "A warm red-pink gradient theme for Slide-CN presentations.",
+      "cssVars": {
+        "theme": {
+          "--slide-grad-angle": "135deg",
+          "--slide-glow-opacity": "0.35",
+          "--slide-noise-opacity": "0.04"
+        },
+        "light": {
+          "--background": "oklch(0.8700 0.0800 10)",
+          "--background-2": "oklch(0.9500 0.0300 20)",
+          "--background-3": "oklch(0.7600 0.1100 0)",
+
+          "--card": "oklch(0.8100 0.0800 10)",
+          "--popover": "oklch(0.7700 0.0800 10)",
+          "--muted": "oklch(0.8300 0.0800 10)",
+
+          "--primary": "oklch(0.4219 0.1484 10)",
+          "--secondary": "oklch(0.7000 0.0742 10)",
+          "--accent": "oklch(0.7600 0.1100 0)",
+          "--destructive": "oklch(0.55 0.22 25)",
+          "--ring": "oklch(0.4219 0.1484 10)",
+
+          "--foreground": "oklch(0.13 0 0)",
+          "--card-foreground": "oklch(0.13 0 0)",
+          "--popover-foreground": "oklch(0.13 0 0)",
+          "--primary-foreground": "oklch(0.95 0 0)",
+          "--secondary-foreground": "oklch(0.13 0 0 / 80%)",
+          "--muted-foreground": "oklch(0.13 0 0 / 60%)",
+          "--accent-foreground": "oklch(0.13 0 0)",
+          "--destructive-foreground": "oklch(0.95 0 0)",
+          "--border": "oklch(0.13 0 0 / 10%)",
+          "--input": "oklch(0.13 0 0 / 10%)"
+        },
+        "dark": {
+          "--background": "oklch(0.4000 0.1300 10)",
+          "--background-2": "oklch(0.5200 0.0900 20)",
+          "--background-3": "oklch(0.2700 0.1100 0)",
+
+          "--card": "oklch(0.4600 0.1300 10)",
+          "--popover": "oklch(0.5000 0.1300 10)",
+          "--muted": "oklch(0.4400 0.1300 10)",
+
+          "--primary": "oklch(0.9226 0.0453 10)",
+          "--secondary": "oklch(0.2500 0.0742 10)",
+          "--accent": "oklch(0.2700 0.1100 0)",
+          "--destructive": "oklch(0.55 0.22 25)",
+          "--ring": "oklch(0.9226 0.0453 10)",
+
+          "--foreground": "oklch(0.95 0 0)",
+          "--card-foreground": "oklch(0.95 0 0)",
+          "--popover-foreground": "oklch(0.95 0 0)",
+          "--primary-foreground": "oklch(0.13 0 0)",
+          "--secondary-foreground": "oklch(0.95 0 0 / 80%)",
+          "--muted-foreground": "oklch(0.95 0 0 / 60%)",
+          "--accent-foreground": "oklch(0.95 0 0)",
+          "--destructive-foreground": "oklch(0.95 0 0)",
+          "--border": "oklch(0.95 0 0 / 10%)",
+          "--input": "oklch(0.95 0 0 / 10%)"
+        }
+      }
+    },
+    {
+      "name": "earth-theme",
+      "type": "registry:theme",
+      "title": "Earth Theme",
+      "description": "A warm green-amber earth tone theme for Slide-CN presentations.",
+      "cssVars": {
+        "theme": {
+          "--slide-grad-angle": "135deg",
+          "--slide-glow-opacity": "0.35",
+          "--slide-noise-opacity": "0.04"
+        },
+        "light": {
+          "--background": "oklch(0.9155 0.0500 100)",
+          "--background-2": "oklch(0.8560 0.0953 70)",
+          "--background-3": "oklch(0.8439 0.0953 130)",
+          "--card": "oklch(0.8555 0.0500 100)",
+          "--popover": "oklch(0.8155 0.0500 100)",
+          "--muted": "oklch(0.8755 0.0500 100)",
+          "--primary": "oklch(0.4092 0.0984 100)",
+          "--secondary": "oklch(0.7000 0.0492 100)",
+          "--accent": "oklch(0.8439 0.0953 130)",
+          "--destructive": "oklch(0.55 0.22 25)",
+          "--ring": "oklch(0.4092 0.0984 100)",
+          "--foreground": "oklch(0.13 0 0)",
+          "--card-foreground": "oklch(0.13 0 0)",
+          "--popover-foreground": "oklch(0.13 0 0)",
+          "--primary-foreground": "oklch(0.95 0 0)",
+          "--secondary-foreground": "oklch(0.13 0 0 / 80%)",
+          "--muted-foreground": "oklch(0.13 0 0 / 60%)",
+          "--accent-foreground": "oklch(0.13 0 0)",
+          "--destructive-foreground": "oklch(0.95 0 0)",
+          "--border": "oklch(0.13 0 0 / 10%)",
+          "--input": "oklch(0.13 0 0 / 10%)"
+        },
+        "dark": {
+          "--background": "oklch(0.2998 0.0719 100)",
+          "--background-2": "oklch(0.4146 0.0984 70)",
+          "--background-3": "oklch(0.4033 0.0984 130)",
+          "--card": "oklch(0.3598 0.0719 100)",
+          "--popover": "oklch(0.3998 0.0719 100)",
+          "--muted": "oklch(0.3398 0.0719 100)",
+          "--primary": "oklch(0.9155 0.0500 100)",
+          "--secondary": "oklch(0.2500 0.0250 100)",
+          "--accent": "oklch(0.4033 0.0984 130)",
+          "--destructive": "oklch(0.55 0.22 25)",
+          "--ring": "oklch(0.9155 0.0500 100)",
+          "--foreground": "oklch(0.95 0 0)",
+          "--card-foreground": "oklch(0.95 0 0)",
+          "--popover-foreground": "oklch(0.95 0 0)",
+          "--primary-foreground": "oklch(0.13 0 0)",
+          "--secondary-foreground": "oklch(0.95 0 0 / 80%)",
+          "--muted-foreground": "oklch(0.95 0 0 / 60%)",
+          "--accent-foreground": "oklch(0.95 0 0)",
+          "--destructive-foreground": "oklch(0.95 0 0)",
+          "--border": "oklch(0.95 0 0 / 10%)",
+          "--input": "oklch(0.95 0 0 / 10%)"
+        }
+      }
+    },
+    {
       "name": "slide-cn-skill",
       "type": "registry:file",
       "title": "Slide-CN Claude Skill",
