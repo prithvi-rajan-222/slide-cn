@@ -1,8 +1,6 @@
-"use client"
+import * as React from "react";
 
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 /**
  * Timeline
@@ -38,33 +36,9 @@ import { cn } from "@/lib/utils"
  *
  * Notes:
  * - Horizontal timelines auto-convert to vertical left-aligned on screens below md (768px)
- * - The connecting line is built from flex siblings — no absolute positioning needed for horizontal
+ * - orientation, align, index, isFirst, isLast are injected by Timeline via cloneElement
  * - Pass any ReactNode to the `marker` prop for custom icons or step numbers
  */
-
-// ─── Context ────────────────────────────────────────────────────────────────
-
-interface TimelineContextValue {
-	orientation: "horizontal" | "vertical"
-	align: "left" | "center"
-}
-
-interface TimelineItemContextValue {
-	index: number
-	isFirst: boolean
-	isLast: boolean
-}
-
-const TimelineContext = React.createContext<TimelineContextValue>({
-	orientation: "horizontal",
-	align: "left",
-})
-
-const TimelineItemContext = React.createContext<TimelineItemContextValue>({
-	index: 0,
-	isFirst: true,
-	isLast: true,
-})
 
 // ─── Marker ─────────────────────────────────────────────────────────────────
 
@@ -74,28 +48,45 @@ function TimelineMarker({ children }: { children?: React.ReactNode }) {
 			<div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-primary/30 bg-background text-primary [&_svg]:h-4 [&_svg]:w-4">
 				{children}
 			</div>
-		)
+		);
 	}
 	return (
 		<div className="relative z-10 h-3 w-3 shrink-0 rounded-full bg-primary ring-4 ring-background" />
-	)
+	);
 }
 
 // ─── Timeline.Item ──────────────────────────────────────────────────────────
 
 export interface TimelineItemProps {
 	/** Date, step label, or any node shown near the marker */
-	label?: React.ReactNode
+	label?: React.ReactNode;
 	/** Custom marker content (icon, number). Defaults to a filled dot. */
-	marker?: React.ReactNode
-	className?: string
-	children?: React.ReactNode
+	marker?: React.ReactNode;
+	className?: string;
+	children?: React.ReactNode;
+	/** Injected by Timeline via cloneElement — do not pass manually */
+	orientation?: "horizontal" | "vertical";
+	/** Injected by Timeline via cloneElement — do not pass manually */
+	align?: "left" | "center";
+	/** Injected by Timeline via cloneElement — do not pass manually */
+	index?: number;
+	/** Injected by Timeline via cloneElement — do not pass manually */
+	isFirst?: boolean;
+	/** Injected by Timeline via cloneElement — do not pass manually */
+	isLast?: boolean;
 }
 
-function TimelineItem({ label, marker, className, children }: TimelineItemProps) {
-	const { orientation, align } = React.useContext(TimelineContext)
-	const { index, isFirst, isLast } = React.useContext(TimelineItemContext)
-
+function TimelineItem({
+	label,
+	marker,
+	className,
+	children,
+	orientation = "horizontal",
+	align = "left",
+	index = 0,
+	isFirst = false,
+	isLast = false,
+}: TimelineItemProps) {
 	// ── Vertical left-aligned ──
 	if (orientation === "vertical" && align !== "center") {
 		return (
@@ -107,9 +98,7 @@ function TimelineItem({ label, marker, className, children }: TimelineItemProps)
 				</div>
 				{/* Right column: label + content */}
 				<div className={cn("flex flex-col gap-1.5", isLast ? "pb-0" : "pb-10")}>
-					{label && (
-						<p className="text-sm font-semibold leading-none">{label}</p>
-					)}
+					{label && <p className="text-sm font-semibold leading-none">{label}</p>}
 					{children && (
 						<div className="text-sm text-muted-foreground leading-relaxed">
 							{children}
@@ -117,12 +106,12 @@ function TimelineItem({ label, marker, className, children }: TimelineItemProps)
 					)}
 				</div>
 			</div>
-		)
+		);
 	}
 
 	// ── Vertical center (alternating) ──
 	if (orientation === "vertical" && align === "center") {
-		const isEven = index % 2 === 0
+		const isEven = index % 2 === 0;
 		return (
 			<div className={cn("grid grid-cols-[1fr_auto_1fr]", className)}>
 				{/* Left cell: content for even items, empty for odd */}
@@ -163,7 +152,7 @@ function TimelineItem({ label, marker, className, children }: TimelineItemProps)
 					)}
 				</div>
 			</div>
-		)
+		);
 	}
 
 	// ── Horizontal (default) — vertical on mobile, horizontal on desktop ──
@@ -176,9 +165,7 @@ function TimelineItem({ label, marker, className, children }: TimelineItemProps)
 					<div className={cn("w-px flex-1 bg-border mt-1", isLast && "opacity-0")} />
 				</div>
 				<div className={cn("flex flex-col gap-1.5", isLast ? "pb-0" : "pb-10")}>
-					{label && (
-						<p className="text-sm font-semibold leading-none">{label}</p>
-					)}
+					{label && <p className="text-sm font-semibold leading-none">{label}</p>}
 					{children && (
 						<div className="text-sm text-muted-foreground leading-relaxed">
 							{children}
@@ -207,18 +194,18 @@ function TimelineItem({ label, marker, className, children }: TimelineItemProps)
 				</div>
 			</div>
 		</div>
-	)
+	);
 }
 
 // ─── Timeline (root) ─────────────────────────────────────────────────────────
 
 export interface TimelineProps {
 	/** Layout direction. "horizontal" converts to vertical on mobile. */
-	orientation?: "horizontal" | "vertical"
+	orientation?: "horizontal" | "vertical";
 	/** Vertical only — "left" keeps content on the right; "center" alternates sides. */
-	align?: "left" | "center"
-	className?: string
-	children?: React.ReactNode
+	align?: "left" | "center";
+	className?: string;
+	children?: React.ReactNode;
 }
 
 export function Timeline({
@@ -227,35 +214,30 @@ export function Timeline({
 	className,
 	children,
 }: TimelineProps) {
-	const items = React.Children.toArray(children)
-	const count = items.length
+	const items = React.Children.toArray(children);
+	const count = items.length;
 
 	return (
-		<TimelineContext.Provider value={{ orientation, align }}>
-			<div
-				className={cn(
-					"w-full",
-					orientation === "horizontal"
-						? "flex flex-col md:flex-row"
-						: "flex flex-col",
-					className
-				)}
-			>
-				{items.map((child, index) => (
-					<TimelineItemContext.Provider
-						key={index}
-						value={{
-							index,
-							isFirst: index === 0,
-							isLast: index === count - 1,
-						}}
-					>
-						{child}
-					</TimelineItemContext.Provider>
-				))}
-			</div>
-		</TimelineContext.Provider>
-	)
+		<div
+			className={cn(
+				"w-full",
+				orientation === "horizontal" ? "flex flex-col md:flex-row" : "flex flex-col",
+				className
+			)}
+		>
+			{items.map((child, index) => {
+				if (!React.isValidElement(child)) return child;
+				return React.cloneElement(child as React.ReactElement<TimelineItemProps>, {
+					key: index,
+					orientation,
+					align,
+					index,
+					isFirst: index === 0,
+					isLast: index === count - 1,
+				});
+			})}
+		</div>
+	);
 }
 
-Timeline.Item = TimelineItem
+Timeline.Item = TimelineItem;

@@ -1,37 +1,41 @@
-import defaultMdxComponents from "fumadocs-ui/mdx"
-import type { MDXComponents } from "mdx/types"
+import defaultMdxComponents from "fumadocs-ui/mdx";
+import type { MDXComponents } from "mdx/types";
 import { CodeBlock, Pre } from "fumadocs-ui/components/codeblock";
 import {
 	Tabs,
 	TabsList,
 	TabsTrigger,
 	TabsContent,
-} from "fumadocs-ui/components/tabs"
+} from "fumadocs-ui/components/tabs";
+import { TypeTable } from "fumadocs-ui/components/type-table";
+import { InstallCommand } from "./components/docs/InstallCommand";
+import { ThemePicker } from "./components/docs/ThemePicker";
+import { ComponentDemo } from "./components/docs/ComponentDemo";
 import {
-	TypeTable
-} from "fumadocs-ui/components/type-table";
-import { InstallCommand } from "./components/docs/InstallCommand"
-import { ThemePicker } from "./components/docs/ThemePicker"
-import { ComponentDemo } from "./components/docs/ComponentDemo"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "./components/ui/card"
-import { Reveal } from "@/components/ui/slide-cn/reveal"
-import { TitleSlide } from "@/components/ui/slide-cn/title-slide"
-import { HorizontalSplit } from "@/components/ui/slide-cn/horizontal-split"
-import { VerticalSplit } from "@/components/ui/slide-cn/vertical-split"
-import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content"
-import { Callout } from "@/components/ui/slide-cn/callout"
-import { CodeBlock as CodeBlockComponent } from "@/components/ui/slide-cn/code-block"
-import { Slide } from "@/components/ui/slide-cn/slide"
-import { SlideImage } from "@/components/ui/slide-cn/slide-image"
-import { Deck } from "@/components/ui/slide-cn/deck"
+	Card,
+	CardHeader,
+	CardTitle,
+	CardDescription,
+	CardContent,
+	CardFooter,
+} from "./components/ui/card";
+import { Reveal } from "@/components/ui/slide-cn/reveal";
+import { TitleSlide } from "@/components/ui/slide-cn/title-slide";
+import { HorizontalSplit } from "@/components/ui/slide-cn/horizontal-split";
+import { VerticalSplit } from "@/components/ui/slide-cn/vertical-split";
+import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
+import { Callout } from "@/components/ui/slide-cn/callout";
+import { CodeBlock as CodeBlockComponent } from "@/components/ui/slide-cn/code-block";
+import { Slide } from "@/components/ui/slide-cn/slide";
+import { SlideImage } from "@/components/ui/slide-cn/slide-image";
+import { Deck } from "@/components/ui/slide-cn/deck";
 import PixelSnow from "@/components/PixelSnow";
 import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
+import { Timeline } from "@/components/ui/slide-cn/timeline";
 import { LinearGradient } from "@/components/ui/slide-cn/backgrounds/gradients/linear";
 import { RadialGradient } from "@/components/ui/slide-cn/backgrounds/gradients/radial";
 
-export function getMDXComponents(
-	components?: MDXComponents
-): MDXComponents {
+export function getMDXComponents(components?: MDXComponents): MDXComponents {
 	return {
 		...defaultMdxComponents,
 		pre: ({ ref: _ref, ...props }) => (
@@ -48,6 +52,8 @@ export function getMDXComponents(
 		InstallCommand,
 		ThemePicker,
 		ComponentDemo,
+		Timeline,
+		"Timeline.Item": Timeline.Item,
 		// Card components
 		Card,
 		CardHeader,
@@ -74,5 +80,5 @@ export function getMDXComponents(
 		RadialGradient,
 
 		...components,
-	}
+	};
 }
