@@ -100,14 +100,13 @@ function TimelineItem({ label, marker, className, children }: TimelineItemProps)
 	if (orientation === "vertical" && align !== "center") {
 		return (
 			<div className={cn("flex flex-row items-stretch", className)}>
-				{/* Left column: connector arms + marker */}
+				{/* Left column: marker at top, line fills downward */}
 				<div className="flex flex-col items-center mr-5 shrink-0">
-					<div className={cn("w-px flex-1 bg-border", isFirst ? "opacity-0" : "min-h-3")} />
 					<TimelineMarker>{marker}</TimelineMarker>
-					<div className={cn("w-px flex-1 bg-border", isLast ? "opacity-0" : "min-h-3")} />
+					<div className={cn("w-px flex-1 bg-border mt-1", isLast && "opacity-0")} />
 				</div>
 				{/* Right column: label + content */}
-				<div className={cn("flex flex-col gap-1.5 pt-0.5", isLast ? "pb-0" : "pb-10")}>
+				<div className={cn("flex flex-col gap-1.5", isLast ? "pb-0" : "pb-10")}>
 					{label && (
 						<p className="text-sm font-semibold leading-none">{label}</p>
 					)}
@@ -125,33 +124,44 @@ function TimelineItem({ label, marker, className, children }: TimelineItemProps)
 	if (orientation === "vertical" && align === "center") {
 		const isEven = index % 2 === 0
 		return (
-			<div
-				className={cn(
-					"flex items-center gap-6",
-					isEven ? "flex-row" : "flex-row-reverse",
-					className
-				)}
-			>
-				{/* Content side */}
+			<div className={cn("grid grid-cols-[1fr_auto_1fr]", className)}>
+				{/* Left cell: content for even items, empty for odd */}
 				<div
 					className={cn(
-						"flex-1 flex flex-col gap-1.5 py-8",
-						isEven ? "items-end text-right" : "items-start text-left"
+						"flex flex-col gap-1.5 items-end text-right pr-6",
+						isLast ? "pb-0" : "pb-10"
 					)}
 				>
-					{label && (
-						<p className="text-sm font-semibold leading-snug">{label}</p>
+					{isEven && label && (
+						<p className="text-sm font-semibold leading-none">{label}</p>
 					)}
-					{children && (
+					{isEven && children && (
 						<div className="text-sm text-muted-foreground leading-relaxed">
 							{children}
 						</div>
 					)}
 				</div>
-				{/* Marker (always center) */}
-				<TimelineMarker>{marker}</TimelineMarker>
-				{/* Empty spacer to keep marker in center */}
-				<div className="flex-1" />
+				{/* Center cell: connector always at the same horizontal position */}
+				<div className="flex flex-col items-center">
+					<TimelineMarker>{marker}</TimelineMarker>
+					<div className={cn("w-px flex-1 bg-border mt-1", isLast && "opacity-0")} />
+				</div>
+				{/* Right cell: content for odd items, empty for even */}
+				<div
+					className={cn(
+						"flex flex-col gap-1.5 items-start text-left pl-6",
+						isLast ? "pb-0" : "pb-10"
+					)}
+				>
+					{!isEven && label && (
+						<p className="text-sm font-semibold leading-none">{label}</p>
+					)}
+					{!isEven && children && (
+						<div className="text-sm text-muted-foreground leading-relaxed">
+							{children}
+						</div>
+					)}
+				</div>
 			</div>
 		)
 	}
@@ -162,11 +172,10 @@ function TimelineItem({ label, marker, className, children }: TimelineItemProps)
 			{/* Mobile: left-aligned vertical */}
 			<div className="flex flex-row items-stretch md:hidden">
 				<div className="flex flex-col items-center mr-5 shrink-0">
-					<div className={cn("w-px flex-1 bg-border", isFirst ? "opacity-0" : "min-h-3")} />
 					<TimelineMarker>{marker}</TimelineMarker>
-					<div className={cn("w-px flex-1 bg-border", isLast ? "opacity-0" : "min-h-3")} />
+					<div className={cn("w-px flex-1 bg-border mt-1", isLast && "opacity-0")} />
 				</div>
-				<div className={cn("flex flex-col gap-1.5 pt-0.5", isLast ? "pb-0" : "pb-10")}>
+				<div className={cn("flex flex-col gap-1.5", isLast ? "pb-0" : "pb-10")}>
 					{label && (
 						<p className="text-sm font-semibold leading-none">{label}</p>
 					)}
@@ -225,20 +234,13 @@ export function Timeline({
 		<TimelineContext.Provider value={{ orientation, align }}>
 			<div
 				className={cn(
-					"relative w-full",
+					"w-full",
 					orientation === "horizontal"
 						? "flex flex-col md:flex-row"
 						: "flex flex-col",
 					className
 				)}
 			>
-				{/* Center line for vertical alternating layout */}
-				{orientation === "vertical" && align === "center" && (
-					<div
-						className="absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2 pointer-events-none"
-						aria-hidden
-					/>
-				)}
 				{items.map((child, index) => (
 					<TimelineItemContext.Provider
 						key={index}
