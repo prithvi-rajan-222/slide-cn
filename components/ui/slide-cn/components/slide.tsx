@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
-import { useDeck } from "@/components/ui/slide-cn/deck";
-import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
+import { useDeck } from "@/components/ui/slide-cn/mechanics/deck";
+import { SlideFooter } from "@/components/ui/slide-cn/components/slide-footer";
 
 
 /**

@@ -1,5 +1,5 @@
-import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
-import { Reveal } from "@/components/ui/slide-cn/reveal";
+import { HeaderWithContent } from "@/components/ui/slide-cn/layouts/header-with-content";
+import { Reveal } from "@/components/ui/slide-cn/mechanics/reveal";
 import { Code, Users, Sparkles } from "lucide-react";
 export function TargetAudienceSlide() {
 	return (

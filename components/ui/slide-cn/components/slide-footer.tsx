@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { useDeck } from "@/components/ui/slide-cn/deck";
+import { useDeck } from "@/components/ui/slide-cn/mechanics/deck";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function FooterKeyCap({ children }: { children: React.ReactNode }) {

@@ -1,6 +1,6 @@
-import { HorizontalSplit } from "@/components/ui/slide-cn/horizontal-split";
-import { CodeBlock } from "@/components/ui/slide-cn/code-block";
-import { Slide } from "@/components/ui/slide-cn/slide";
+import { HorizontalSplit } from "@/components/ui/slide-cn/layouts/horizontal-split";
+import { CodeBlock } from "@/components/ui/slide-cn/components/code-block";
+import { Slide } from "@/components/ui/slide-cn/components/slide";
 import { Palette, Type, Ruler } from "lucide-react";
 import { GradientBackground } from "@/components/ui/slide-cn/backgrounds/dark-mode-gradient";
 

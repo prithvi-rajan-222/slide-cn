@@ -1,10 +1,10 @@
 "use client";
-import { useDeckController } from "@/components/ui/slide-cn/use-deck-controller";
-import { useKeyboardNavigation } from "@/components/ui/slide-cn/use-keyboard-navigation";
-import { NavigationToast } from "@/components/ui/slide-cn/navigation-toast";
+import { useDeckController } from "@/components/ui/slide-cn/mechanics/use-deck-controller";
+import { useKeyboardNavigation } from "@/components/ui/slide-cn/mechanics/use-keyboard-navigation";
+import { NavigationToast } from "@/components/ui/slide-cn/mechanics/navigation-toast";
 import React from "react";
 import { AnimatePresence } from "motion/react";
-import { SlideNav } from "@/components/ui/slide-cn/slide-nav";
+import { SlideNav } from "@/components/ui/slide-cn/mechanics/slide-nav";
 import { cn } from "@/lib/utils";
 
 

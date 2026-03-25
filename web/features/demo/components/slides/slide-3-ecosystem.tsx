@@ -1,6 +1,6 @@
-import { HorizontalSplit } from "@/components/ui/slide-cn/horizontal-split";
+import { HorizontalSplit } from "@/components/ui/slide-cn/layouts/horizontal-split";
 import { Layers, PieChart, Box } from "lucide-react";
-import { Slide } from "@/components/ui/slide-cn/slide";
+import { Slide } from "@/components/ui/slide-cn/components/slide";
 import { GradientBackground } from "@/components/ui/slide-cn/backgrounds/dark-mode-gradient";
 
 export function Slide3Ecosystem() {

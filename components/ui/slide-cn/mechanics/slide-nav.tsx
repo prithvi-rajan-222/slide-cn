@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useDeck } from "@/components/ui/slide-cn/deck";
+import { useDeck } from "@/components/ui/slide-cn/mechanics/deck";
 
 /**
  * SlideNav

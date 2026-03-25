@@ -1,4 +1,4 @@
-import { TitleSlide } from "@/components/ui/slide-cn/title-slide";
+import { TitleSlide } from "@/components/ui/slide-cn/layouts/title-slide";
 import Link from "next/link";
 export function ClosingSlide() {
 	return (

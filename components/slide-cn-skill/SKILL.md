@@ -48,7 +48,7 @@ Shows progress and nav hints. Key props: `showProgress`, `showHint`, `showAdd` (
 
 ## useDeck Hook
 
-Access deck state from any child: `const { index, total, next, prev, goTo } = useDeck()`. Import from `@/components/ui/slide-cn/deck`.
+Access deck state from any child: `const { index, total, next, prev, goTo } = useDeck()`. Import from `@/components/ui/slide-cn/mechanics/deck`.
 
 ## Backgrounds
 

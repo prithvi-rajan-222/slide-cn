@@ -3,7 +3,7 @@
 import * as React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
-import { useDeck } from "@/components/ui/slide-cn/deck";
+import { useDeck } from "@/components/ui/slide-cn/mechanics/deck";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 type NavigationToastProps = {

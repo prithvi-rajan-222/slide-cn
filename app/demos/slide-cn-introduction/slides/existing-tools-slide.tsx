@@ -1,4 +1,4 @@
-import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
+import { HeaderWithContent } from "@/components/ui/slide-cn/layouts/header-with-content";
 import { X, AlertTriangle, CheckCircle2 } from "lucide-react";
 export function ExistingToolsSlide() {
 	return (

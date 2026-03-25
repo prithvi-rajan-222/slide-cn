@@ -1,7 +1,7 @@
 "use client";
 
-import { Deck } from "@/components/ui/slide-cn/deck";
-import { Slide } from "@/components/ui/slide-cn/slide";
+import { Deck } from "@/components/ui/slide-cn/mechanics/deck";
+import { Slide } from "@/components/ui/slide-cn/components/slide";
 import { TitleSlideComponent } from "./slides/title-slide";
 import { ProblemSlide } from "./slides/problem-slide";
 import { TargetAudienceSlide } from "./slides/target-audience-slide";
@@ -11,7 +11,7 @@ import { ExistingToolsSlide } from "./slides/existing-tools-slide";
 import { ClosingSlide } from "./slides/closing-slide";
 import { LongSlide } from "./slides/long-slide";
 import PixelSnow from "@/components/PixelSnow";
-import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
+import { SlideFooter } from "@/components/ui/slide-cn/components/slide-footer";
 
 export default function SlideCnIntroductionPage() {
 	return (

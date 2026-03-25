@@ -1,8 +1,8 @@
-import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
-import { Callout } from "@/components/ui/slide-cn/callout";
+import { HeaderWithContent } from "@/components/ui/slide-cn/layouts/header-with-content";
+import { Callout } from "@/components/ui/slide-cn/components/callout";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { Slide } from "@/components/ui/slide-cn/slide";
+import { Slide } from "@/components/ui/slide-cn/components/slide";
 import { GradientBackground } from "@/components/ui/slide-cn/backgrounds/dark-mode-gradient";
 
 export function Slide5Interactive() {

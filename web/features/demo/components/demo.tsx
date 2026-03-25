@@ -1,4 +1,4 @@
-import { Deck } from "@/components/ui/slide-cn/deck";
+import { Deck } from "@/components/ui/slide-cn/mechanics/deck";
 import { Slide1Title } from "./slides/slide-1-title";
 import { Slide2Consistency } from "./slides/slide-2-consistency";
 import { Slide3Ecosystem } from "./slides/slide-3-ecosystem";

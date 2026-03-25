@@ -1,9 +1,9 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism"
 
-const codeString = `import { Deck } from "@/components/ui/slide-cn/deck";
-import { Slide } from "@/components/ui/slide-cn/slide";
-import { TitleSlide } from "@/components/ui/slide-cn/title-slide";
+const codeString = `import { Deck } from "@/components/ui/slide-cn/mechanics/deck";
+import { Slide } from "@/components/ui/slide-cn/components/slide";
+import { TitleSlide } from "@/components/ui/slide-cn/layouts/title-slide";
 import { GradientBackground }
   from "@/components/ui/slide-cn/backgrounds/dark-mode-gradient";
 

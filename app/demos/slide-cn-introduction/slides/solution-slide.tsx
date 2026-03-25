@@ -1,5 +1,5 @@
-import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
-import { HorizontalSplit } from "@/components/ui/slide-cn/horizontal-split";
+import { HeaderWithContent } from "@/components/ui/slide-cn/layouts/header-with-content";
+import { HorizontalSplit } from "@/components/ui/slide-cn/layouts/horizontal-split";
 import { FileCode, GitBranch, Box, Zap } from "lucide-react";
 export function SolutionSlide() {
 	return (

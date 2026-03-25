@@ -1,5 +1,5 @@
-import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
-import { Reveal } from "@/components/ui/slide-cn/reveal";
+import { HeaderWithContent } from "@/components/ui/slide-cn/layouts/header-with-content";
+import { Reveal } from "@/components/ui/slide-cn/mechanics/reveal";
 import { Rocket, Palette, Users2, Sparkles as SparklesIcon } from "lucide-react";
 export function BenefitsSlide() {
 	return (

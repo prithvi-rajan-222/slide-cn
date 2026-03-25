@@ -1,5 +1,5 @@
-import { TitleSlide } from "@/components/ui/slide-cn/title-slide";
-import { Slide } from "@/components/ui/slide-cn/slide";
+import { TitleSlide } from "@/components/ui/slide-cn/layouts/title-slide";
+import { Slide } from "@/components/ui/slide-cn/components/slide";
 import { GradientBackground } from "@/components/ui/slide-cn/backgrounds/dark-mode-gradient";
 
 

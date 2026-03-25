@@ -1,4 +1,4 @@
-import { TitleSlide } from "@/components/ui/slide-cn/title-slide";
+import { TitleSlide } from "@/components/ui/slide-cn/layouts/title-slide";
 
 export function TitleSlideComponent() {
 	return (

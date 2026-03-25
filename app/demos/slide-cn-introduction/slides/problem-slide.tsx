@@ -1,4 +1,4 @@
-import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
+import { HeaderWithContent } from "@/components/ui/slide-cn/layouts/header-with-content";
 import { X, GitBranch, Copy } from "lucide-react";
 export function ProblemSlide() {
 	return (
