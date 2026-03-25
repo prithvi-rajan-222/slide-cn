@@ -21,7 +21,6 @@
 
 # production
 /build
-public/r/
 
 # misc
 .DS_Store
