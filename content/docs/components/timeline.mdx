@@ -1,0 +1,146 @@
+---
+title: Timeline
+description: Display ordered events, milestones, or process steps connected by a continuous line.
+---
+
+## Overview
+The Timeline component renders a sequence of items connected by a continuous line through their markers. It supports horizontal and vertical orientations, and automatically converts horizontal timelines to vertical on mobile.
+
+## Installation
+<InstallCommand packageName="timeline" />
+
+## Demo
+
+### Horizontal (default)
+<ComponentDemo description="Horizontal timeline — converts to vertical on mobile">
+  <div className="w-full p-8">
+    <Timeline>
+      <Timeline.Item label="Q1 2024">Defined scope and core architecture</Timeline.Item>
+      <Timeline.Item label="Q2 2024">Built component library</Timeline.Item>
+      <Timeline.Item label="Q3 2024">Public beta launch</Timeline.Item>
+      <Timeline.Item label="Q4 2024">v1.0 GA release</Timeline.Item>
+    </Timeline>
+  </div>
+</ComponentDemo>
+
+### Vertical left-aligned
+<ComponentDemo description="Vertical timeline, left-aligned">
+  <div className="w-full max-w-sm p-8">
+    <Timeline orientation="vertical">
+      <Timeline.Item label="2020">Founded the company and assembled the founding team.</Timeline.Item>
+      <Timeline.Item label="2021">Shipped the first product to early adopters.</Timeline.Item>
+      <Timeline.Item label="2022">Raised Series A and expanded to 30 people.</Timeline.Item>
+      <Timeline.Item label="2023">Launched in 12 new markets.</Timeline.Item>
+    </Timeline>
+  </div>
+</ComponentDemo>
+
+### Vertical alternating
+<ComponentDemo description="Vertical timeline, alternating sides">
+  <div className="w-full p-8">
+    <Timeline orientation="vertical" align="center">
+      <Timeline.Item label="Ideation">Defined the problem and validated with users.</Timeline.Item>
+      <Timeline.Item label="Design">Created wireframes and high-fidelity mockups.</Timeline.Item>
+      <Timeline.Item label="Build">Developed and iterated through three sprints.</Timeline.Item>
+      <Timeline.Item label="Launch">Shipped to production with full monitoring.</Timeline.Item>
+    </Timeline>
+  </div>
+</ComponentDemo>
+
+### Custom markers
+<ComponentDemo description="Timeline with icon markers">
+  <div className="w-full p-8">
+    <Timeline>
+      <Timeline.Item label="Install" marker={<span className="text-xs font-bold">1</span>}>
+        Add the component to your project.
+      </Timeline.Item>
+      <Timeline.Item label="Configure" marker={<span className="text-xs font-bold">2</span>}>
+        Set up your theme and layout.
+      </Timeline.Item>
+      <Timeline.Item label="Present" marker={<span className="text-xs font-bold">3</span>}>
+        Ship your presentation.
+      </Timeline.Item>
+    </Timeline>
+  </div>
+</ComponentDemo>
+
+## Usage
+
+```tsx
+import { Timeline } from "@/components/ui/slide-cn/timeline"
+
+// Horizontal (default)
+<Timeline>
+  <Timeline.Item label="Q1 2024">Shipped v1</Timeline.Item>
+  <Timeline.Item label="Q2 2024">Shipped v2</Timeline.Item>
+  <Timeline.Item label="Q3 2024">Beta launch</Timeline.Item>
+</Timeline>
+
+// Vertical left-aligned
+<Timeline orientation="vertical">
+  <Timeline.Item label="2020">Founded the company</Timeline.Item>
+  <Timeline.Item label="2021">First product shipped</Timeline.Item>
+</Timeline>
+
+// Vertical alternating
+<Timeline orientation="vertical" align="center">
+  <Timeline.Item label="Ideation">Defined scope</Timeline.Item>
+  <Timeline.Item label="Design">Created mockups</Timeline.Item>
+</Timeline>
+
+// Custom markers (icons, numbers)
+<Timeline>
+  <Timeline.Item label="Step 1" marker={<CheckCircle />}>Done</Timeline.Item>
+  <Timeline.Item label="Step 2" marker={<span>2</span>}>In progress</Timeline.Item>
+</Timeline>
+```
+
+## Reference
+
+### Timeline
+
+<TypeTable
+  type={{
+    orientation: {
+      type: '"horizontal" | "vertical"',
+      description: 'Layout direction. Horizontal timelines auto-convert to vertical on mobile (< 768px).',
+      default: '"horizontal"'
+    },
+    align: {
+      type: '"left" | "center"',
+      description: 'Vertical only. "left" keeps all content on the right side. "center" alternates items left and right.',
+      default: '"left"'
+    },
+    className: {
+      type: "string",
+      description: "Additional CSS classes for the root element.",
+    },
+    children: {
+      type: "ReactNode",
+      description: "Timeline.Item children.",
+    }
+  }}
+/>
+
+### Timeline.Item
+
+<TypeTable
+  type={{
+    label: {
+      type: "ReactNode",
+      description: "Date, step name, or any label rendered near the marker.",
+    },
+    marker: {
+      type: "ReactNode",
+      description: "Custom marker content — icon, number, or any element. Defaults to a filled dot.",
+    },
+    className: {
+      type: "string",
+      description: "Additional CSS classes for the item.",
+    },
+    children: {
+      type: "ReactNode",
+      description: "The main content for this timeline item.",
+    }
+  }}
+/>

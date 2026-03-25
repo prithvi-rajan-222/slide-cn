@@ -22,6 +22,7 @@
         "https://slide-cn.com/r/callout.json",
         "https://slide-cn.com/r/code-block.json",
         "https://slide-cn.com/r/reveal.json",
+        "https://slide-cn.com/r/timeline.json",
         "accordion",
         "card"
       ]
@@ -299,6 +300,19 @@
           "path": "components/ui/slide-cn/reveal.tsx",
           "type": "registry:component",
           "target": "components/ui/slide-cn/reveal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "timeline",
+      "type": "registry:component",
+      "title": "Timeline",
+      "description": "A horizontal or vertical timeline component for displaying ordered events, steps, or milestones",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/timeline.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/timeline.tsx"
         }
       ]
     },
