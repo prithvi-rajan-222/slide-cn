@@ -1,0 +1,49 @@
+---
+title: Spotlight Gradient Background
+description: Off-centre spotlight gradient background for Slide-CN slides
+---
+
+## Overview
+
+`SpotlightGradient` shines a bright radial "spotlight" from an off-centre position against a darker field. Great for drawing the audience's eye to a focal point.
+
+| Variable | Description |
+|----------|-------------|
+| `--background` | Mid-range fill colour |
+| `--background-2` | Outer edge colour |
+| `--background-3` | Spotlight highlight colour |
+
+## Installation
+
+<InstallCommand packageName="background-spotlight" />
+
+## Demo
+
+<ComponentDemo description="SpotlightGradient background" className="h-96 rounded-lg overflow-hidden">
+<Deck className="h-96">
+  <Slide background={<SpotlightGradient style={{"--background": "oklch(0.25 0.05 250)", "--background-2": "oklch(0.15 0.03 250)", "--background-3": "oklch(0.55 0.15 180)"}} />}>
+    <TitleSlide>
+      <TitleSlide.Heading>Spotlight</TitleSlide.Heading>
+      <TitleSlide.SubHeading>Off-centre focal highlight</TitleSlide.SubHeading>
+    </TitleSlide>
+  </Slide>
+</Deck>
+</ComponentDemo>
+
+```tsx
+import { SpotlightGradient } from "@/components/ui/slide-cn/backgrounds/spotlight";
+
+<Slide background={<SpotlightGradient x="30%" y="30%" />}>
+  {/* slide content */}
+</Slide>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `x` | `string` | `"30%"` | Horizontal position of the spotlight centre |
+| `y` | `string` | `"30%"` | Vertical position of the spotlight centre |
+| `size` | `number` | `60` | Spotlight radius as a percentage of the container |
+| `className` | `string` | — | Merged with `absolute inset-0` |
+| `style` | `CSSProperties` | — | Merged with the gradient. Pass CSS variable overrides here. |

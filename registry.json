@@ -289,6 +289,71 @@
       ]
     },
     {
+      "name": "background-mesh",
+      "type": "registry:component",
+      "title": "Mesh Gradient Background",
+      "description": "A full-bleed mesh gradient background that layers multiple radial gradients at different corners to create a soft, organic look using the slide-cn theme palette tokens.",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/backgrounds/mesh.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/backgrounds/mesh.tsx"
+        }
+      ]
+    },
+    {
+      "name": "background-conic",
+      "type": "registry:component",
+      "title": "Conic Gradient Background",
+      "description": "A full-bleed conic (sweep) gradient background that rotates through the slide-cn theme palette tokens around a central point.",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/backgrounds/conic.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/backgrounds/conic.tsx"
+        }
+      ]
+    },
+    {
+      "name": "background-spotlight",
+      "type": "registry:component",
+      "title": "Spotlight Gradient Background",
+      "description": "A full-bleed background with a bright spotlight radial gradient emanating from an off-centre position, using the slide-cn theme palette tokens.",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/backgrounds/spotlight.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/backgrounds/spotlight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "background-stripes",
+      "type": "registry:component",
+      "title": "Striped Gradient Background",
+      "description": "A full-bleed background with soft diagonal repeating stripes using the slide-cn theme palette tokens (background and background-2).",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/backgrounds/stripes.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/backgrounds/stripes.tsx"
+        }
+      ]
+    },
+    {
+      "name": "background-noise",
+      "type": "registry:component",
+      "title": "Noise Gradient Background",
+      "description": "A full-bleed linear gradient background overlaid with an SVG-based film-grain noise texture, using the slide-cn theme palette tokens.",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/backgrounds/noise.tsx",
+          "type": "registry:component",
+          "target": "components/ui/slide-cn/backgrounds/noise.tsx"
+        }
+      ]
+    },
+    {
       "name": "reveal",
       "type": "registry:component",
       "title": "Reveal",

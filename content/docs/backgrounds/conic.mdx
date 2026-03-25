@@ -1,0 +1,48 @@
+---
+title: Conic Gradient Background
+description: Sweep/conic gradient background for Slide-CN slides
+---
+
+## Overview
+
+`ConicGradient` renders a smooth colour sweep (conic gradient) that rotates through the slide-cn theme tokens around a configurable centre point.
+
+| Variable | Description |
+|----------|-------------|
+| `--background` | Start / end colour of the sweep |
+| `--background-2` | Quarter-turn colour |
+| `--background-3` | Half-turn colour |
+
+## Installation
+
+<InstallCommand packageName="background-conic" />
+
+## Demo
+
+<ComponentDemo description="ConicGradient background" className="h-96 rounded-lg overflow-hidden">
+<Deck className="h-96">
+  <Slide background={<ConicGradient style={{"--background": "oklch(0.38 0.08 290)", "--background-2": "oklch(0.55 0.15 180)", "--background-3": "oklch(0.37 0.08 250)"}} />}>
+    <TitleSlide>
+      <TitleSlide.Heading>Conic Gradient</TitleSlide.Heading>
+      <TitleSlide.SubHeading>Smooth colour sweep</TitleSlide.SubHeading>
+    </TitleSlide>
+  </Slide>
+</Deck>
+</ComponentDemo>
+
+```tsx
+import { ConicGradient } from "@/components/ui/slide-cn/backgrounds/conic";
+
+<Slide background={<ConicGradient />}>
+  {/* slide content */}
+</Slide>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `angle` | `number` | `0` | Starting angle in degrees |
+| `position` | `string` | `"center"` | CSS position of the gradient origin (e.g. `"30% 40%"`) |
+| `className` | `string` | — | Merged with `absolute inset-0` |
+| `style` | `CSSProperties` | — | Merged with the gradient. Pass CSS variable overrides here. |

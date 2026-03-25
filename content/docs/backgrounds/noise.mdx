@@ -1,0 +1,47 @@
+---
+title: Noise Gradient Background
+description: Film-grain noise overlay on a gradient background for Slide-CN slides
+---
+
+## Overview
+
+`NoiseGradient` combines a linear gradient with an SVG-based film-grain texture overlay, giving slides a tactile, printed feel.
+
+| Variable | Description |
+|----------|-------------|
+| `--background` | Gradient mid colour |
+| `--background-2` | Gradient start colour |
+| `--background-3` | Gradient end colour |
+
+## Installation
+
+<InstallCommand packageName="background-noise" />
+
+## Demo
+
+<ComponentDemo description="NoiseGradient background" className="h-96 rounded-lg overflow-hidden">
+<Deck className="h-96">
+  <Slide background={<NoiseGradient style={{"--background": "oklch(0.38 0.08 290)", "--background-2": "oklch(0.37 0.08 250)", "--background-3": "oklch(0.36 0.08 210)"}} />}>
+    <TitleSlide>
+      <TitleSlide.Heading>Noise Gradient</TitleSlide.Heading>
+      <TitleSlide.SubHeading>Gradient with film-grain texture</TitleSlide.SubHeading>
+    </TitleSlide>
+  </Slide>
+</Deck>
+</ComponentDemo>
+
+```tsx
+import { NoiseGradient } from "@/components/ui/slide-cn/backgrounds/noise";
+
+<Slide background={<NoiseGradient />}>
+  {/* slide content */}
+</Slide>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `noiseOpacity` | `number` | `0.08` | Opacity of the noise texture layer (0–1) |
+| `className` | `string` | — | Merged with `absolute inset-0` |
+| `style` | `CSSProperties` | — | Merged with the container. Pass CSS variable overrides here. |

@@ -1,0 +1,48 @@
+---
+title: Mesh Gradient Background
+description: Soft, organic mesh gradient background for Slide-CN slides
+---
+
+## Overview
+
+`MeshGradient` layers four radial gradients at the corners of the slide to produce a smooth, organic "mesh" of colour, driven by three CSS variables.
+
+| Variable | Description |
+|----------|-------------|
+| `--background` | Base fill colour |
+| `--background-2` | Colour blended into the top-left and bottom-left corners |
+| `--background-3` | Colour blended into the top-right and bottom-right corners |
+
+## Installation
+
+<InstallCommand packageName="background-mesh" />
+
+## Demo
+
+<ComponentDemo description="MeshGradient background" className="h-96 rounded-lg overflow-hidden">
+<Deck className="h-96">
+  <Slide background={<MeshGradient style={{"--background": "oklch(0.38 0.08 290)", "--background-2": "oklch(0.37 0.08 250)", "--background-3": "oklch(0.55 0.15 180)"}} />}>
+    <TitleSlide>
+      <TitleSlide.Heading>Mesh Gradient</TitleSlide.Heading>
+      <TitleSlide.SubHeading>Soft organic colour blend</TitleSlide.SubHeading>
+    </TitleSlide>
+  </Slide>
+</Deck>
+</ComponentDemo>
+
+```tsx
+import { MeshGradient } from "@/components/ui/slide-cn/backgrounds/mesh";
+
+<Slide background={<MeshGradient />}>
+  {/* slide content */}
+</Slide>
+```
+
+## Reference
+
+Accepts all standard `<div>` props. `className` and `style` are merged with the component defaults.
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `className` | `string` | Merged with `absolute inset-0` |
+| `style` | `CSSProperties` | Merged with the gradient definition. Use to override `--background`, `--background-2`, `--background-3` inline. |

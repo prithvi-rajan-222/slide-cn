@@ -28,6 +28,11 @@ import PixelSnow from "@/components/PixelSnow";
 import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
 import { LinearGradient } from "@/components/ui/slide-cn/backgrounds/gradients/linear";
 import { RadialGradient } from "@/components/ui/slide-cn/backgrounds/gradients/radial";
+import { MeshGradient } from "@/components/ui/slide-cn/backgrounds/mesh";
+import { ConicGradient } from "@/components/ui/slide-cn/backgrounds/conic";
+import { SpotlightGradient } from "@/components/ui/slide-cn/backgrounds/spotlight";
+import { StripedGradient } from "@/components/ui/slide-cn/backgrounds/stripes";
+import { NoiseGradient } from "@/components/ui/slide-cn/backgrounds/noise";
 
 export function getMDXComponents(
 	components?: MDXComponents
@@ -72,6 +77,11 @@ export function getMDXComponents(
 		SlideFooter,
 		LinearGradient,
 		RadialGradient,
+		MeshGradient,
+		ConicGradient,
+		SpotlightGradient,
+		StripedGradient,
+		NoiseGradient,
 
 		...components,
 	}

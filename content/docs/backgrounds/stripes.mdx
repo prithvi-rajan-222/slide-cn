@@ -1,0 +1,47 @@
+---
+title: Striped Background
+description: Diagonal repeating-stripe background for Slide-CN slides
+---
+
+## Overview
+
+`StripedGradient` tiles soft diagonal stripes across the slide using `--background` and `--background-2`.
+
+| Variable | Description |
+|----------|-------------|
+| `--background` | Primary stripe colour |
+| `--background-2` | Secondary stripe colour |
+
+## Installation
+
+<InstallCommand packageName="background-stripes" />
+
+## Demo
+
+<ComponentDemo description="StripedGradient background" className="h-96 rounded-lg overflow-hidden">
+<Deck className="h-96">
+  <Slide background={<StripedGradient style={{"--background": "oklch(0.38 0.08 290)", "--background-2": "oklch(0.42 0.10 270)", "--background-3": "oklch(0.37 0.08 250)"}} />}>
+    <TitleSlide>
+      <TitleSlide.Heading>Striped</TitleSlide.Heading>
+      <TitleSlide.SubHeading>Repeating diagonal stripes</TitleSlide.SubHeading>
+    </TitleSlide>
+  </Slide>
+</Deck>
+</ComponentDemo>
+
+```tsx
+import { StripedGradient } from "@/components/ui/slide-cn/backgrounds/stripes";
+
+<Slide background={<StripedGradient angle={45} stripeSize={40} />}>
+  {/* slide content */}
+</Slide>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `angle` | `number` | `45` | Stripe angle in degrees |
+| `stripeSize` | `number` | `40` | Total width of one stripe pair in pixels |
+| `className` | `string` | — | Merged with `absolute inset-0` |
+| `style` | `CSSProperties` | — | Merged with the pattern. Pass CSS variable overrides here. |
