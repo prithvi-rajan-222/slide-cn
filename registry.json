@@ -307,6 +307,13 @@
       "type": "registry:theme",
       "title": "Sky Theme",
       "description": "A cool blue-purple gradient theme for Slide-CN presentations.",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/themes/sky.css",
+          "type": "registry:file",
+          "target": "components/ui/slide-cn/themes/sky.css"
+        }
+      ],
       "cssVars": {
         "theme": {
           "--slide-grad-angle": "135deg",
@@ -370,6 +377,13 @@
       "type": "registry:theme",
       "title": "Rose Theme",
       "description": "A warm red-pink gradient theme for Slide-CN presentations.",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/themes/rose.css",
+          "type": "registry:file",
+          "target": "components/ui/slide-cn/themes/rose.css"
+        }
+      ],
       "cssVars": {
         "theme": {
           "--slide-grad-angle": "135deg",
@@ -435,6 +449,13 @@
       "type": "registry:theme",
       "title": "Earth Theme",
       "description": "A warm green-amber earth tone theme for Slide-CN presentations.",
+      "files": [
+        {
+          "path": "components/ui/slide-cn/themes/earth.css",
+          "type": "registry:file",
+          "target": "components/ui/slide-cn/themes/earth.css"
+        }
+      ],
       "cssVars": {
         "theme": {
           "--slide-grad-angle": "135deg",

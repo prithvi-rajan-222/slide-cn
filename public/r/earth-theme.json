@@ -3,6 +3,14 @@
   "name": "earth-theme",
   "title": "Earth Theme",
   "description": "A warm green-amber earth tone theme for Slide-CN presentations.",
+  "files": [
+    {
+      "path": "components/ui/slide-cn/themes/earth.css",
+      "type": "registry:file",
+      "target": "components/ui/slide-cn/themes/earth.css",
+      "content": "@layer base {\n  :root {\n    --slide-grad-angle: 135deg;\n    --slide-glow-opacity: 0.35;\n    --slide-noise-opacity: 0.04;\n\n    --background: oklch(0.9155 0.0500 100);\n    --background-2: oklch(0.8560 0.0953 70);\n    --background-3: oklch(0.8439 0.0953 130);\n\n    --card: oklch(0.8555 0.0500 100);\n    --popover: oklch(0.8155 0.0500 100);\n    --muted: oklch(0.8755 0.0500 100);\n\n    --primary: oklch(0.4092 0.0984 100);\n    --secondary: oklch(0.7000 0.0492 100);\n    --accent: oklch(0.8439 0.0953 130);\n    --destructive: oklch(0.55 0.22 25);\n    --ring: oklch(0.4092 0.0984 100);\n\n    --foreground: oklch(0.13 0 0);\n    --card-foreground: oklch(0.13 0 0);\n    --popover-foreground: oklch(0.13 0 0);\n    --primary-foreground: oklch(0.95 0 0);\n    --secondary-foreground: oklch(0.13 0 0 / 80%);\n    --muted-foreground: oklch(0.13 0 0 / 60%);\n    --accent-foreground: oklch(0.13 0 0);\n    --destructive-foreground: oklch(0.95 0 0);\n    --border: oklch(0.13 0 0 / 10%);\n    --input: oklch(0.13 0 0 / 10%);\n  }\n\n  .dark {\n    --background: oklch(0.2998 0.0719 100);\n    --background-2: oklch(0.4146 0.0984 70);\n    --background-3: oklch(0.4033 0.0984 130);\n\n    --card: oklch(0.3598 0.0719 100);\n    --popover: oklch(0.3998 0.0719 100);\n    --muted: oklch(0.3398 0.0719 100);\n\n    --primary: oklch(0.9155 0.0500 100);\n    --secondary: oklch(0.2500 0.0250 100);\n    --accent: oklch(0.4033 0.0984 130);\n    --destructive: oklch(0.55 0.22 25);\n    --ring: oklch(0.9155 0.0500 100);\n\n    --foreground: oklch(0.95 0 0);\n    --card-foreground: oklch(0.95 0 0);\n    --popover-foreground: oklch(0.95 0 0);\n    --primary-foreground: oklch(0.13 0 0);\n    --secondary-foreground: oklch(0.95 0 0 / 80%);\n    --muted-foreground: oklch(0.95 0 0 / 60%);\n    --accent-foreground: oklch(0.95 0 0);\n    --destructive-foreground: oklch(0.95 0 0);\n    --border: oklch(0.95 0 0 / 10%);\n    --input: oklch(0.95 0 0 / 10%);\n  }\n}\n"
+    }
+  ],
   "cssVars": {
     "theme": {
       "--slide-grad-angle": "135deg",

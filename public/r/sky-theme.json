@@ -3,6 +3,14 @@
   "name": "sky-theme",
   "title": "Sky Theme",
   "description": "A cool blue-purple gradient theme for Slide-CN presentations.",
+  "files": [
+    {
+      "path": "components/ui/slide-cn/themes/sky.css",
+      "type": "registry:file",
+      "target": "components/ui/slide-cn/themes/sky.css",
+      "content": "@layer base {\n  :root {\n    --slide-grad-angle: 135deg;\n    --slide-glow-opacity: 0.35;\n    --slide-noise-opacity: 0.04;\n\n    --background: oklch(0.8844 0.05781 210);\n    --background-2: oklch(0.8892 0.05781 250);\n    --background-3: oklch(0.8940 0.05781 290);\n\n    --card: oklch(0.82 0.05 210);\n    --popover: oklch(0.78 0.05 210);\n    --muted: oklch(0.84 0.05 210);\n\n    --primary: oklch(0.8892 0.05781 250);\n    --secondary: oklch(0.70 0.03 250);\n    --accent: oklch(0.8940 0.05781 290);\n    --destructive: oklch(0.55 0.22 25);\n    --ring: oklch(0.8892 0.05781 250);\n\n    --foreground: oklch(0.13 0 0);\n    --card-foreground: oklch(0.13 0 0);\n    --popover-foreground: oklch(0.13 0 0);\n    --primary-foreground: oklch(0.95 0 0);\n    --secondary-foreground: oklch(0.13 0 0 / 80%);\n    --muted-foreground: oklch(0.13 0 0 / 60%);\n    --accent-foreground: oklch(0.13 0 0);\n    --destructive-foreground: oklch(0.95 0 0);\n    --border: oklch(0.13 0 0 / 10%);\n    --input: oklch(0.13 0 0 / 10%);\n  }\n\n  .dark {\n    --background: oklch(0.3763 0.08125 290);\n    --background-2: oklch(0.3684 0.08125 250);\n    --background-3: oklch(0.3578 0.08125 210);\n\n    --card: oklch(0.44 0.08 290);\n    --popover: oklch(0.48 0.08 290);\n    --muted: oklch(0.42 0.08 290);\n\n    --primary: oklch(0.8892 0.05781 250);\n    --secondary: oklch(0.25 0.04 250);\n    --accent: oklch(0.45 0.10 210);\n    --destructive: oklch(0.55 0.22 25);\n    --ring: oklch(0.8892 0.05781 250);\n\n    --foreground: oklch(0.95 0 0);\n    --card-foreground: oklch(0.95 0 0);\n    --popover-foreground: oklch(0.95 0 0);\n    --primary-foreground: oklch(0.13 0 0);\n    --secondary-foreground: oklch(0.95 0 0 / 80%);\n    --muted-foreground: oklch(0.95 0 0 / 60%);\n    --accent-foreground: oklch(0.95 0 0);\n    --destructive-foreground: oklch(0.95 0 0);\n    --border: oklch(0.95 0 0 / 10%);\n    --input: oklch(0.95 0 0 / 10%);\n  }\n}\n"
+    }
+  ],
   "cssVars": {
     "theme": {
       "--slide-grad-angle": "135deg",

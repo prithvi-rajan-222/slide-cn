@@ -3,9 +3,62 @@ title: Themes
 description: Color themes for Slide-CN presentations
 ---
 
-Slide-CN uses the shadcn theming system — themes are just sets of CSS variables applied to `:root` and `.dark`. Install a theme the same way you install any other registry item.
+Slide-CN themes are sets of CSS variables that control the color palette and gradient appearance of your presentation. They follow the shadcn theming system, so they work seamlessly with both light and dark mode.
 
-Each theme defines three background tokens (`--background`, `--background-2`, `--background-3`) that the gradient background components use to build the slide gradient, plus the full set of shadcn color tokens for light and dark mode.
+## Installing a theme
+
+Install any theme using the shadcn CLI, the same way you install components:
+
+```bash
+pnpm dlx shadcn@latest add https://slide-cn.com/r/sky-theme.json
+```
+
+This adds a CSS file to `components/ui/slide-cn/themes/` and applies the color variables automatically.
+
+## Available themes
+
+Browse and preview the available themes below. Use the light/dark toggle to see how each theme looks in both modes.
 
 <ThemePicker />
 
+## How themes work
+
+Each theme defines three background tokens used by the gradient background components:
+
+| Variable | Purpose |
+|---|---|
+| `--background` | Primary background color |
+| `--background-2` | Secondary gradient stop |
+| `--background-3` | Tertiary gradient stop |
+
+Themes also include the full set of shadcn color tokens (`--primary`, `--secondary`, `--muted`, `--card`, etc.) for both light and dark mode, so all UI components adapt to the chosen theme.
+
+## Customizing a theme
+
+After installing a theme, open its CSS file and edit the variables directly. For example, to adjust the Sky theme:
+
+```css title="components/ui/slide-cn/themes/sky.css"
+@layer base {
+  :root {
+    /* Shift the gradient toward teal */
+    --background:   oklch(0.88 0.06 190);
+    --background-2: oklch(0.89 0.06 220);
+    --background-3: oklch(0.90 0.06 260);
+    /* ... rest of light mode vars */
+  }
+
+  .dark {
+    /* ... dark mode vars */
+  }
+}
+```
+
+Colors use the [OKLCH color space](https://oklch.com) — `oklch(lightness chroma hue)` — which makes it easy to shift hue while keeping consistent lightness and saturation across stops.
+
+## Creating a custom theme
+
+Copy any existing theme file as a starting point, adjust the OKLCH values to match your brand, and import it in your global CSS:
+
+```css title="app/globals.css"
+@import "../components/ui/slide-cn/themes/my-theme.css";
+```
