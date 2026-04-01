@@ -1,6 +1,5 @@
 import { Slide } from "@/components/ui/slide-cn/slide";
 import { HeaderWithContent } from "@/components/ui/slide-cn/header-with-content";
-import { Reveal } from "@/components/ui/slide-cn/reveal";
 import { GitBranch, User, Globe } from "lucide-react";
 import { GradientBackground } from "@/components/ui/slide-cn/backgrounds/dark-mode-gradient";
 
