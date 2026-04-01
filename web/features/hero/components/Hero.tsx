@@ -33,7 +33,7 @@ export function Hero() {
 					Create <AuroraText>beautiful</AuroraText> presentations using code
 				</h1>
 				<p className="text-muted-foreground text-sm sm:text-base md:text-xl pt-4 sm:pt-6 pb-4 max-w-2xl mx-auto">
-					Build slides as React components. Version control with Git, style with Tailwind, and present from your Next.js app.
+					Build slides as React components, install them through the shadcn registry, and present interactive decks straight from your app.
 				</p>
 				<div className="flex flex-row gap-3 sm:gap-4 items-center justify-center mt-2">
 					<Button onClick={navigateToDocs} variant="default" className="w-auto px-4 sm:px-6 py-4 sm:py-5 text-sm sm:text-base">

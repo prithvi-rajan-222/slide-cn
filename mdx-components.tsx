@@ -38,7 +38,7 @@ import { RadialGradient } from "@/components/ui/slide-cn/backgrounds/gradients/r
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
 	return {
 		...defaultMdxComponents,
-		pre: ({ ref: _ref, ...props }) => (
+		pre: (props) => (
 			<CodeBlock>
 				<Pre>{props.children}</Pre>
 			</CodeBlock>

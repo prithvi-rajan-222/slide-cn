@@ -3,16 +3,53 @@ title: Installation
 description: How to get started with Slide-CN
 ---
 
-The first thing you need to do is install [Shadcn UI](https://ui.shadcn.com/docs/installation).
+Slide-CN is distributed through the shadcn registry, so the fastest path is:
 
-After that, the main component to install is the [Deck](./components/deck) component. This is the minimum required code to get your presentations to work.
-
+1. Set up [shadcn/ui](https://ui.shadcn.com/docs/installation) in your project
+2. Install the Slide-CN preset
+3. Render a deck in any page or route
 
 ## Quick Start
 
-You can install the default preset which includes all the recommended layouts and components by running the following command:
+Install the default preset, which includes the core deck primitives plus the recommended layouts and content components:
 
 <InstallCommand packageName="slide-cn-default" />
 
-## Compatibiility
-Slide-CN works with any React + TypeScript project. It is framework agnostic and can be used with any framework that supports React.
+Then create a page and render your first deck:
+
+```tsx
+import { Deck } from "@/components/ui/slide-cn/deck";
+import { Slide } from "@/components/ui/slide-cn/slide";
+import { TitleSlide } from "@/components/ui/slide-cn/title-slide";
+
+export default function PresentationPage() {
+  return (
+    <div className="fixed inset-0">
+      <Deck>
+        <Slide>
+          <TitleSlide>
+            <TitleSlide.Heading>Welcome to Slide-CN</TitleSlide.Heading>
+            <TitleSlide.SubHeading>
+              Presentations built with real React components
+            </TitleSlide.SubHeading>
+            <TitleSlide.Meta>Arrow keys to navigate</TitleSlide.Meta>
+          </TitleSlide>
+        </Slide>
+      </Deck>
+    </div>
+  );
+}
+```
+
+Start your app with `pnpm dev`, open the route, and you have a working presentation.
+
+## What You Get
+
+- `Deck` for keyboard and swipe navigation
+- `Slide` for individual slides
+- Layout primitives like `TitleSlide`, `HorizontalSplit`, and `VerticalSplit`
+- Content components like `Reveal`, `CodeBlock`, `SlideImage`, and `Callout`
+
+## Compatibility
+
+Slide-CN works best in React + TypeScript projects that already use shadcn/ui. The docs and examples are built around Next.js, but the components themselves are regular React components.

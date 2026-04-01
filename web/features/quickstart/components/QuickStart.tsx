@@ -7,7 +7,7 @@ const steps = [
 	{
 		number: 1,
 		title: "Install",
-		description: "Add Slide-CN to your Next.js project with a single command.",
+		description: "Add the default Slide-CN preset from the shadcn registry.",
 		code: "pnpm dlx shadcn@latest add @slide-cn/slide-cn-default",
 		language: "bash",
 	},
@@ -15,11 +15,16 @@ const steps = [
 		number: 2,
 		title: "Write",
 		description: "Create a deck using React components. Each slide is a component.",
-		code: `<Deck>
+		code: `import { Deck } from "@/components/ui/slide-cn/deck";
+import { Slide } from "@/components/ui/slide-cn/slide";
+import { TitleSlide } from "@/components/ui/slide-cn/title-slide";
+
+<Deck>
   <Slide>
-    <SlideTitle>
-      My Presentation
-    </SlideTitle>
+    <TitleSlide>
+      <TitleSlide.Heading>My Presentation</TitleSlide.Heading>
+      <TitleSlide.SubHeading>Built with Slide-CN</TitleSlide.SubHeading>
+    </TitleSlide>
   </Slide>
 </Deck>`,
 		language: "tsx",
@@ -27,7 +32,7 @@ const steps = [
 	{
 		number: 3,
 		title: "Present",
-		description: "Run your Next.js app and present directly from the browser.",
+		description: "Run your app and present directly from the browser.",
 		code: "pnpm dev",
 		language: "bash",
 	},
@@ -41,7 +46,7 @@ export function QuickStart() {
 					Get started in three steps
 				</h2>
 				<p className="text-muted-foreground text-center text-base md:text-lg max-w-2xl mx-auto mb-12">
-					From zero to presenting in under a minute.
+					From install to first working deck in a couple of minutes.
 				</p>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{steps.map((step) => (

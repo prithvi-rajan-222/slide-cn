@@ -2,6 +2,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import type { PanInfo } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 
 export type SideMenuDirection = 'left' | 'right';
@@ -163,7 +164,10 @@ const MotionDrawer: React.FC<SideMenuProps> = ({
 		}
 	};
 
-	const handleDragEnd = (_event: any, info: any) => {
+	const handleDragEnd = (
+		_event: MouseEvent | TouchEvent | PointerEvent,
+		info: PanInfo
+	) => {
 		if (!enableDrag) return;
 
 		const threshold = width * dragThreshold;

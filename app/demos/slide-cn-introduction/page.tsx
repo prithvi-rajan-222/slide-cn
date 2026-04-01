@@ -7,9 +7,7 @@ import { ProblemSlide } from "./slides/problem-slide";
 import { TargetAudienceSlide } from "./slides/target-audience-slide";
 import { SolutionSlide } from "./slides/solution-slide";
 import { BenefitsSlide } from "./slides/benefits-slide";
-import { ExistingToolsSlide } from "./slides/existing-tools-slide";
 import { ClosingSlide } from "./slides/closing-slide";
-import { LongSlide } from "./slides/long-slide";
 import PixelSnow from "@/components/PixelSnow";
 import { SlideFooter } from "@/components/ui/slide-cn/slide-footer";
 

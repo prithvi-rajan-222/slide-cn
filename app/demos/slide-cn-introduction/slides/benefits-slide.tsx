@@ -54,7 +54,7 @@ export function BenefitsSlide() {
 										<h3 className="text-2xl font-bold">Interactive Elements</h3>
 										<p className="text-sm text-muted-foreground leading-relaxed">
 											Add animations, reveals, and interactive components that
-											traditional tools can't match.
+											traditional tools can&apos;t match.
 										</p>
 									</div>
 								</Reveal>
