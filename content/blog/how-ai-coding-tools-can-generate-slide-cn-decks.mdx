@@ -1,0 +1,186 @@
+---
+title: How AI Coding Tools Can Generate Slide-CN Decks
+description: AI tools are unusually good at producing first drafts of code-first presentations. The key is giving them the right constraints, structure, and review loop.
+author: Prithvi Rajan
+date: "2026-04-01"
+tags:
+  - AI
+  - Tutorial
+  - Developer Workflow
+featured: false
+---
+
+AI coding tools are not especially good at making polished decks in traditional slide software.
+
+They are much better at generating structured code.
+
+That makes Slide-CN a particularly good match.
+
+If a presentation is made of React components, layouts, content blocks, and themes, then an AI tool can help with exactly the thing it is strongest at:
+
+- producing a first draft quickly
+- organizing repetitive structure
+- generating content scaffolds
+- filling in slide-by-slide JSX
+
+The trick is not to ask for "a presentation."
+
+The trick is to ask for a **well-scoped deck system**.
+
+## Why this works better with code-first slides
+
+AI tools respond well to:
+
+- explicit file structures
+- named components
+- constrained APIs
+- examples they can imitate
+
+Slide-CN gives them all four.
+
+Instead of improvising on a canvas, the model can work with building blocks like:
+
+- `Deck`
+- `Slide`
+- `TitleSlide`
+- `HorizontalSplit`
+- `Reveal`
+- theme tokens and utility classes
+
+That creates a much tighter feedback loop than trying to generate an unstructured deck from scratch.
+
+## What AI is good at in this workflow
+
+AI can be very effective for:
+
+- creating a first pass of deck structure
+- drafting titles and slide copy
+- converting an outline into JSX slides
+- proposing layout patterns for different sections
+- generating multiple versions of a talk quickly
+
+This is especially useful when you already know the talk you want, but do not want to build all the slide scaffolding by hand.
+
+## What AI is not good at
+
+Do not outsource the final narrative judgment.
+
+AI is weaker at:
+
+- knowing which details actually matter for your audience
+- maintaining crisp pacing across an entire talk
+- making product-specific taste decisions
+- deciding what should be cut
+
+It can create abundance. You still need to create clarity.
+
+## A prompt format that works
+
+The best prompts are specific about four things:
+
+1. audience
+2. goal of the talk
+3. slide structure
+4. visual constraints
+
+For example:
+
+```txt
+Create a 10-slide Slide-CN deck for a developer audience.
+Goal: explain why presentations should be treated like websites.
+Use React components and concise copy.
+Include a title slide, problem slide, solution slide, comparison slide, and closing CTA.
+Prefer TitleSlide, HorizontalSplit, Reveal, and branded Tailwind styling.
+Keep each slide focused on one idea.
+```
+
+That is much better than:
+
+```txt
+Make me a deck about Slide-CN.
+```
+
+## Give the model a small vocabulary
+
+One of the easiest ways to improve output quality is to limit what the model is allowed to use.
+
+For example:
+
+- only use `TitleSlide`, `HorizontalSplit`, and plain `Slide`
+- no more than 20 words in any bullet list item
+- one visual pattern per slide
+- one key message per slide
+
+Constraints improve outputs because they reduce the amount of invention the model has to do.
+
+## Ask for components, not one giant file
+
+Large single-file outputs get messy quickly.
+
+A better workflow is:
+
+1. ask the AI to produce a slide outline
+2. ask it to map each slide to a component pattern
+3. ask it to generate the JSX
+4. review and edit manually
+
+For example, instead of "write the whole presentation," ask:
+
+```txt
+Turn this outline into Slide-CN slides.
+Use one React component per slide section.
+Keep titles short, avoid generic filler, and add comments only where structure is non-obvious.
+```
+
+That usually leads to cleaner results.
+
+## Review for the things AI gets wrong
+
+When reviewing an AI-generated deck, check:
+
+- whether the story has repetition
+- whether slides are overloaded with text
+- whether the layouts actually fit the content
+- whether claims are accurate
+- whether the deck sounds like your product and not like generic startup copy
+
+This part matters more than generation.
+
+AI is good at producing volume. The product team still needs to enforce taste and truth.
+
+## A practical use case
+
+Imagine you need three versions of the same talk:
+
+- investor pitch
+- conference talk
+- internal product overview
+
+An AI tool can help you reuse the same deck primitives and adapt the narrative for each audience. That is a much better use of AI than expecting it to replace presentation craft entirely.
+
+## When this workflow is most useful
+
+AI-assisted Slide-CN authoring is a strong fit when:
+
+- your team is comfortable reviewing code
+- you want fast first drafts
+- the deck structure is repeatable
+- the presentation benefits from reusable layouts
+
+## When it is not
+
+This approach is a poor fit when:
+
+- nobody on the team wants to review generated JSX
+- the talk is highly sensitive and every claim requires careful manual wording
+- the real bottleneck is strategy, not implementation
+
+## Final thought
+
+AI does not remove the need for a point of view.
+
+What it can remove is a lot of blank-page overhead.
+
+That is why Slide-CN pairs well with coding agents and AI-assisted workflows: the system gives the model something concrete to generate, and your team keeps control over accuracy, pacing, and quality.
+
+That combination is much more useful than asking a model to invent a polished deck in a vacuum.
