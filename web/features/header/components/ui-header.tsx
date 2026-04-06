@@ -16,6 +16,10 @@ export function UIHeader() {
 			href: "/docs"
 		},
 		{
+			label: "Blog",
+			href: "/blog"
+		},
+		{
 			label: "Demo",
 			href: "/demos/slide-cn-introduction"
 		}

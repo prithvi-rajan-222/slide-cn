@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const links = [
 	{ label: "Docs", href: "/docs" },
+	{ label: "Blog", href: "/blog" },
 	{ label: "GitHub", href: "https://github.com/prithvi-rajan-222/slide-cn" },
 	{ label: "Demo", href: "/demos/slide-cn-introduction" },
 ];
