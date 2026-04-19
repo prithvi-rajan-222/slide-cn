@@ -2,13 +2,13 @@
 	"pages": [
 		"index",
 		"installation",
+		"skills",
 		"themes",
 		"slide-cn-vs-slidev",
 		"build-a-pitch-deck-in-react",
 		"create-an-interactive-technical-talk",
 		"components",
 		"layouts",
-		"backgrounds",
-		"ai"
+		"backgrounds"
 	]
 }
