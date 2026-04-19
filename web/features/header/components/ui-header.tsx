@@ -17,7 +17,7 @@ export function UIHeader() {
 		},
 		{
 			label: "Blog",
-			href: "/blog"
+			href: "/docs/why-slides-should-be-treated-like-websites"
 		},
 		{
 			label: "Demo",

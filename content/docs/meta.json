@@ -1,0 +1,15 @@
+{
+	"pages": [
+		"index",
+		"installation",
+		"themes",
+		"why-slides-should-be-treated-like-websites",
+		"slide-cn-vs-slidev",
+		"build-a-pitch-deck-in-react",
+		"create-an-interactive-technical-talk",
+		"components",
+		"layouts",
+		"backgrounds",
+		"ai"
+	]
+}

@@ -1,13 +1,6 @@
 ---
-title: How to Create an Interactive Technical Talk with React
+title: Create an Interactive Technical Talk
 description: Technical talks often need more than static slides. Here is how to build a talk in React that can explain systems, states, and interactions more clearly.
-author: Prithvi Rajan
-date: "2026-04-02"
-tags:
-  - Tutorial
-  - Interactive Presentation React
-  - Technical Talk
-featured: false
 ---
 
 Many technical talks are trying to explain things that are inherently dynamic:
@@ -25,7 +18,7 @@ Static slides can do some of that. But they often force you into one of two bad 
 
 This is where an interactive, code-first deck starts to make sense.
 
-## What "interactive" should mean in a technical talk
+# What "interactive" should mean
 
 Interactive does not mean gimmicky.
 
@@ -63,8 +56,6 @@ For example:
 </Reveal>
 ```
 
-This is a small interaction, but it changes the pacing of the explanation.
-
 ## Use one stable layout while the content changes
 
 A technical talk gets easier to follow when the frame stays familiar.
@@ -79,59 +70,7 @@ That lets the audience focus on the idea, not on re-parsing the whole screen.
 
 Components like `HorizontalSplit`, `VerticalSplit`, and `HeaderWithContent` are useful for this because they create repeatable structure.
 
-## Treat diagrams like stateful explanations
-
-A good architecture diagram is rarely a single final image.
-
-It is usually a sequence:
-
-1. system boundary
-2. key components
-3. data flow
-4. bottleneck or insight
-
-When you think of a diagram that way, code becomes a natural medium. You are not just placing shapes. You are controlling emphasis and progression.
-
-## Use code snippets as teaching surfaces, not decoration
-
-Code on slides often fails because too much of it is visible at once.
-
-A better pattern is:
-
-- show only the important section
-- give it room
-- pair it with a clear explanation
-- change the code only when the narrative changes
-
-For example, one slide can show the baseline API:
-
-```tsx
-<Deck initialSlide={0}>
-  <Slide>
-    <CodeBlockComponent
-      language="tsx"
-      code={`<Deck>\n  <Slide>Intro</Slide>\n  <Slide>Problem</Slide>\n</Deck>`}
-    />
-  </Slide>
-</Deck>
-```
-
-Then the next slide can show the enhancement:
-
-```tsx
-<Reveal>
-  <CodeBlockComponent
-    language="tsx"
-    code={`<Deck>\n  <Slide>Intro</Slide>\n  <Slide><InteractiveDemo /></Slide>\n</Deck>`}
-  />
-</Reveal>
-```
-
-The point is not animation for its own sake. The point is controlled comparison.
-
 ## Build one or two high-value interactive moments
-
-Not every slide needs motion or changing state.
 
 Most technical talks benefit from just one or two interactive sequences:
 
@@ -143,38 +82,8 @@ That keeps the presentation intentional.
 
 When every slide is active, none of them feels important.
 
-## When React is especially useful for technical talks
-
-React becomes valuable when the talk is close to the thing being built.
-
-Examples:
-
-- presenting a component library
-- teaching architecture to engineers
-- demoing a developer tool
-- explaining a workflow with UI and code together
-
-In those cases, a component-driven presentation often feels much more natural than a static slide deck.
-
 ## When this is too much
-
-Be honest about the tradeoff.
 
 If you just need a straightforward internal talk with bullet points and a few screenshots, a simpler slide workflow may be better.
 
 Code-first presentations pay off when the talk benefits from composability and state, not when you are solving a purely authoring problem.
-
-## A practical checklist
-
-Before adding interaction to a technical talk, ask:
-
-- Does this make the explanation clearer?
-- Does it reduce clutter on screen?
-- Does it help the audience follow sequence or cause and effect?
-- Would a static slide do the job just as well?
-
-If the answer to the last question is yes, keep it static.
-
-If the answer to the first three is yes, interaction is doing real work.
-
-That is the sweet spot.

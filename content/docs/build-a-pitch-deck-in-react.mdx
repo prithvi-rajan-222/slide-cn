@@ -1,13 +1,6 @@
 ---
-title: Build a Pitch Deck in React with Slide-CN
+title: Build a Pitch Deck in React
 description: A practical walkthrough for turning a startup pitch deck into a React-based presentation that stays on-brand and easy to iterate on.
-author: Prithvi Rajan
-date: "2026-04-03"
-tags:
-  - Tutorial
-  - Pitch Deck
-  - React Presentation Framework
-featured: false
 ---
 
 Most pitch decks are built under pressure.
@@ -18,21 +11,7 @@ That is why a code-first deck can be surprisingly useful.
 
 With Slide-CN, you can build a pitch deck in React using the same mindset you already use for product surfaces: reusable layouts, consistent tokens, and components instead of repeated manual formatting.
 
-## What a good pitch deck needs
-
-A pitch deck usually needs to do five things well:
-
-- establish the problem quickly
-- explain the product clearly
-- communicate traction or momentum
-- build trust
-- end with a memorable ask
-
-That does not require a huge design system.
-
-It does require consistency.
-
-## Start with a simple deck structure
+# Start with a simple deck structure
 
 A strong first version often looks like this:
 
@@ -99,8 +78,6 @@ That gives the deck rhythm without making it feel repetitive.
 
 ## Keep the deck on-brand with your existing tokens
 
-This is where code-first decks can feel much stronger than traditional slides.
-
 If your team already has:
 
 - typography choices
@@ -123,47 +100,6 @@ A better approach is to show the product in context:
 - use progressive reveal for one important interaction
 - highlight the outcome, not every detail
 
-Slide-CN helps here because the deck can use actual composition patterns rather than static mockup placement alone.
-
-## Use progressive reveals carefully
-
-Investors and stakeholders need clarity more than cleverness.
-
-Progressive reveals are useful when they simplify a complex point:
-
-- three-step workflows
-- market layers
-- architecture snapshots
-- before/after comparisons
-
-They are not useful when they turn every bullet into a mini animation event.
-
-A good rule is: reveal information only when sequencing improves understanding.
-
-## A useful pattern for traction slides
-
-Traction slides often become dense.
-
-Try a simple hierarchy:
-
-- one headline metric
-- two supporting metrics
-- one proof point
-
-For example:
-
-```tsx
-<Slide>
-  <div className="grid gap-6 md:grid-cols-3">
-    <MetricCard value="120+" label="design-system-ready slides shipped" />
-    <MetricCard value="6 min" label="to create a first branded deck" />
-    <MetricCard value="1 stack" label="for app UI and presentations" />
-  </div>
-</Slide>
-```
-
-Even if the exact component changes, the structure remains easy to maintain.
-
 ## When a React pitch deck is a great idea
 
 Use this approach when:
@@ -180,15 +116,3 @@ Skip this approach if:
 - you need lots of non-technical collaborators to edit the deck directly
 - the deck is a one-time artifact with minimal design stakes
 - speed of drag-and-drop editing matters more than consistency
-
-## The real advantage
-
-The best reason to build a pitch deck in React is not novelty.
-
-It is that the deck becomes easier to evolve without losing coherence.
-
-That matters because pitch decks are rarely finished after version one. They are rewritten, refined, re-sequenced, and adapted to different audiences.
-
-When the presentation is built from reusable slide structures instead of manual one-off formatting, iteration gets much less painful.
-
-And for early-stage teams, that is a real advantage.
