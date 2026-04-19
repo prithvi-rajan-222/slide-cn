@@ -1,111 +1,49 @@
 ---
 title: Slide-CN vs Slidev
-description: Both tools are aimed at developers, but they optimize for different workflows. Here is the honest tradeoff between Slide-CN and Slidev.
+description: A short comparison between Slide-CN and Slidev for developer presentations.
 ---
 
-If you are looking for a developer-friendly way to make slides, Slide-CN and Slidev will probably end up on the same shortlist.
+Slide-CN and Slidev are both good options for developer presentations. The main difference is where each one starts.
 
-That makes sense. Both move away from traditional slide software. Both are built for people who are comfortable with code. Both make more sense for technical presentations than PowerPoint-style workflows.
+Slidev starts from Markdown. Slide-CN starts from React components.
 
-But they are not trying to solve the exact same problem.
-
-# Different philosophies for developer presentations
-
-Use **Slidev** if you want a markdown-first slide authoring experience with strong defaults and a fast path from idea to presentation.
-
-Use **Slide-CN** if you want your slides to behave like part of your React product stack, with reusable components, design-system alignment, and richer UI composition.
-
-That is the real distinction:
-
-- Slidev is optimized for writing slides
-- Slide-CN is optimized for building slides
-
-Both approaches are valid. The better choice depends on the kind of presentation you are trying to make.
+# Quick comparison
 
 ## Where Slidev is stronger
 
-Slidev has a very appealing workflow for many technical talks.
+Slidev is a strong fit when you want to write slides quickly in Markdown.
 
-You can write in markdown, move quickly, and get a polished deck without building a lot of infrastructure around it. For many speakers, that is exactly the right level of abstraction.
+It works well for:
 
-Slidev is especially strong when:
+- content-heavy talks
+- speaker notes and presentation-focused defaults
+- fast drafting
+- decks where Markdown is the main authoring format
 
-- the talk is content-heavy
-- markdown is your preferred writing environment
-- you want presentation-specific features out of the box
-- speed matters more than integrating with an existing component system
-
-If your ideal workflow is "write the story first, lightly customize later," Slidev is a strong fit.
+If your ideal workflow is writing the talk first and styling it later, Slidev is probably the smoother path.
 
 ## Where Slide-CN is stronger
 
-Slide-CN is built around a different assumption:
-
-## a presentation can be an extension of your application layer
-
-That means the value shows up when you want to use the same primitives you already use elsewhere:
+Slide-CN is a better fit when the deck needs to share more with the rest of your app:
 
 - React components
-- Tailwind tokens
-- shadcn-style building blocks
-- design-system conventions
-- interactive UI states
+- Tailwind theme tokens
+- shadcn-style UI
+- reusable layouts
+- interactive product states
 
-Instead of treating the deck as a separate document format, Slide-CN treats it more like a small interface with a narrative structure.
+It works well for:
 
-That is useful when the presentation is close to the product itself:
-
+- product demos
 - startup pitch decks
-- product launches
-- developer tool demos
+- launches
 - architecture talks
-- presentations that include live UI patterns
+- presentations that reuse app UI
 
-## The biggest philosophical difference
+## The simple rule
 
-Slidev starts from authoring.
+Use Slidev when the deck is mostly a document.
 
-Slide-CN starts from composition.
+Use Slide-CN when the deck is closer to a small React surface.
 
-With Slidev, the deck is primarily a presentation document that developers can enhance.
-
-With Slide-CN, the deck is primarily a React surface designed for presentations.
-
-That difference affects how you think about:
-
-- layout
-- reuse
-- customization
-- interactivity
-- team workflows
-
-## When Slide-CN is the wrong choice
-
-You should probably not choose Slide-CN if:
-
-- you want a markdown-first workflow
-- you do not want to touch JSX
-- the presentation does not benefit from component reuse
-- you prefer presentation-specific tooling over app-like flexibility
-
-That does not make Slide-CN worse. It just means the product has a more specific point of view.
-
-## When Slide-CN is the right choice
-
-Slide-CN is a strong fit when:
-
-- your team already uses React
-- you care about visual consistency with your product
-- you want presentations to reuse system thinking, not imitate it
-- interactivity and layout composition matter
-- you want to build decks with components instead of documents
-
-## A practical rule of thumb
-
-Ask one question:
-
-## Is this deck closer to a document, or closer to a product surface?
-
-If it is closer to a document, Slidev is likely the better fit.
-
-If it is closer to a product surface, Slide-CN is likely the better fit.
+That is the whole comparison.

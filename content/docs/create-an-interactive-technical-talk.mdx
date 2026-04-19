@@ -1,51 +1,19 @@
 ---
 title: Create an Interactive Technical Talk
-description: Technical talks often need more than static slides. Here is how to build a talk in React that can explain systems, states, and interactions more clearly.
+description: A practical way to use interaction in a technical Slide-CN talk.
 ---
 
-Many technical talks are trying to explain things that are inherently dynamic:
+Use interaction when it makes the explanation easier to follow.
 
-- state changes
-- architecture flows
-- user journeys
-- step-by-step abstractions
-- code evolving over time
-
-Static slides can do some of that. But they often force you into one of two bad outcomes:
-
-- slides that are too dense
-- slide sequences that repeat almost the same layout over and over
-
-This is where an interactive, code-first deck starts to make sense.
-
-# What "interactive" should mean
-
-Interactive does not mean gimmicky.
-
-In a good technical presentation, interactivity should help the audience understand:
+Good technical talk interactions usually answer one question:
 
 - what changed
-- why it changed
-- what part matters right now
 
-That is why the most valuable interaction patterns are usually simple:
+# Start with attention
 
-- progressive reveal
-- step-based diagrams
-- embedded UI states
-- code that updates focus over time
+Technical slides get hard to follow when the audience has to parse everything at once: diagram, labels, code, and explanation.
 
-## Start with the audience's cognitive load
-
-Technical speakers often try to show too much at once.
-
-If a slide contains an architecture diagram, several labels, code, and verbal explanation, the audience has to decide what to pay attention to. That decision costs energy.
-
-A better approach is to control attention deliberately.
-
-Slide-CN includes a `Reveal` component for exactly this reason. It lets you sequence information instead of forcing all of it onto the screen at once.
-
-For example:
+Use `Reveal` when the order matters:
 
 ```tsx
 <Reveal>
@@ -56,34 +24,27 @@ For example:
 </Reveal>
 ```
 
-## Use one stable layout while the content changes
+This keeps the audience on the same path as the speaker.
 
-A technical talk gets easier to follow when the frame stays familiar.
+## Keep the frame stable
 
-Instead of rebuilding every slide visually, keep the layout stable and update the content inside it:
+For system explanations, keep the layout stable while the content changes.
+
+That can mean:
 
 - same title position
 - same code or diagram area
 - same explanation panel
 
-That lets the audience focus on the idea, not on re-parsing the whole screen.
+`HorizontalSplit`, `VerticalSplit`, and `HeaderWithContent` are useful for this. The audience learns the frame once, then follows the changes inside it.
 
-Components like `HorizontalSplit`, `VerticalSplit`, and `HeaderWithContent` are useful for this because they create repeatable structure.
+## Add one strong interactive sequence
 
-## Build one or two high-value interactive moments
-
-Most technical talks benefit from just one or two interactive sequences:
+Most talks only need one or two of these:
 
 - a diagram that builds in stages
 - a demo slide that shows a UI changing state
 - a comparison slide with toggled views
+- a code example that shifts focus step by step
 
-That keeps the presentation intentional.
-
-When every slide is active, none of them feels important.
-
-## When this is too much
-
-If you just need a straightforward internal talk with bullet points and a few screenshots, a simpler slide workflow may be better.
-
-Code-first presentations pay off when the talk benefits from composability and state, not when you are solving a purely authoring problem.
+Keep the rest of the deck calm. Interaction works best when it supports the important idea instead of competing with it.

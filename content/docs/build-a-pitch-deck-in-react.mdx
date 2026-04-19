@@ -1,17 +1,11 @@
 ---
 title: Build a Pitch Deck in React
-description: A practical walkthrough for turning a startup pitch deck into a React-based presentation that stays on-brand and easy to iterate on.
+description: A practical structure for building a startup pitch deck with Slide-CN.
 ---
 
-Most pitch decks are built under pressure.
+Pitch decks change a lot. The story gets sharper, numbers move, screenshots get replaced, and the ask changes.
 
-You need something polished, fast, and easy to update. The problem is that pitch decks also tend to become living assets. Numbers change. Messaging changes. Screenshots change. The product evolves.
-
-That is why a code-first deck can be surprisingly useful.
-
-With Slide-CN, you can build a pitch deck in React using the same mindset you already use for product surfaces: reusable layouts, consistent tokens, and components instead of repeated manual formatting.
-
-# Start with a simple deck structure
+# Start with the deck outline
 
 A strong first version often looks like this:
 
@@ -25,7 +19,7 @@ A strong first version often looks like this:
 8. Team
 9. Closing ask
 
-In Slide-CN, that might look like:
+In code, keep that outline obvious:
 
 ```tsx
 <Deck>
@@ -41,24 +35,18 @@ In Slide-CN, that might look like:
 </Deck>
 ```
 
-This is already a useful shift.
+The component names should read like the story. That makes the deck easier to rearrange later.
 
-Instead of thinking in isolated pages, you are thinking in narrative components.
+## Reuse a few layouts
 
-## Use reusable layouts, not custom slide designs every time
-
-One of the easiest mistakes in a pitch deck is over-designing each slide independently.
-
-That usually leads to inconsistency.
-
-A better approach is to choose two or three layout patterns and repeat them:
+Pick a small set of patterns and repeat them:
 
 - title slide
 - split layout
 - metric or proof slide
 - closing slide
 
-For example:
+For example, a problem slide can use a split layout:
 
 ```tsx
 <HorizontalSplit
@@ -74,45 +62,31 @@ For example:
 />
 ```
 
-That gives the deck rhythm without making it feel repetitive.
+The point is not to make every slide look identical. The point is to avoid redesigning the deck nine times.
 
-## Keep the deck on-brand with your existing tokens
+## Keep product material close to the product
 
-If your team already has:
+For pitch decks, product slides usually matter more than decoration.
 
-- typography choices
-- brand colors
-- spacing conventions
-- UI motifs
+Useful product slide patterns:
 
-you can bring those directly into the presentation.
+- one workflow per slide
+- one highlighted interaction
+- one screenshot with a clear crop
+- one metric paired with the product moment that caused it
 
-The result is not just "nicer slides." It is a more credible story. The deck feels like it belongs to the product, not adjacent to it.
+Avoid turning product sections into screenshot dumps. Show fewer states and make the important one easy to see.
 
-## Show the product as a product, not as screenshots on white rectangles
+## Keep the data easy to update
 
-Pitch decks often fall into screenshot overload.
+If traction numbers, customer quotes, or team details are likely to change, keep them in small objects instead of burying them inside long JSX blocks.
 
-A better approach is to show the product in context:
+```tsx
+const traction = [
+  { label: "Active teams", value: "120+" },
+  { label: "Weekly growth", value: "18%" },
+  { label: "Pilots", value: "9" },
+];
+```
 
-- zoom in on one core workflow
-- sequence UI states across multiple slides
-- use progressive reveal for one important interaction
-- highlight the outcome, not every detail
-
-## When a React pitch deck is a great idea
-
-Use this approach when:
-
-- your product already has a strong visual identity
-- your team is comfortable with React
-- the deck will be updated frequently
-- you want slides to feel tightly connected to the product
-
-## When it is not
-
-Skip this approach if:
-
-- you need lots of non-technical collaborators to edit the deck directly
-- the deck is a one-time artifact with minimal design stakes
-- speed of drag-and-drop editing matters more than consistency
+That keeps the pitch deck simple to revise while the narrative is still moving.
