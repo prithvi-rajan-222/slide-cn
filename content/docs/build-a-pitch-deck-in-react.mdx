@@ -1,0 +1,92 @@
+---
+title: Build a Pitch Deck in React
+description: A practical structure for building a startup pitch deck with Slide-CN.
+---
+
+Pitch decks change a lot. The story gets sharper, numbers move, screenshots get replaced, and the ask changes.
+
+# Start with the deck outline
+
+A strong first version often looks like this:
+
+1. Title slide
+2. Problem
+3. Solution
+4. Product demo
+5. Market or category
+6. Traction
+7. Why now
+8. Team
+9. Closing ask
+
+In code, keep that outline obvious:
+
+```tsx
+<Deck>
+  <Slide><PitchIntroSlide /></Slide>
+  <Slide><ProblemSlide /></Slide>
+  <Slide><SolutionSlide /></Slide>
+  <Slide><ProductDemoSlide /></Slide>
+  <Slide><MarketSlide /></Slide>
+  <Slide><TractionSlide /></Slide>
+  <Slide><WhyNowSlide /></Slide>
+  <Slide><TeamSlide /></Slide>
+  <Slide><ClosingSlide /></Slide>
+</Deck>
+```
+
+The component names should read like the story. That makes the deck easier to rearrange later.
+
+## Reuse a few layouts
+
+Pick a small set of patterns and repeat them:
+
+- title slide
+- split layout
+- metric or proof slide
+- closing slide
+
+For example, a problem slide can use a split layout:
+
+```tsx
+<HorizontalSplit
+  left={
+    <>
+      <h2 className="text-4xl font-semibold">The problem</h2>
+      <p className="mt-4 text-xl text-muted-foreground">
+        Teams still build presentations in tools disconnected from their product stack.
+      </p>
+    </>
+  }
+  right={<ProblemVisual />}
+/>
+```
+
+The point is not to make every slide look identical. The point is to avoid redesigning the deck nine times.
+
+## Keep product material close to the product
+
+For pitch decks, product slides usually matter more than decoration.
+
+Useful product slide patterns:
+
+- one workflow per slide
+- one highlighted interaction
+- one screenshot with a clear crop
+- one metric paired with the product moment that caused it
+
+Avoid turning product sections into screenshot dumps. Show fewer states and make the important one easy to see.
+
+## Keep the data easy to update
+
+If traction numbers, customer quotes, or team details are likely to change, keep them in small objects instead of burying them inside long JSX blocks.
+
+```tsx
+const traction = [
+  { label: "Active teams", value: "120+" },
+  { label: "Weekly growth", value: "18%" },
+  { label: "Pilots", value: "9" },
+];
+```
+
+That keeps the pitch deck simple to revise while the narrative is still moving.

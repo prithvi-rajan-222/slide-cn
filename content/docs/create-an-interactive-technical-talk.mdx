@@ -1,0 +1,50 @@
+---
+title: Create an Interactive Technical Talk
+description: A practical way to use interaction in a technical Slide-CN talk.
+---
+
+Use interaction when it makes the explanation easier to follow.
+
+Good technical talk interactions usually answer one question:
+
+- what changed
+
+# Start with attention
+
+Technical slides get hard to follow when the audience has to parse everything at once: diagram, labels, code, and explanation.
+
+Use `Reveal` when the order matters:
+
+```tsx
+<Reveal>
+  <li>Request enters through the API layer</li>
+  <li>Events are queued for processing</li>
+  <li>Workers fan out to specialized services</li>
+  <li>UI updates when the pipeline completes</li>
+</Reveal>
+```
+
+This keeps the audience on the same path as the speaker.
+
+## Keep the frame stable
+
+For system explanations, keep the layout stable while the content changes.
+
+That can mean:
+
+- same title position
+- same code or diagram area
+- same explanation panel
+
+`HorizontalSplit`, `VerticalSplit`, and `HeaderWithContent` are useful for this. The audience learns the frame once, then follows the changes inside it.
+
+## Add one strong interactive sequence
+
+Most talks only need one or two of these:
+
+- a diagram that builds in stages
+- a demo slide that shows a UI changing state
+- a comparison slide with toggled views
+- a code example that shifts focus step by step
+
+Keep the rest of the deck calm. Interaction works best when it supports the important idea instead of competing with it.
